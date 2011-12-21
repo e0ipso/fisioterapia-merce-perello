@@ -10,6 +10,13 @@ body {
   position: relative;
   background-size: auto 100%, auto;  
 }
+a, a:link, a:visited {
+  color: #7AF;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 h1, h2 {
   display: block;
@@ -19,6 +26,7 @@ h1, h2 {
   color: red;
   text-align: center;
   margin: 0.2em 0;
+  text-shadow: 0 -1px 1px black;
 }
 td, th {
   padding: 5px;
@@ -70,7 +78,7 @@ nav ul li.active {
   box-shadow: inset 0 3px 5px #444;
   background-color: #DDD;
 }
-nav ul li a {
+nav ul li a:link, nav ul li a {
   display: block;
   width: 64px;
   height: 64px;
@@ -95,13 +103,10 @@ nav ul li a.contact { background-position-x: -256px; }
   margin: 0 auto;
 }
 
-
-
-
-
+a.button:link, a.button { display: inline-block; }
 /* blue pill (inspired by iTunes)
 *******************************************************************************/
-button, input[type="submit"], input[type="reset"] {
+a.button, button, input[type="submit"], input[type="reset"] {
   background-color: #a5b8da;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#a5b8da), to(#7089b3));
   /* Saf4+, Chrome */
@@ -132,7 +137,7 @@ button, input[type="submit"], input[type="reset"] {
   text-shadow: 0 -1px 1px #64799e;
   text-transform: uppercase;
   width: 150px; }
-  button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+  a.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #9badcc;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#9badcc), to(#687fa6));
     /* Saf4+, Chrome */
@@ -151,7 +156,7 @@ button, input[type="submit"], input[type="reset"] {
     -o-box-shadow: inset 0 1px 0 0 #a5b9d9;
     box-shadow: inset 0 1px 0 0 #a5b9d9;
     cursor: pointer; }
-  button:active, input[type="submit"]:active, input[type="reset"]:active {
+  a.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active {
     border: 1px solid #546685;
     -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
     -moz-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee;
