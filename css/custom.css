@@ -104,6 +104,7 @@ nav ul li a.contact { background-position-x: -256px; }
 }
 
 a.button:link, a.button { display: inline-block; }
+a.button:hover { text-decoration: none; }
 /* blue pill (inspired by iTunes)
 *******************************************************************************/
 a.button, button, input[type="submit"], input[type="reset"] {
@@ -321,17 +322,32 @@ table.availability td.available:after {
   display: inline-block;
   width: 250px;
 }
-#contact input, #contact textarea {
+#contact input[type="text"], #contact input[type="email"], #contact input[type="date"], #contact input[type="time"], #contact textarea {
   margin: 3px 0;
-  background-color: #eee;
+  border: 1px solid #7e8da6;
+  -webkit-box-shadow: inset 0 0 8px 2px #cedbf1, 0 1px 0 0 #eeeeee;
+  -moz-box-shadow: inset 0 0 8px 2px #cedbf1, 0 1px 0 0 #eeeeee;
+  -ms-box-shadow: inset 0 0 8px 2px #cedbf1, 0 1px 0 0 #eeeeee;
+  -o-box-shadow: inset 0 0 8px 2px #cedbf1, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 8px 2px #cedbf1, 0 1px 0 0 #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d2dff5), to(#e2ecff));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #d2dff5, #e2ecff);
+  background-image: -moz-linear-gradient(top, #d2dff5, #e2ecff);
+  background-image: -ms-linear-gradient(top, #d2dff5, #e2ecff);
+  background-image: -o-linear-gradient(top, #d2dff5, #e2ecff);
+  background-image: linear-gradient(top, #d2dff5, #e2ecff);
+}
+input:invalid::after {
+  content: 'X';
 }
 #contact input[type="reset"] {
-  margin-left: 667px;
+  margin-left: 367px;
   margin-right: 10px;
 }
 
 /* Home section */
-ul.circles {list-style-type: none; margin: 0 0 0 40px; width:854px;color: #FFFFFF; text-decoration: none;}
+ul.circles { list-style-type: none; margin: 0 0 0 40px; width:854px;color: #FFFFFF; text-decoration: none; overflow: hidden; }
 ul.circles a { color: #FFFFFF; text-decoration: none; display: block; width: 115px; margin: 0 auto; height: 100%; }
 ul.circles li {
     background: url(../img/circle.png) no-repeat;
@@ -356,3 +372,7 @@ ul.circles li {
     padding-left: 0;
 }
 ul.circles li:hover {opacity: 1;}
+#home p {
+  text-align: center;
+  margin-top: 3em;
+}
