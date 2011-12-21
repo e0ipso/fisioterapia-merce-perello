@@ -356,3 +356,30 @@ table.availability td.available:after {
   margin-left: 667px;
   margin-right: 10px;
 }
+
+/* Home section */
+ul.circles {list-style-type: none; margin: 0 0 0 40px; width:854px;color: #FFFFFF; text-decoration: none;}
+ul.circles a { color: #FFFFFF; text-decoration: none; display: block; width: 115px; margin: 0 auto; height: 100%; }
+ul.circles li {
+    background: url(../img/circle.png) no-repeat;
+    opacity: 0.4;
+    float: left;
+    width: 191px;
+    height: 120px;
+    text-align: center;
+    text-transform:uppercase;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: -40px;
+    padding-top: 80px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+ul.circles li:hover {opacity: 1;}
