@@ -14,13 +14,13 @@ $(document).ready(function () {
   sectionSize();
   $('h1').fitText(0.7);
   $('h2').fitText(1.2);
-  $('abbr[title], input[title], img[title], a[title], li[title]').qtip({
+  $('abbr[title], input[title], img[title], a[title], li[title], input:focus').qtip({
      position: {
        my: 'bottom center',  // Position my top left...
        at: 'top center', // at the bottom left of...
      },
      style: {
-       classes: 'ui-tooltip-light ui-tooltip-shadow'
+       classes: 'ui-tooltip-cream ui-tooltip-shadow'
      }
   });
 });
