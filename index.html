@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/jquery.qtip.min.css">
+  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a class="home" href="#home">Inici</a></li>
+          <li><a class="about" href="#about">Qui soc</a></li>
+          <li><a class="location" href="#location">On estic</a></li>
+          <li><a class="available" href="#available">Disponibilitat</a></li>
+          <li><a class="contact" href="#contact">Contacte</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main" role="main">
+      <section id="home">
+        <h1>Fisioteràpia</h1>
+        <h2>Mercè Perelló</h2>
+        <ul class="circles">
+          <li><a title="Per a la teva tranquilitat evita aquells que et venen salud sense la preparació adient">Colegiada</a></li>
+          <li><a title="Tractament de lesions esportives per a poder estar be ràpidament.">Lesions esportives</a></li>
+          <li><a title="Alleuja el teu dolor">Tractament del dolor</a></li>
+          <li><a title="És el complement ideal a la rehabilitació de la teva assegurança">Rehabilitació</a></li>
+          <li><a title="Un ambient comfortable a Muro, Ca'n Picafort o a casa teva">Comoditat</a></li>
+        </ul>
+        <p>Colegiada en Fisioteràpia</p>
+      </section>
+      <section id="description">
+        <h2>El que faig</h2>
+        <p>Aquí va una descripció molona de les coses que cures.</p>
+      </section>
+      <section id="about">
+        <h2>Sobre mi</h2>
+        <p>Jo soc na Mercè. Soc una al·lota de 25 anys originària de Muro que viu a Ca'n Picafort durant tot l'any.</p>
+        <p>M'encanta sortir a córrer i cansar-me abans de sortir a sopar a fora amb els amics, encara que també disfruto molt estant a casa disfrutant dels petits plaers.</p>
+        <p>Potser la meva afició més gran és la d'estudiar. Després d'haver acabat la carrera de fisioteràpia i estudiat dos postgraus, ara mateix estic estudiant anglès a la <abbr title="Escola Oficial d'Idiomes">EOI</abbr> i la carrera de psicologia a distància per la <abbr title="Universitat Oberta de Catalunya">UOC</abbr>.</p>
+      </section>
+      <section id="location">
+        <h2>On estic</h2>
+        <div id="map">
+          <div class="location" id="muro">
+            <div class="label">Muro</div>
+            <div class="adr">
+              <div class="street-address">Sant Joan 79</div>
+              <span class="locality">Muro</span>
+              <iframe width="800" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Sant+Joan+79,+Muro,+Illes+Balears,+Espanya&amp;aq=&amp;sll=40.396764,-3.713379&amp;sspn=14.595679,33.728027&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+de+San+Juan,+79,+07440+Muro,+Baleares,+Islas+Baleares&amp;t=m&amp;ll=39.735145,3.0604&amp;spn=0.008251,0.017145&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+            </div>
+          </div>
+          <div class="location" id="canpica">
+            <div class="label">Ca'n Picafort</div>
+            <div class="adr">
+              <div class="street-address">Violeta 3</div>
+              <span class="locality">Ca'n Picafort</span>
+              <iframe width="800" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Violeta+3,+Ca'n+Picafort,+Illes+Balears,+Espanya&amp;aq=&amp;sll=39.733018,3.059798&amp;sspn=0.007203,0.016469&amp;vpsrc=0&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+de+la+Violeta,+07458+Santa+Margalida,+Baleares,+Islas+Baleares&amp;t=m&amp;ll=39.761707,3.162518&amp;spn=0.03299,0.068579&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+            </div>
+          </div>
+          <div class="location" id="domicili">
+            <div class="label">A domicili</div>
+            <div class="adr">
+              <p>Amb la meva llitera portàtil arribo fins a casa teva per a que no t'hagis de desplaçar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="available">
+        <h2>Disponibilitat</h2>
+        <p>A grans trets aquesta és la meva disponibilitat. Això no significa que no pugui estar ocupada o disponible contradint l'horari de sota.</p>
+        <table class="availability"><thead><tr><th>&nbsp;</th><th>Dilluns</th><th>Dimarts</th><th>Dimecres</th><th>Dijous</th><th>Divendres</th><th>Dissabte</th><th>Diumenge</th></tr></thead><tbody><tr><th style="text-align: right;">9-10</th><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td></tr><tr><th style="text-align: right;">10-11</th><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td></tr><tr><th style="text-align: right;">11-12</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td></tr><tr><th style="text-align: right;">12-1</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">1-2</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">2-3</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">3-4</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">4-5</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">5-6</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">6-7</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">7-8</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">8-9</th><td class="not-available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr><tr><th style="text-align: right;">9-10</th><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="not-available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td><td class="available">&nbsp;</td></tr></tbody><tbody><tr><th style="text-align: center;" colspan="8">Horari en función de la disponibilitat</th></tr></tbody></table>
+      </section>
+      <section id="contact">
+        <h2>Contacta</h2>
+        <form>
+          <label class="required">El teu nom:</label>
+          <input type="text" id="name" name="name" placeholder="Perico de los Palotes" required><br />
+        
+          <label class="required">Adreça d'email:</label>
+          <input type="email" id="email" name="email" placeholder="example@example.org" required><br />
+              
+          <label class="required">Teléfon:</label>
+          <input type="text" pattern="[0-9]*" id="email" name="email" required><br />
+      
+          <label>Quin dia vols venir?</label>
+          <input type="date" id="date" name="date" title="Entra una data del tipus 2012-10-25"><br />
+          
+          <label>A quina hora?</label>
+          <input type="time" id="time" name="time" title="Entra una hora del tipus 16:32"><br />
+            
+          <label class="required">Comentaris:</label>
+          <textarea rows="4" cols="50" required></textarea><br />
+        
+          <input type="reset" value="Esborra" /><input type="submit" value="Contacta" />
+        </form>
+      </section>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <script defer src="js/libs/jquery.qtip-1.0.0-rc3.min.js"></script>
+  <script defer src="js/libs/jquery.fittext.js"></script>
+  <!-- end scripts-->
+
+	
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>
