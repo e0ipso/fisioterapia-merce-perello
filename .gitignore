@@ -1,3 +1,5 @@
 *.espressostorage
 ._*
 .DS_Storage
+
+.DS_Store
