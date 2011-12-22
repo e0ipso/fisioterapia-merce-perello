@@ -21,7 +21,7 @@ a:hover {
 h1, h2 {
   display: block;
   width: 100%;
-  font: normal 1em/1.5em "Impact";
+  font: normal 1em/1.5em "Museo Slab";
   text-transform: uppercase;
   color: red;
   text-align: center;
@@ -48,6 +48,13 @@ section {
   padding: 105px;
   position: relative;
   overflow: hidden;
+}
+
+section p {
+  font: 1.8em/1.5em "Museo Slab", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  color: #57A;
+  text-shadow: 0 -1px 0 black, 0 1px 1px #FFF;
+  
 }
 
 /* @group Navigation */
