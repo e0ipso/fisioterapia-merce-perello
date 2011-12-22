@@ -167,8 +167,10 @@ a.button, button, input[type="submit"], input[type="reset"] {
 
 /* Taula de disponibilitat */
 table.availability {
+  width: 450px;
+  margin: 120px auto 0 auto;
   position: relative;
-  z-index: 45;
+  z-index: 4;
   -webkit-transform: rotate(-15deg);
   -mox-transform: rotate(-15deg);
   -o-transform: rotate(-15deg);
@@ -190,10 +192,11 @@ table.availability:hover {
   table.availability::before, table.availability::after {
     content: '';
     position: absolute;
-    top: -135px;
-    left: -120px;
-    padding: 362px;
-    border-radius: 362px;
+    z-index: -2;
+    top: -98px;
+    left: -63px;
+    padding: 302px;
+    border-radius: 302px;
     border: none;
     background-color: #000;
     opacity: 0.45;
@@ -208,10 +211,10 @@ table.availability:hover {
       opacity: 0.2;
     }
   table.availability::after {
-    padding: 350px;
+    padding: 290px;
     border: 2px dashed #FFF;
     background-color: transparent;
-    margin: 8px;
+    margin: 10px;
   }
   
 table.availability td.not-available { background-color: #C28882; }
