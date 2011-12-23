@@ -4,7 +4,7 @@ body {
   font: normal 12px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   background-image: url('../img/body-bg.png');
   background-color: #f5f5f5;
-  background-image: url('../img/body-2.svg'), url('../img/body-bg.png');
+  background-image: url('../img/body-2.svg'), url('../img/bg.jpg');
   background-position: left top, left top;
   background-repeat: no-repeat, repeat;
   position: relative;
@@ -18,7 +18,7 @@ a, a:link, a:visited {
 a:hover {
   text-decoration: underline;
 }
-h1, h2 {
+h1, h2, h3 {
   display: block;
   width: 100%;
   font: normal 1em/1.5em "Museo Slab";
@@ -27,6 +27,11 @@ h1, h2 {
   text-align: center;
   margin: 0.2em 0;
   text-shadow: 0 -1px 0 black, 0 1px 1px #FFF;
+}
+h3 {
+  text-shadow: 0 1px 1px #888;
+  text-align: inherit;
+  text-transform: none;
 }
 td, th {
   padding: 5px;
@@ -50,7 +55,7 @@ section {
   overflow: hidden;
 }
 
-section p {
+section > p {
   font: 1.8em/1.5em "Museo Slab", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: #57A;
   text-shadow: 0 -1px 0 black, 0 1px 1px #FFF;
@@ -64,13 +69,9 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-  background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  height: 130px;
+  background-image: url('../img/bck_top.jpg');
+  background-position: bottom;
   background-color: #DDD;
   text-align: left;
   box-shadow: 0px 1px 2px #444;
@@ -82,19 +83,18 @@ nav ul {
 }
 nav ul li {
   float: left;
-  padding: 15px;
+  padding: 10px;
   margin: 5px;
 }
 nav ul li:hover, nav ul li.active {
   padding: 10px;
-  background-color: #f5f5f5;
-  border: 5px solid #FFF;
+  background: #f5f5f5 url('../img/bck_top_nav_hover.png') no-repeat left top;
   border-radius: 75px;
-  box-shadow: 0 3px 5px #444;
+  box-shadow: 0 2px 2px #a29574, inset 0 1px 1px #eee;
 }
 nav ul li.active {
-  box-shadow: inset 0 3px 5px #444;
-  background-color: #DDD;
+  box-shadow: inset 0 2px 2px #a29574, 0 1px 1px #eee;
+  background: #DDD url('../img/bck_top_nav_active.png') no-repeat left top;
 }
 nav ul li a:link, nav ul li a {
   display: block;
@@ -250,93 +250,32 @@ table.availability td.available:after {
 }
 
 /* Mapa de localització */
-/*#map {
-  width: 600px;
-  height: 600px;
-  position: relative;
-  background: url(../img/map-bg.svg) no-repeat;
-  background-size: 100%;
+#map_canvas {
+  height: 600px; width: 47.5%; float: left; position: relative; z-index: 30 !important;
+  border: 10px solid white;
 }
-.location .label {
-  text-transform: uppercase;
-  font-family: "ChunkFive";
-  text-align: center;
-  position: absolute;
-  z-index: 2;
-  color: #DDD;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;	
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
+
+#locations { list-style: none; width: 20%; float: left; margin: 0; padding: 0; }
+  #locations h1, #more-info h1 { margin: 0 0 15px 0; font-size: 48px !important; letter-spacing: -2px; }
+  #locations h2, #more-info h2 { margin: 0 0 15px 0; font-size: 32px !important; letter-spacing: -1px; text-align: inherit; text-transform: none; }
+  #locations h3, #more-info h3 { margin: 0 0  1px 0; font-size: 18px !important; letter-spacing: -1px; }
+  #locations li { padding: 5px; z-index: 20; }
+    #locations li:hover, #locations li.hover { background-color: rgba(0, 0, 0, 0.05); }
+    #locations li:hover h3, #locations li.hover h3 { color: red; text-shadow: 0 1px 0px rgba(255,255,255,0.3); }
+
+#more-info {
+  width: 30%; float: right; background-color: rgba(0, 0, 0, 0.05); height: 400px; margin-top: 20px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-.location .label::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  text-align: center;
-  z-index: -2;
-}
-.location .label:hover, .location .label:focus {
-  color: #333;
-}
-.location .adr {
-  display: none;
-  position: absolute;
-  left: 100%;
-  z-index: 3;
-}
-.location.hover .adr {
-  display: block;
-}
-#muro .label {
-  font-size: 60px;
-  line-height: 115px;
-  height: 115px;
-  overflow: hidden;
-  width: 195px;
-  top: 17%;
-  left: -3%;
-}
-#muro .label::after {
-  border-radius: 110px;
-  width: 110px;
-  height: 110px;
-  background-color: red;
-  left: 42px; /* (195-110)/2 *!/
-}
-#canpica .label{
-  display: block;
-  height: 85px;
-  font-size: 35px;
-  width: 190px;
-  left: 50%;
-  top: 32%;
-}
-#canpica .label::after {
-  border-radius: 85px;
-  width: 85px;
-  height: 85px;
-  background-color: cyan;
-  left: 52px; /* (190-85)/2 *!/
-}
-#domicili .label{
-  display: block;
-  font-size: 40px;
-  position: absolute;
-  top: 73%;
-  left: 8%;
-}
-#domicili .label::after {
-  content: '?';
-  font-size: 170px;
-  color: orange;
-  left: 45%;
-  top: -120%;
-}*/
+  #more-info * { position: relative; z-index: 40; }
+  #more-info > div { padding: 20px; }
+
+.longdesc { display: none; }
 
 /* Contact form */
 #contact form {
@@ -419,3 +358,71 @@ section#about {
 .parallax-layer {
   position: absolute;
 }
+
+/* Description section */
+#show-twitter, #show-facebook {
+  background-image: url('../img/social-buttons.png');
+  display: inline-block;
+  width: 140px;
+  height: 60px;
+  text-indent: -9999999px;
+  color: transparent;
+  overflow: hidden;
+}
+#show-facebook {
+  background-position-y: -60px;
+  margin-left: 10px;
+}
+#social-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.parallax-layer-2 {
+  position: relative;
+  display: inline-block;
+}
+#port-2 {
+  position: relative;
+}
+/* @group Colorbox */
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#000;}
+#colorbox{}
+    #cboxContent{margin-top:20px;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{border:5px solid #000; background:#fff;}
+        #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
+        #cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
+        #cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
+        #cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(../img/controls.png) no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:bottom left;}
+        #cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(../img/controls.png) no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:bottom right;}
+        #cboxLoadingOverlay{background:#000;}
+        #cboxLoadingGraphic{background:url(../img/loading.gif) no-repeat center center;}
+        #cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(../img/controls.png) no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:bottom center;}
+
+/* @end */
+
