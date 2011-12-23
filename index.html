@@ -6,6 +6,7 @@
 <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+  <title>Fisioteràpia Mallorca Nord | Mercè Perelló</title>
   <meta charset="utf-8">
 
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
@@ -38,7 +39,6 @@
 </head>
 
 <body>
-
   <div id="container">
     <header>
       <nav>
@@ -66,7 +66,18 @@
       </section>
       <section id="description">
         <h2>El que faig</h2>
-        <p>Aquí va una descripció molona de les coses que cures.</p>
+        <p>Estic especialitzada en el tractament del dolor i la rehabilitació utilitzant, entre altres, els següents tractaments</p>
+        <ul class="circles">
+          <li title="Com es fa?">Tractament</li>
+          <li title="Com es fa?">Tractament</li>
+          <li title="Com es fa?">Tractament</li>
+          <li title="Com es fa?">Tractament</li>
+          <li title="Com es fa?">Tractament</li>
+        </ul>        
+        <div id="social-buttons">
+          <a id="show-twitter" href="https://mobile.twitter.com/rceperello">Twitter</a><a id="show-facebook" href="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FMerc%C3%A8-Perell%C3%B3-Fisioter%C3%A0pia%2F205104012886133&amp;width=600&amp;height=600&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=false&amp;appId=216318715105952">Facebook</a>
+        </div>
+        <div style="text-align: center">Si cliques el botó de <em>Twitter</em> o de <em>Facebook</em> s'obrirà una finestreta amb el que faig a aquestes xarxes socials.</div>
       </section>
       <section id="about">
         <h2>Sobre mi</h2>
@@ -82,28 +93,28 @@
       </section>
       <section id="location">
         <h2>On estic</h2>
-        <div id="map">
-          <div class="location" id="muro">
-            <div class="label">Muro</div>
-            <div class="adr">
-              <div class="street-address">Sant Joan 79</div>
-              <span class="locality">Muro</span>
-              <iframe width="800" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Sant+Joan+79,+Muro,+Illes+Balears,+Espanya&amp;aq=&amp;sll=40.396764,-3.713379&amp;sspn=14.595679,33.728027&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+de+San+Juan,+79,+07440+Muro,+Baleares,+Islas+Baleares&amp;t=m&amp;ll=39.735145,3.0604&amp;spn=0.008251,0.017145&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
-            </div>
-          </div>
-          <div class="location" id="canpica">
-            <div class="label">Ca'n Picafort</div>
-            <div class="adr">
-              <div class="street-address">Violeta 3</div>
-              <span class="locality">Ca'n Picafort</span>
-              <iframe width="800" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Violeta+3,+Ca'n+Picafort,+Illes+Balears,+Espanya&amp;aq=&amp;sll=39.733018,3.059798&amp;sspn=0.007203,0.016469&amp;vpsrc=0&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+de+la+Violeta,+07458+Santa+Margalida,+Baleares,+Islas+Baleares&amp;t=m&amp;ll=39.761707,3.162518&amp;spn=0.03299,0.068579&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
-            </div>
-          </div>
-          <div class="location" id="domicili">
-            <div class="label">A domicili</div>
-            <div class="adr">
-              <p>Amb la meva llitera portàtil arribo fins a casa teva per a que no t'hagis de desplaçar.</p>
-            </div>
+        <ul id="locations">
+          <li data-geo-lat="39.761723" data-geo-long="3.162496">
+            <h3>Ca'n Picafort</h3>
+            <p>Carrer Violeta 3</p>
+            <div class="longdesc"><p>Aquí és on visc. Per a mi és el lloc més còmode per a atendre't ja que és casa meva.</p> <p>Tenc totes les comoditats preparades per a que estiguis a gust el 100%, com aire acondicionat a l'estiu i calefacció a l'hivern.</p> <p>Es troba entre l'ajuntament i el gimnàs, és el carrer que queda enmig. És un xalet de dos pisos, jo estic al primer pis. Per a entrar has d'entrar per la porteta de més amunt.</p></div>
+          </li>
+          <li data-geo-lat="39.735145" data-geo-long="3.0604">
+            <h3>Muro</h3>
+            <p>Sant Joan 79</p>
+            <div class="longdesc"><p>És l'última casa del carrer de Sant Joan. És la casa aquí on em vaig criar i on encara hi viuen els meus pares, que em guarden l'habitació de la llitera.</p> <p>Si no és dia de partit i juga el Barça o el Madrid no tendràs cap problema per a venir en cotxe i aparcar. És bo de trobar si vens a peu, si vens en cotxe has d'entrar al carrer de Sant Joan pel cap de cantó abans de <em>Ca na Francisca</em>.</p></div>
+          </li>
+          <li data-geo-lat="39.574336" data-geo-long="3.20142">
+            <h3>A domicili</h3>
+            <p>On em necessitis</p>
+            <div class="longdesc"><p>Aquesta és l'opció que acaba optant més gent. Ja que si necessites una fisio tampoc deus tenir moltes ganes de venir fins a Muro o Ca'n Picafort, no?</p> <p>Les tarifes són una mica més cares, per a cobrir la benzina i el temps de desplaçament.</p> <p>A Manacor, per exemple no et cobraré extra si és el dimarts o dijous ja que hi he d'anar igualment.</p></div>
+          </li>
+        </ul>
+        <div id="map_canvas"></div>
+        <div id="more-info">
+          <div>
+            <h2>More Info</h2>
+            <p>Passa per sobre de les localitzacions de l'esquerra. (JavaScript ha d'estar activat)</p>
           </div>
         </div>
       </section>
@@ -148,6 +159,8 @@
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  
 
 
   <!-- scripts concatenated and minified via ant build script-->
