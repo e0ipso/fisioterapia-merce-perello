@@ -85,7 +85,7 @@ $(document).ready(function () {
       curMarker = new google.maps.Marker({
         position: pointToMoveTo,
         map: map,
-  //      icon: "images/marker.png"
+        icon: "./img/marker.png"
       });
       
       // On click, zoom map
