@@ -256,9 +256,9 @@ table.availability td.available:after {
 }
 
 #locations { list-style: none; width: 20%; float: left; margin: 0; padding: 0; }
-  #locations h1, #more-info h1 { margin: 0 0 15px 0; font-size: 48px !important; letter-spacing: -2px; }
-  #locations h2, #more-info h2 { margin: 0 0 15px 0; font-size: 32px !important; letter-spacing: -1px; text-align: inherit; text-transform: none; }
-  #locations h3, #more-info h3 { margin: 0 0  1px 0; font-size: 18px !important; letter-spacing: -1px; }
+  #locations h1, #more-info h1 { color: #57A; margin: 0 0 15px 0; font-size: 48px !important; letter-spacing: -2px; }
+  #locations h2, #more-info h2 { color: #57A; margin: 0 0 15px 0; font-size: 32px !important; letter-spacing: -1px; text-align: inherit; text-transform: none; }
+  #locations h3, #more-info h3 { color: #57A; margin: 0 0  1px 0; font-size: 18px !important; letter-spacing: -1px; }
   #locations li { padding: 5px; z-index: 20; }
     #locations li:hover, #locations li.hover { background-color: rgba(0, 0, 0, 0.05); }
     #locations li:hover h3, #locations li.hover h3 { color: red; text-shadow: 0 1px 0px rgba(255,255,255,0.3); }
@@ -280,32 +280,37 @@ table.availability td.available:after {
 /* Contact form */
 #contact form {
   font-size: 1.2em;
+  width: 580px;
+  margin: 0 auto;
+  padding-left: 130px;
 }
 #contact label {
   display: inline-block;
-  width: 250px;
+  width: 130px;
 }
 #contact input[type="text"], #contact input[type="email"], #contact input[type="date"], #contact input[type="time"], #contact textarea {
-  margin: 3px 0;
-  border: 1px solid #7e8da6;
-  -webkit-box-shadow: inset 0 0 8px 2px #d0d0d0, 0 1px 0 0 #eeeeee;
-  -moz-box-shadow: inset 0 0 8px 2px #d0d0d0, 0 1px 0 0 #eeeeee;
-  -ms-box-shadow: inset 0 0 8px 2px #d0d0d0, 0 1px 0 0 #eeeeee;
-  -o-box-shadow: inset 0 0 8px 2px #d0d0d0, 0 1px 0 0 #eeeeee;
-  box-shadow: inset 0 0 8px 2px #d0d0d0, 0 1px 0 0 #eeeeee;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e2e2e2));
+  border-radius: 0px;
+  margin: 10px 0;
+  padding: 3px;
+  border: 3px solid #f5f5f5;
+  -webkit-box-shadow: inset 0 0 8px 2px #eeeeee, 0 1px 0 0 #d0d0d0;
+  -moz-box-shadow: inset 0 0 8px 2px #eeeeee, 0 1px 0 0 #d0d0d0;
+  -ms-box-shadow: inset 0 0 8px 2px #eeeeee, 0 1px 0 0 #d0d0d0;
+  -o-box-shadow: inset 0 0 8px 2px #eeeeee, 0 1px 0 0 #d0d0d0;
+  box-shadow: inset 0 0 8px 2px #eeeeee, 0 1px 0 0 #d0d0d0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#f5f5f5));
   /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #f5f5f5, #e2e2e2);
-  background-image: -moz-linear-gradient(top, #f5f5f5, #e2e2e2);
-  background-image: -ms-linear-gradient(top, #f5f5f5, #e2e2e2);
-  background-image: -o-linear-gradient(top, #f5f5f5, #e2e2e2);
-  background-image: linear-gradient(top, #f5f5f5, #e2e2e2);
+  background-image: -webkit-linear-gradient(top, #e2e2e2, #f5f5f5);
+  background-image: -moz-linear-gradient(top, #e2e2e2, #f5f5f5);
+  background-image: -ms-linear-gradient(top, #e2e2e2, #f5f5f5);
+  background-image: -o-linear-gradient(top, #e2e2e2, #f5f5f5);
+  background-image: linear-gradient(top, #e2e2e2, #f5f5f5);
 }
 input:invalid::after {
   content: 'X';
 }
 #contact input[type="reset"] {
-  margin-left: 367px;
+  margin-left: 250px;
   margin-right: 10px;
 }
 
