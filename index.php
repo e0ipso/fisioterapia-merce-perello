@@ -30,9 +30,11 @@
   <!-- end CSS-->
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-  <meta property="og:title" content="Mercè Perelló Fisioteràpia">
-  <meta property="og:description" content="El centre de fisioteràpia del Nord de Mallorca. Estic a Ca'n Picafort i Muro. També vaig a domicili.">
-  <meta property="og:image" content="http://merceperello.es/img/face.jpg">
+  <meta property="og:title" content="Mercè Perelló Fisioteràpia" />
+  <meta property="og:description" content="El centre de fisioteràpia del Nord de Mallorca. Estic a Ca'n Picafort i Muro. També vaig a domicili." />
+  <meta property="og:image" content="http://merceperello.es/img/face.jpg" />
+  <meta property="og:url" content="http://merceperello.es" />
+  
   <link rel="canonical" href="http://merceperello.es">
   <link rel="author" href="/humans.txt">
   
