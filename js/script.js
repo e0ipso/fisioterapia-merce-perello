@@ -78,7 +78,6 @@ $(document).ready(function () {
       
       // Move (pan) map to new location
       pointToMoveTo = new google.maps.LatLng($el.attr("data-geo-lat"), $el.attr("data-geo-long"));
-      window.log(pointToMoveTo);  
       map.panTo(pointToMoveTo);
       
       // Add new marker
@@ -108,5 +107,9 @@ $(document).ready(function () {
   });
   
   $("#locations li:first").trigger("mouseenter");
-  
+  var list = [];
+  $('ul#txtlzr-data-1 li').each(function () { list.push($(this).text()) });
+  var txtlizer = $('#txtlzr-container-1');
+  txtlizer.textualizer(list);
+  txtlizer.textualizer('start');
 });
