@@ -85,10 +85,10 @@
         <h2>El que faig</h2>
         <header>Estic especialitzada en el tractament del dolor i la rehabilitació utilitzant, entre d'altres, els següents tractaments:</header>
         <ul class="circles">
-          <li title="Com es fa?">Tractament</li>
-          <li title="Com es fa?">Tractament</li>
-          <li title="Com es fa?">Tractament</li>
-          <li title="Com es fa?">Tractament</li>
+          <li title="Massoteràpia, Kinesioteràpia, o Teràpia pel Moviment, Fisioteràpia Manipulativa Articular, Reeducació postural, Fisioteràpia Respiratòria, Embenat funcional i Kinesio-Taping.">Manual</li>
+          <li title="Eliminació del líquid limfàtic excessiu produit per diverses causes.">Drenatge</li>
+          <li title="Maniobra terapèutica consistent en la mobilització del teixit conectiu, efectuada en profunditat, en punts precisos, codificats, on és possible trobar una alteració de l'elasticitat i consistència de la fàscia.">Fàscies</li>
+          <li title="Tècniques que s'apliquen per el tractament de les seqüel·les en lesions del sistema nerviós central o perifèric.">Neurologia</li>
           <li title="Aquí només he descrit les pràctiques més habituals">Molt més…</li>
         </ul>        
         <div id="social-buttons">
