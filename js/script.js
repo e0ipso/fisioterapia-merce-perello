@@ -33,10 +33,10 @@ $(document).ready(function () {
     $("#twtr-widget-1").slideToggle(1000, 'easeInOutExpo');
     e.preventDefault();
   });
-  // Declare parallax on layers
-  jQuery('.parallax-layer').parallax({
-    mouseport: jQuery("#port")
-  });
+//   Declare parallax on layers
+//  jQuery('.parallax-layer').parallax({
+//    mouseport: jQuery("#port")
+//  });
   // Scrolling for the navigation
   $('a[href*=#]').bind('click',function(event){
     var $anchor = $(this);
