@@ -32,7 +32,7 @@
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
   <meta property="og:title" content="Mercè Perelló Fisioteràpia">
   <meta property="og:description" content="El centre de fisioteràpia del Nord de Mallorca. Estic a Ca'n Picafort i Muro. També vaig a domicili.">
-  <meta property="og:image" content="/img/face.jpg">
+  <meta property="og:image" content="http://merceperello.es/img/face.jpg">
   <link rel="canonical" href="http://merceperello.es">
   <link rel="author" href="/humans.txt">
   
@@ -62,7 +62,10 @@
           <li><a class="contact" href="#contact">Contacte</a></li>
         </ul>
       </nav>
-      <div id="messages">El teu missatge ha estat enviat</div>
+      
+      <?php if (isset($_REQUEST['message'])) {
+        print('<div id="messages">' . $_REQUEST['message'] . '</div>');
+      } ?>
     </header>
     <div id="main" role="main">
       <section id="home">
@@ -193,7 +196,7 @@
           <input type="email" id="email" name="email" placeholder="example@example.org" required><br />
               
           <label class="required">Teléfon:</label>
-          <input type="text" pattern="[0-9]*" id="email" name="email" required><br />
+          <input type="text" pattern="[0-9]*" id="phone" name="phone" required><br />
       
           <label>Quin dia vols venir?</label>
           <input type="date" id="date" name="date" title="Entra una data del tipus 2012-10-25"><br />
