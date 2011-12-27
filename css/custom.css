@@ -69,10 +69,13 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 130px;
-  background-image: url('../img/bck_top.jpg');
-  background-position: bottom;
-  background-color: #DDD;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.15)), color-stop(100%,rgba(0,0,0,0.35))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.35) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.35) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.35) 100%); /* IE10+ */
+  background: linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.35) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#59000000',GradientType=0 ); /* IE6-9 */
   text-align: left;
   box-shadow: 0px 1px 2px #444;
   z-index: 99;
@@ -83,18 +86,20 @@ nav ul {
 }
 nav ul li {
   float: left;
-  padding: 10px;
+  padding: 12px;
   margin: 5px;
 }
 nav ul li:hover, nav ul li.active {
-  padding: 10px;
-  background: #f5f5f5 url('../img/bck_top_nav_hover.png') no-repeat left top;
+  padding: 11px;
+  border: 1px solid #6f6f6f;
   border-radius: 75px;
-  box-shadow: 0 2px 2px #a29574, inset 0 1px 1px #eee;
+  box-shadow: inset 0 -1px 1px #888, inset 0 1px 1px #aaa;
+  background-color: rgba(0, 0, 0, .05);
 }
 nav ul li.active {
-  box-shadow: inset 0 2px 2px #a29574, 0 1px 1px #eee;
-  background: #DDD url('../img/bck_top_nav_active.png') no-repeat left top;
+  background-image: none;
+  background-color: rgba(0, 0, 0, .07);
+  box-shadow: inset 0px 1px 2px #888, 0px 1px 1px #ccc;
 }
 nav ul li a:link, nav ul li a {
   display: block;
@@ -343,6 +348,18 @@ ul.circles li:hover { opacity: 1; }
 #home p {
   text-align: center;
   margin-top: 3em;
+}
+.txtlzr-data {
+  display: none;
+}
+.txtlzr-container {
+  position: relative;
+  min-height: 135px;
+  font: bold 2.5em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 !important;
+  color: #666;
 }
 
 /* About section */
