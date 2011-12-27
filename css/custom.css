@@ -399,6 +399,13 @@ section#about {
   text-align: center;
   margin-bottom: 20px;
 }
+
+#twtr-widget-1 {
+  width: 600px;
+  margin: 20px auto;
+  display: none;
+}
+
 .parallax-layer-2 {
   position: relative;
   display: inline-block;

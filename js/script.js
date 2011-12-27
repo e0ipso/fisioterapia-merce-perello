@@ -24,10 +24,14 @@ $(document).ready(function () {
      }
   });
   // Colorbox popups
-  $("#show-twitter, #show-facebook").colorbox({
+  $("#show-facebook").colorbox({
     iframe:true,
     width:"600px",
     height:"600px"
+  });
+  $("#show-twitter").click(function (e) {
+    $("#twtr-widget-1").slideToggle(1000, 'easeInOutExpo');
+    e.preventDefault();
   });
   // Declare parallax on layers
   jQuery('.parallax-layer').parallax({
