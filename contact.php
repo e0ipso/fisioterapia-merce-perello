@@ -28,7 +28,7 @@ if (isset($_REQUEST['time'])) {
 if (isset($_REQUEST['message'])) {
   $message = $_REQUEST['message'];
 }
-$message = "El <strong>$name ($phone)</strong> ha mandat el seg&uuml;ent missatge:<br /><br />$message<br /><hr /><br /><strong>Vol venir:</strong>Dia $date, a les $time";
+$body = "El <strong>$name ($phone)</strong> ha mandat el seg&uuml;ent missatge:<br /><br />$message<br /><hr /><br /><strong>Vol venir:</strong>Dia $date, a les $time";
 
 require_once('class.phpmailer.php');
 //include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
@@ -52,11 +52,11 @@ $mail->AddReplyTo($sender, $name);
 
 $mail->Subject    = "Formulari de contacte de la web";
 
-$mail->AltBody    = $message; // optional, comment out and test
+$mail->AltBody    = $body; // optional, comment out and test
 
-$mail->MsgHTML($message);
+$mail->MsgHTML($body);
 
-$address = "mateu@humanbits.es";
+$address = "hola@merceperello.es";
 $mail->AddAddress($address, "Mercè Perelló Fisioteràpia");
 
 if(!$mail->Send()) {
