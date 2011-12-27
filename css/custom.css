@@ -374,7 +374,7 @@ input:invalid::after {
 }
 
 /* Home section */
-ul.circles { list-style-type: none; margin: 0 0 0 40px; width:854px;color: #FFFFFF; text-decoration: none; overflow: hidden; }
+ul.circles { list-style-type: none; margin: 20px auto; width: 760px;color: #FFFFFF; text-decoration: none; overflow: hidden; }
 ul.circles a { color: #FFFFFF; text-decoration: none; display: block; width: 115px; margin: 0 auto; height: 100%; }
 ul.circles li {
     background: url(../img/circle.png) no-repeat;
