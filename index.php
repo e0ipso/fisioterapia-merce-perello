@@ -205,7 +205,7 @@
           <input type="time" id="time" name="time" title="Entra una hora del tipus 16:32"><br />
             
           <label class="required">Comentaris:</label>
-          <textarea rows="4" cols="50" required></textarea><br />
+          <textarea rows="4" cols="50" name="message" id="message" required></textarea><br />
         
           <input type="reset" value="Esborra" /><input type="submit" value="Contacta" />
         </form>
