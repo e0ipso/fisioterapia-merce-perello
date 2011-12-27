@@ -28,7 +28,7 @@ if (isset($_REQUEST['time'])) {
 if (isset($_REQUEST['message'])) {
   $message = $_REQUEST['message'];
 }
-$body = "El <strong>$name ($phone)</strong> ha mandat el seg&uuml;ent missatge:<br /><br />$message<br /><hr /><br /><strong>Vol venir:</strong>Dia $date, a les $time";
+$body = "<p>El <strong>$name ($phone)</strong> ha mandat el seg&uuml;ent missatge:</p><p>$message</p><hr /><strong>Vol venir</strong> dia $date, a les $time";
 
 require_once('class.phpmailer.php');
 //include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
