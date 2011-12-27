@@ -1,3 +1,6 @@
+/* @override 
+	http://merceperello.local.mac:8888/css/custom.css */
+
 /* Default Styles */
 body {
   color: #666;
@@ -419,21 +422,19 @@ ul.circles li:hover { opacity: 1; }
 section#about {
   overflow: visible;
 }
-#port {
-  background: none;
-  margin: 1.5em 0px;
-  position: RElative;
-  z-index: 90;
-  top: -50px;
-  right: 30px;
-  width: 1024px;
-  height: 550px;
-  opacity: 0.6;
-}
-.parallax-layer {
-  position: absolute;
-}
 
+#me {
+  float: left;
+  margin: 0 20px 10px 0;
+  border: 10px solid #FFF;
+  -webkit-transform: rotate(-3deg);
+  -mox-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -khtml-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  box-shadow: 2px 2px 10px #CCC;
+  width: 300px;
+}
 /* Description section */
 #show-twitter, #show-facebook {
   background-image: url('../img/social-buttons.png');
