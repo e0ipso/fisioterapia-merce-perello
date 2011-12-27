@@ -17,11 +17,41 @@ $(document).ready(function () {
   $('abbr[title], input[title], img[title], a[title], li[title]').qtip({
      position: {
        my: 'bottom center',  // Position my top left...
-       at: 'top center', // at the bottom left of...
+       at: 'top center' // at the bottom left of...
      },
      style: {
        classes: 'ui-tooltip-cream ui-tooltip-shadow'
      }
+  });
+  $("#block-1").qtip({
+    position: {
+      my: 'middle left',
+      at: 'middle right'
+    },
+    style: {
+      classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
+    },
+    content: $('#block-1 .tooltip').text()
+  });
+  $("#block-2").qtip({
+    position: {
+      my: 'bottom center',
+      at: 'top center'
+    },
+    style: {
+      classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
+    },
+    content: $('#block-2 .tooltip').text()
+  });
+  $("#block-3").qtip({
+    position: {
+      my: 'middle right',
+      at: 'middle left'
+    },
+    style: {
+      classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
+    },
+    content: $('#block-3 .tooltip').text()
   });
   // Colorbox popups
   $("#show-facebook").colorbox({
