@@ -376,13 +376,14 @@ input:invalid::after {
 }
 
 /* Home section */
-ul.circles { list-style-type: none; margin: 20px auto; width: 760px;color: #FFFFFF; text-decoration: none; overflow: hidden; }
-ul.circles a { color: #FFFFFF; text-decoration: none; display: block; width: 115px; margin: 0 auto; height: 100%; }
+ul.circles { list-style-type: none; margin: 20px auto; width: 760px;color: #FFFFFF; text-decoration: none; overflow: hidden; width: 100%; }
+ul.circles a { color: #FFFFFF; text-decoration: none; display: block; width: 20%; margin: 0 auto; height: 100%; font-size: 100%; }
 ul.circles li {
     background: url(../img/circle.png) no-repeat;
+    background-size: 100%;
     opacity: 0.4;
     float: left;
-    width: 191px;
+    width: 24%;
     height: 120px;
     text-align: center;
     text-transform:uppercase;
@@ -394,8 +395,8 @@ ul.circles li {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
-    margin-left: -40px;
-    padding-top: 80px;
+    margin-left: -5%;
+    padding-top: 10%;
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
