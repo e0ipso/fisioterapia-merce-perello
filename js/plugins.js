@@ -201,3 +201,446 @@ jQuery.extend( jQuery.easing,
 // License: http://www.opensource.org/licenses/mit-license.php
 (function(a,b,c){function Z(c,d,e){var g=b.createElement(c);return d&&(g.id=f+d),e&&(g.style.cssText=e),a(g)}function $(a){var b=y.length,c=(Q+a)%b;return c<0?b+c:c}function _(a,b){return Math.round((/%/.test(a)?(b==="x"?z.width():z.height())/100:1)*parseInt(a,10))}function ba(a){return K.photo||/\.(gif|png|jpe?g|bmp|ico)((#|\?).*)?$/i.test(a)}function bb(){var b;K=a.extend({},a.data(P,e));for(b in K)a.isFunction(K[b])&&b.slice(0,2)!=="on"&&(K[b]=K[b].call(P));K.rel=K.rel||P.rel||"nofollow",K.href=K.href||a(P).attr("href"),K.title=K.title||P.title,typeof K.href=="string"&&(K.href=a.trim(K.href))}function bc(b,c){a.event.trigger(b),c&&c.call(P)}function bd(){var a,b=f+"Slideshow_",c="click."+f,d,e,g;K.slideshow&&y[1]?(d=function(){F.text(K.slideshowStop).unbind(c).bind(j,function(){if(K.loop||y[Q+1])a=setTimeout(W.next,K.slideshowSpeed)}).bind(i,function(){clearTimeout(a)}).one(c+" "+k,e),r.removeClass(b+"off").addClass(b+"on"),a=setTimeout(W.next,K.slideshowSpeed)},e=function(){clearTimeout(a),F.text(K.slideshowStart).unbind([j,i,k,c].join(" ")).one(c,function(){W.next(),d()}),r.removeClass(b+"on").addClass(b+"off")},K.slideshowAuto?d():e()):r.removeClass(b+"off "+b+"on")}function be(b){U||(P=b,bb(),y=a(P),Q=0,K.rel!=="nofollow"&&(y=a("."+g).filter(function(){var b=a.data(this,e).rel||this.rel;return b===K.rel}),Q=y.index(P),Q===-1&&(y=y.add(P),Q=y.length-1)),S||(S=T=!0,r.show(),K.returnFocus&&a(P).blur().one(l,function(){a(this).focus()}),q.css({opacity:+K.opacity,cursor:K.overlayClose?"pointer":"auto"}).show(),K.w=_(K.initialWidth,"x"),K.h=_(K.initialHeight,"y"),W.position(),o&&z.bind("resize."+p+" scroll."+p,function(){q.css({width:z.width(),height:z.height(),top:z.scrollTop(),left:z.scrollLeft()})}).trigger("resize."+p),bc(h,K.onOpen),J.add(D).hide(),I.html(K.close).show()),W.load(!0))}function bf(){!r&&b.body&&(Y=!1,z=a(c),r=Z(X).attr({id:e,"class":n?f+(o?"IE6":"IE"):""}).hide(),q=Z(X,"Overlay",o?"position:absolute":"").hide(),s=Z(X,"Wrapper"),t=Z(X,"Content").append(A=Z(X,"LoadedContent","width:0; height:0; overflow:hidden"),C=Z(X,"LoadingOverlay").add(Z(X,"LoadingGraphic")),D=Z(X,"Title"),E=Z(X,"Current"),G=Z(X,"Next"),H=Z(X,"Previous"),F=Z(X,"Slideshow").bind(h,bd),I=Z(X,"Close")),s.append(Z(X).append(Z(X,"TopLeft"),u=Z(X,"TopCenter"),Z(X,"TopRight")),Z(X,!1,"clear:left").append(v=Z(X,"MiddleLeft"),t,w=Z(X,"MiddleRight")),Z(X,!1,"clear:left").append(Z(X,"BottomLeft"),x=Z(X,"BottomCenter"),Z(X,"BottomRight"))).find("div div").css({"float":"left"}),B=Z(X,!1,"position:absolute; width:9999px; visibility:hidden; display:none"),J=G.add(H).add(E).add(F),a(b.body).append(q,r.append(s,B)))}function bg(){return r?(Y||(Y=!0,L=u.height()+x.height()+t.outerHeight(!0)-t.height(),M=v.width()+w.width()+t.outerWidth(!0)-t.width(),N=A.outerHeight(!0),O=A.outerWidth(!0),r.css({"padding-bottom":L,"padding-right":M}),G.click(function(){W.next()}),H.click(function(){W.prev()}),I.click(function(){W.close()}),q.click(function(){K.overlayClose&&W.close()}),a(b).bind("keydown."+f,function(a){var b=a.keyCode;S&&K.escKey&&b===27&&(a.preventDefault(),W.close()),S&&K.arrowKey&&y[1]&&(b===37?(a.preventDefault(),H.click()):b===39&&(a.preventDefault(),G.click()))}),a("."+g,b).live("click",function(a){a.which>1||a.shiftKey||a.altKey||a.metaKey||(a.preventDefault(),be(this))})),!0):!1}var d={transition:"elastic",speed:300,width:!1,initialWidth:"600",innerWidth:!1,maxWidth:!1,height:!1,initialHeight:"450",innerHeight:!1,maxHeight:!1,scalePhotos:!0,scrolling:!0,inline:!1,html:!1,iframe:!1,fastIframe:!0,photo:!1,href:!1,title:!1,rel:!1,opacity:.9,preloading:!0,current:"image {current} of {total}",previous:"previous",next:"next",close:"close",open:!1,returnFocus:!0,reposition:!0,loop:!0,slideshow:!1,slideshowAuto:!0,slideshowSpeed:2500,slideshowStart:"start slideshow",slideshowStop:"stop slideshow",onOpen:!1,onLoad:!1,onComplete:!1,onCleanup:!1,onClosed:!1,overlayClose:!0,escKey:!0,arrowKey:!0,top:!1,bottom:!1,left:!1,right:!1,fixed:!1,data:undefined},e="colorbox",f="cbox",g=f+"Element",h=f+"_open",i=f+"_load",j=f+"_complete",k=f+"_cleanup",l=f+"_closed",m=f+"_purge",n=!a.support.opacity&&!a.support.style,o=n&&!c.XMLHttpRequest,p=f+"_IE6",q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X="div",Y;if(a.colorbox)return;a(bf),W=a.fn[e]=a[e]=function(b,c){var f=this;b=b||{},bf();if(bg()){if(!f[0]){if(f.selector)return f;f=a("<a/>"),b.open=!0}c&&(b.onComplete=c),f.each(function(){a.data(this,e,a.extend({},a.data(this,e)||d,b))}).addClass(g),(a.isFunction(b.open)&&b.open.call(f)||b.open)&&be(f[0])}return f},W.position=function(a,b){function i(a){u[0].style.width=x[0].style.width=t[0].style.width=a.style.width,t[0].style.height=v[0].style.height=w[0].style.height=a.style.height}var c=0,d=0,e=r.offset(),g=z.scrollTop(),h=z.scrollLeft();z.unbind("resize."+f),r.css({top:-9e4,left:-9e4}),K.fixed&&!o?(e.top-=g,e.left-=h,r.css({position:"fixed"})):(c=g,d=h,r.css({position:"absolute"})),K.right!==!1?d+=Math.max(z.width()-K.w-O-M-_(K.right,"x"),0):K.left!==!1?d+=_(K.left,"x"):d+=Math.round(Math.max(z.width()-K.w-O-M,0)/2),K.bottom!==!1?c+=Math.max(z.height()-K.h-N-L-_(K.bottom,"y"),0):K.top!==!1?c+=_(K.top,"y"):c+=Math.round(Math.max(z.height()-K.h-N-L,0)/2),r.css({top:e.top,left:e.left}),a=r.width()===K.w+O&&r.height()===K.h+N?0:a||0,s[0].style.width=s[0].style.height="9999px",r.dequeue().animate({width:K.w+O,height:K.h+N,top:c,left:d},{duration:a,complete:function(){i(this),T=!1,s[0].style.width=K.w+O+M+"px",s[0].style.height=K.h+N+L+"px",K.reposition&&setTimeout(function(){z.bind("resize."+f,W.position)},1),b&&b()},step:function(){i(this)}})},W.resize=function(a){S&&(a=a||{},a.width&&(K.w=_(a.width,"x")-O-M),a.innerWidth&&(K.w=_(a.innerWidth,"x")),A.css({width:K.w}),a.height&&(K.h=_(a.height,"y")-N-L),a.innerHeight&&(K.h=_(a.innerHeight,"y")),!a.innerHeight&&!a.height&&(A.css({height:"auto"}),K.h=A.height()),A.css({height:K.h}),W.position(K.transition==="none"?0:K.speed))},W.prep=function(b){function g(){return K.w=K.w||A.width(),K.w=K.mw&&K.mw<K.w?K.mw:K.w,K.w}function h(){return K.h=K.h||A.height(),K.h=K.mh&&K.mh<K.h?K.mh:K.h,K.h}if(!S)return;var c,d=K.transition==="none"?0:K.speed;A.remove(),A=Z(X,"LoadedContent").append(b),A.hide().appendTo(B.show()).css({width:g(),overflow:K.scrolling?"auto":"hidden"}).css({height:h()}).prependTo(t),B.hide(),a(R).css({"float":"none"}),o&&a("select").not(r.find("select")).filter(function(){return this.style.visibility!=="hidden"}).css({visibility:"hidden"}).one(k,function(){this.style.visibility="inherit"}),c=function(){function q(){n&&r[0].style.removeAttribute("filter")}var b,c,g=y.length,h,i="frameBorder",k="allowTransparency",l,o,p;if(!S)return;l=function(){clearTimeout(V),C.hide(),bc(j,K.onComplete)},n&&R&&A.fadeIn(100),D.html(K.title).add(A).show();if(g>1){typeof K.current=="string"&&E.html(K.current.replace("{current}",Q+1).replace("{total}",g)).show(),G[K.loop||Q<g-1?"show":"hide"]().html(K.next),H[K.loop||Q?"show":"hide"]().html(K.previous),K.slideshow&&F.show();if(K.preloading){b=[$(-1),$(1)];while(c=y[b.pop()])o=a.data(c,e).href||c.href,a.isFunction(o)&&(o=o.call(c)),ba(o)&&(p=new Image,p.src=o)}}else J.hide();K.iframe?(h=Z("iframe")[0],i in h&&(h[i]=0),k in h&&(h[k]="true"),h.name=f+ +(new Date),K.fastIframe?l():a(h).one("load",l),h.src=K.href,K.scrolling||(h.scrolling="no"),a(h).addClass(f+"Iframe").appendTo(A).one(m,function(){h.src="//about:blank"})):l(),K.transition==="fade"?r.fadeTo(d,1,q):q()},K.transition==="fade"?r.fadeTo(d,0,function(){W.position(0,c)}):W.position(d,c)},W.load=function(b){var c,d,e=W.prep;T=!0,R=!1,P=y[Q],b||bb(),bc(m),bc(i,K.onLoad),K.h=K.height?_(K.height,"y")-N-L:K.innerHeight&&_(K.innerHeight,"y"),K.w=K.width?_(K.width,"x")-O-M:K.innerWidth&&_(K.innerWidth,"x"),K.mw=K.w,K.mh=K.h,K.maxWidth&&(K.mw=_(K.maxWidth,"x")-O-M,K.mw=K.w&&K.w<K.mw?K.w:K.mw),K.maxHeight&&(K.mh=_(K.maxHeight,"y")-N-L,K.mh=K.h&&K.h<K.mh?K.h:K.mh),c=K.href,V=setTimeout(function(){C.show()},100),K.inline?(Z(X).hide().insertBefore(a(c)[0]).one(m,function(){a(this).replaceWith(A.children())}),e(a(c))):K.iframe?e(" "):K.html?e(K.html):ba(c)?(a(R=new Image).addClass(f+"Photo").error(function(){K.title=!1,e(Z(X,"Error").text("This image could not be loaded"))}).load(function(){var a;R.onload=null,K.scalePhotos&&(d=function(){R.height-=R.height*a,R.width-=R.width*a},K.mw&&R.width>K.mw&&(a=(R.width-K.mw)/R.width,d()),K.mh&&R.height>K.mh&&(a=(R.height-K.mh)/R.height,d())),K.h&&(R.style.marginTop=Math.max(K.h-R.height,0)/2+"px"),y[1]&&(K.loop||y[Q+1])&&(R.style.cursor="pointer",R.onclick=function(){W.next()}),n&&(R.style.msInterpolationMode="bicubic"),setTimeout(function(){e(R)},1)}),setTimeout(function(){R.src=c},1)):c&&B.load(c,K.data,function(b,c,d){e(c==="error"?Z(X,"Error").text("Request unsuccessful: "+d.statusText):a(this).contents())})},W.next=function(){!T&&y[1]&&(K.loop||y[Q+1])&&(Q=$(1),W.load())},W.prev=function(){!T&&y[1]&&(K.loop||Q)&&(Q=$(-1),W.load())},W.close=function(){S&&!U&&(U=!0,S=!1,bc(k,K.onCleanup),z.unbind("."+f+" ."+p),q.fadeTo(200,0),r.stop().fadeTo(300,0,function(){r.add(q).css({opacity:1,cursor:"auto"}).hide(),bc(m),A.remove(),setTimeout(function(){U=!1,bc(l,K.onClosed)},1)}))},W.remove=function(){a([]).add(r).add(q).remove(),r=null,a("."+g).removeData(e).removeClass(g).die()},W.element=function(){return a(P)},W.settings=d})(jQuery,document,this);
 (function(e){e(function(){function l(b,a){window.getComputedStyle?(styles=window.getComputedStyle(b[0],null),e.each(styles,function(c,b){a.css(b,styles.getPropertyValue(b))})):(styles=b[0].currentStyle,e.each(styles,function(b,d){a.css(b,d)}))}function q(){var b=this,a=[function(c){var a=e.Deferred();c.animate({top:b._position.bottom,opacity:"hide"},a.resolve);return a.promise()},function(b){var a=e.Deferred();b.fadeOut(1E3,a.resolve);return a.promise()}];return a[Math.floor(Math.random()*a.length)]} function m(b){var a=this,c="random"===this.options.effect?e.fn.textualizer.effects[g[Math.floor(Math.random()*g.length)]]:e.fn.textualizer.effects[this.options.effect],d=e.Deferred(),f=[];e.each(b.chars,function(b,d){if(!d.inserted){d.domNode.css({left:d.pos.left,top:d.pos.top});var k=e.Deferred();setTimeout(function(){c.call(a,d,k)},Math.random()*r);f.push(k)}});e.when.apply(null,f).done(function(){d.resolve()});return d.promise()}var r=2E3;e.fn.textualizer=function(b,a){var c=arguments,d,f=this.data("textualizer"); if(!f){f=[];if(1===c.length&&c[0]instanceof Array)f=c[0];else if(1===c.length&&"object"===typeof c[0])d=c[0];else if(2===c.length)f=c[0],d=c[1];else throw"textualizer: invalid argument(s)";d=e.extend({},e.fn.textualizer.defaults,d);f=new i(this,f,d);this.data("textualizer",f)}d=f;"string"===typeof c[0]&&d[c[0]]&&d[c[0]].apply(d,Array.prototype.slice.call(c,1));return this};e.fn.textualizer.defaults={effect:"random",duration:2E3,rearrangeDuration:1E3};e.fn.textualizer.effects={none:function(b){this.container.append(b.domNode.show())}, fadeIn:function(b,a){this.container.append(b.domNode.fadeIn(2E3,a.resolve));return a.promise()},slideLeft:function(b,a){b.domNode.appendTo(this.container).css({left:-1E3}).show().animate({left:b.pos.left},2E3,a.resolve);return a.promise()},slideTop:function(b,a){b.domNode.appendTo(this.container).css({top:-1E3}).show().animate({top:b.pos.top},2E3,a.resolve);return a.promise()}};var g=[];e.each(e.fn.textualizer.effects,function(b){"none"!==b&&g.push(b)});var n=function(){this.str="";this.chars=[]}; n.prototype={use:function(b){for(var a=0,c=this.chars.length;a<c;a++){var d=this.chars[a];if(d.ch===b&&!d.used)return d.used=!0,d}return null},reset:function(){e.each(this.chars,function(b,a){a.inserted=!1;a.used=!1})}};var s=function(){this.pos=this.domNode=this.ch=null;this.visited=this.inserted=this.used=!1},i=function(b,a,c){this.options=c;c=b.clone().removeAttr("id").appendTo(document.body);l(b,c);c.css({position:"absolute",top:"-1000px"});this.phantomContainer=e("<div />").css({position:"relative", visibility:"hidden"}).appendTo(c);b.css("overflow","hidden");this.elementHeight=b.height();this.container=e("<div />").css("position","relative").appendTo(b);this._previous=null;this._position={};this._position.bottom=b.height();this.blurbs=[];a&&a instanceof Array&&this.data(a)};i.prototype={data:function(b){this.stop();this.list=b;this.blurbs=[]},start:function(){function b(c){a._pause||a._rotate(c).done(function(){setTimeout(function(){c===a.list.length-1&&(c=-1,e.each(a.blurbs,function(b,c){c.reset()})); c++;a._index=c;b(c)},a.options.duration)})}if(this.list&&0!==this.list.length){var a=this,c=this._index||0;this._pause=!1;b(c)}},stop:function(){this.pause();this._previous=null;this._index=0;this.container.empty();this.phantomContainer.empty()},pause:function(){this._pause=!0},_rotate:function(b){var a=e.Deferred(),c=this.blurbs[b];if(!c){var d=[],f,j,h,c=new n;c.str=this.list[b];this.blurbs.push(c);for(b=0,f=c.str.length;b<f;b++)j=c.str.charAt(b),""===j?this.phantomContainer.append(" "):(h=new s, h.ch=j,h.domNode=e("<span/>").text(j),this.phantomContainer.append(h.domNode),d.push(h));var k=this.options.centered?(this.elementHeight-this.phantomContainer.height())/2:0;e.each(d,function(b,a){a.pos=a.domNode.position();a.domNode=a.domNode.clone();a.pos.top+=k;a.domNode.css({left:a.pos.left,top:a.pos.top,position:"absolute"});c.chars.push(a)});this.phantomContainer.html("")}if(this._previous){var g=this,i=[],o=[],p=[],l=q.call(this);e.each(this._previous.chars,function(a,b){var d=c.use(b.ch);if(d)d.domNode= b.domNode,d.inserted=!0,i.push(d);else{var f=e.Deferred();o.push(f);l(b.domNode.delay(2E3*Math.random())).done(function(){b.domNode.remove();f.resolve()})}});e.when.apply(null,o).done(function(){setTimeout(function(){e.each(i,function(b,a){var c=e.Deferred();a.domNode.animate({left:a.pos.left,top:a.pos.top},g.options.rearrangeDuration,c.resolve);p.push(c.promise())});e.when.apply(null,p).done(function(){setTimeout(function(){m.call(g,c).done(function(){a.resolve()})},500)})},1E3)})}else m.call(this, c).done(function(){a.resolve()});this._previous=c;return a.promise()},destroy:function(){this.container.parent().removeData("textualizer").end().remove();this.phantomContainer.remove()}}})})(jQuery);
+/**
+ * jQuery Scrolling Parallax v0.1
+ * http://jonraasch.com/blog/scrolling-parallax-jquery-plugin
+ *
+ * Copyright (c) 2009 Jon Raasch (http://jonraasch.com/)
+ * Licensed under the FreeBSD License (See terms below)
+ *
+ * @author Jon Raasch
+ *
+ * @projectDescription    jQuery plugin to create a parallax effect when the page is scrolled.
+ * 
+ * @version 0.1.0
+ * 
+ * @requires jquery.js (v 1.3.2 minimum)
+ *
+ *
+ * TERMS OF USE - jQuery Scrolling Parallax
+ * Open source under the FreeBSD License.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+ *
+ *    1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+ *    2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY JON RAASCH ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL JON RAASCH OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of Jon Raasch, who is the man.
+ * 
+ *
+ * FOR USAGE INSTRUCTIONS SEE THE DOCUMENATION AT: http://dev.jonraasch.com/scrolling-parallax/documentation
+ * 
+ *
+ */
+
+
+( function( $ ) {
+    
+    $.scrollingParallax = function ( box, options )
+    {
+        var options = options || {};
+        
+        // vertical options
+        
+        options.enableVertical = typeof( options.enableVertical ) != 'undefined' ? options.enableVertical : true;
+        
+        if ( options.enableVertical ) {
+            options.staticSpeed = options.staticSpeed || false;
+            options.staticScrollLimit = typeof(options.staticScrollLimit) != 'undefined' ? options.staticScrollLimit : true;
+            
+            options.loopIt = options.loopIt || false;
+            
+            options.reverseDirection = options.reverseDirection || false;
+        }
+        
+        // horizontal options
+        
+        options.enableHorizontal = options.enableHorizontal || false;
+        
+        if ( options.enableHorizontal ) {
+            options.staticSpeedX = options.staticSpeedX || false;
+            options.staticScrollLimitX = typeof(options.staticScrollLimitX) != 'undefined' ? options.staticScrollLimitX : true;
+            
+            options.loopItX = options.loopItX || false;
+            
+            options.reverseDirectionX = options.reverseDirectionX || false;
+        }
+        
+        // IE6 options
+        
+        options.disableIE6 = options.disableIE6 || false; // disables in IE6 altogether
+        options.disableIE6Anim = typeof(options.disableIE6Anim) != 'undefined' ? options.disableIE6Anim : true; // disables IE6 animation, however background will still append
+        
+        // layout options
+        
+        options.bgWidth = options.bgWidth || (options.enableHorizontal ? '150%' : '100%' );
+        options.bgHeight = options.bgHeight || '150%';
+        
+        options.bgRepeat = options.bgRepeat || false;
+        
+        options.appendInFront = options.appendInFront || false;
+        
+        options.parallaxHeight = options.parallaxHeight || false;
+        options.parallaxWidth = options.parallaxWidth || false;
+        
+                
+        var isIE6 = $.browser.msie && $.browser.version < 7 ? true : false;
+        
+        if ( options.disableIE6 && isIE6 ) return false;
+        
+        var $document = $(document);
+        var $window   = $(window);
+        var $box;
+
+        var backgroundMode = false;
+
+        if ( options.enableVertical ) {
+            var boxHeight;
+            var windowHeight;
+            var docHeight;
+            var parallaxRoom;
+            var maxIE6Move = 0;
+            var loopCount = 0;
+            var startingPos = 0;
+            var tooSmallMode = false;
+            var oldMoveIt = null;
+        }
+        
+        if ( options.enableHorizontal ) {
+            var boxWidth;
+            var windowWidth;
+            var docWidth;
+            var parallaxRoomX;
+            var maxIE6MoveX = 0;
+            var loopCountX = 0;
+            var startingPosX = 0;
+            var tooSmallModeX = false;
+            var oldMoveItX = null;
+        }
+        
+        init( box );
+        
+        
+        
+        // init( obj/string box )   :  sets up the parallax and associated events
+        
+        function init( box ) {
+            // if string append image as background, otherwise define as jQuery object
+            if ( typeof( box ) == 'string' ) $box = appendBackground( box );
+            else {
+                $box = $( box );
+                
+                $box.css('position', isIE6 ? 'absolute' : 'fixed');
+                
+                if ( options.enableVertical ) startingPos = parseInt( $box.css('top') );
+                
+                if ( options.enableHorizontal ) startingPosX = parseInt( $box.css('left') );
+            }
+            
+            if ( options.disableIE6Anim && isIE6 ) return false;
+            
+            defineSizes();
+            
+            // if in background mode, and reverseDirection, then attch the background to the opposite end to maximize scrolling room
+            if ( backgroundMode ) {
+                if ( options.reverseDirection && options.enableVertical ) {
+                    startingPos += -1 * parallaxRoom;
+                    $box.css('top', startingPos);
+                }
+                
+                if ( options.reverseDirectionX && options.enableHorizontal ) {
+                    startingPosX += -1 * parallaxRoomX;
+                    $box.css('left', startingPosX);
+                }
+            }
+            
+            // attach scroll and resize events
+            
+            $window.scroll( function() {
+                ani();
+            });
+            
+            $window.resize( function() {
+                defineSizes();
+            });
+        }
+        
+        
+        
+        
+        // appendBackground( string theSrc )  :   appends an image to the page as a stretched background
+        
+        function appendBackground( theSrc ) {
+            var bgCss = {
+                display:   'block',
+                top:       0,
+                left:      0,
+                width:     options.bgWidth,
+                height:    options.bgHeight,
+                zIndex:    0
+            };
+            
+            bgCss.position = isIE6 ? 'absolute' : 'fixed';
+            
+            if ( options.bgRepeat ) {
+                var $obj = options.appendInFront ? $('<div></div>').appendTo( $('body') ) : $('<div></div>').prependTo( $('body') );
+                bgCss.backgroundRepeat = 'repeat';
+                bgCss.backgroundImage  = 'url("' + theSrc + '")';
+            }
+            else {
+                var $obj = options.appendInFront ? $('<img />').appendTo( $('body') ) : $('<img />').prependTo( $('body') );
+                $obj.attr('src', theSrc);
+            }
+            
+            
+            $obj.css( bgCss );
+            
+            backgroundMode = true;
+            
+            return $obj;
+        }
+        
+        
+        
+        
+        // defineSizes()  :  sets up various constants used by the app - must be set on page load and on screen resize
+        
+        function defineSizes() {
+        
+            // define vertical vars
+            
+            if ( options.enableVertical ) {
+                boxHeight = $box.height();
+                windowHeight = $window.height();
+                docHeight = $document.height();
+                
+                parallaxRoom = ( options.parallaxHeight || boxHeight ) - windowHeight;
+                
+                // if parallax object is smaller than window size
+                if ( parallaxRoom < 0 ) {
+                    if ( options.staticSpeed ) parallaxRoom = windowHeight -  boxHeight;
+                    else parallaxRoom = options.reverseDirection ? windowHeight - startingPos - boxHeight : startingPos;
+                    
+                    tooSmallMode = true;
+                }
+                
+                if ( isIE6 && !maxIE6Move ) maxIE6Move =  -1 * ( docHeight - boxHeight );
+                
+                if ( options.loopIt ) loopCount = parseInt( $document.scrollTop() / ( tooSmallMode ? windowHeight : boxHeight ) );
+            }
+            
+            // define horizontal vars
+
+            if ( options.enableHorizontal ) {
+                boxWidth = $box.width();
+                windowWidth = $window.width();
+                docWidth = $document.width();
+                
+                parallaxRoomX = ( options.parallaxWidth || boxWidth ) - windowWidth;
+            
+                // if parallax object is smaller than window size
+                if ( parallaxRoomX < 0 ) {
+                    parallaxRoomX = options.staticSpeedX ? windowWidth - boxWidth : options.reverseDirectionX ? windowWidth - startingPosX - boxWidth : startingPosX;
+                    
+                    tooSmallModeX = true;
+                }
+                
+                if ( isIE6 && !maxIE6MoveX ) maxIE6MoveX =  -1 * ( docWidth - boxWidth );
+                
+                if ( options.loopItX ) loopCountX = parseInt( $document.scrollLeft() / ( tooSmallModeX ? windowWidth : boxWidth ) );
+            }
+            
+            // make any changes
+            ani();
+        }
+        
+        
+        
+        // ani()  :  performs the animation of the object
+        
+        function ani() {
+            
+            // dont let multiple animations queue up
+            $box.queue( [ ] );
+            
+            var theCss = {};
+            
+            
+            // vertical
+            if ( options.enableVertical ) {
+            
+                var moveIt = calculateMove(true);
+                
+                theCss.top = moveIt;
+            }
+
+            
+            // horizontal
+            if ( options.enableHorizontal ) {
+                
+                var moveItX = calculateMove(false);
+                
+                theCss.left = moveItX;
+            }
+            
+            // if large move animate in FF, safari and opera for smoother transition
+            if ( !$.browser.msie && ( Math.abs( oldMoveIt - moveIt ) > 100 || Math.abs( oldMoveItX - moveItX ) > 100 ) ) $box.animate(theCss, 30);
+            else $box.css(theCss);
+            
+            oldMoveIt = moveIt;
+            oldMoveItX = moveItX;
+
+        }
+        
+        
+        
+        // calculateMove( boolean vertical ) : determines amount to move whether vertically or horizontally
+        
+        function calculateMove( vertical ) {
+            // establish variables, this is basically a switch between vertical and horizontal modes
+            if ( vertical ) {
+                var offset =  $document.scrollTop();
+                var docSize = docHeight;
+                var windowSize = windowHeight;
+                var boxSize = boxHeight;
+                
+                var parallaxRoom2 = parallaxRoom;
+                
+                var loopCount2 = loopCount;
+                var startingPos2 = startingPos;
+                var parallaxRoom2 = parallaxRoom;
+                var tooSmallMode2 = tooSmallMode;
+                var maxIE6Move2 = maxIE6Move;
+                
+                var opts = {
+                    reverseDirection : options.reverseDirection,
+                    staticSpeed : options.staticSpeed,
+                    loopIt : options.loopIt,
+                    staticScrollLimit : options.staticScrollLimit
+                }
+            }
+            else {
+                var offset = $document.scrollLeft();
+                var docSize = docWidth;
+                var windowSize = windowWidth;
+                var boxSize = boxWidth;
+                
+                var loopCount2 = loopCountX;
+                var startingPos2 = startingPosX;
+                var parallaxRoom2 = parallaxRoomX;
+                var tooSmallMode2 = tooSmallModeX;
+                var maxIE6Move2 = maxIE6MoveX;
+                
+                var opts = {
+                    reverseDirection : options.reverseDirectionX,
+                    staticSpeed : options.staticSpeedX,
+                    loopIt : options.loopItX,
+                    staticScrollLimit : options.staticScrollLimitX
+                }
+            }
+            
+            /*** get move amount - static speed ***/
+            
+            if ( opts.staticSpeed ) {
+                var move = offset * opts.staticSpeed;
+
+                // account for number of loops
+                move -= parallaxRoom2 * ( loopCount2 );
+            }
+            
+            /*** get move amount - auto speed ***/
+            
+            else {
+                // determine percentage of page that has been scrolled down
+                var offsetPercent = offset / ( docSize - windowSize );
+                
+                /*
+                var moveIt = ( $.browser.msie && $.browser.version < 7 ) 
+                    ? -1 * ( offsetParent * parallaxRoom + offsetTop )
+                    : -1 * offsetPercent * parallaxRoom;
+                */
+                
+                var move = offsetPercent * parallaxRoom2;
+            }
+            
+            // reverse direction
+            if ( !opts.reverseDirection ) move *= -1;
+            
+            // incorporate starting position
+            move += startingPos2;
+            
+            // if static speed set, make sure move is within bounds
+            if ( opts.staticSpeed ) move = checkMove( move, vertical, opts, parallaxRoom2, tooSmallMode2 );
+            
+            
+            // if in tooSmallMode and looping, add difference of window height and box height, since the box needs to be conceptualized as that much taller ( otherwise it would loop in place rather than over the screen )
+            if ( tooSmallMode2 && opts.staticSpeed && opts.loopIt ) move += windowSize - boxSize;
+            
+            if ( isIE6 ) {
+                // IE6 fix for fixed positioning
+                move += offset;
+                move = Math.max( parseInt(move), parseInt(maxIE6Move2) );
+            }
+            
+            return move;
+        }
+        
+        
+        
+        // checkMove( int moveIt )  :  checks to ensure that move amount does not exceed established bounds
+        
+        function checkMove( move, vertical, opts, parallaxRoom, tooSmallMode ) {
+
+            // if overflow limited
+            if ( !opts.loopIt ) {
+                if ( opts.staticScrollLimit ){
+                    if ( tooSmallMode ) {
+                        if ( move < 0 ) move = 0;
+                        if ( move > parallaxRoom ) move = parallaxRoom;
+                    }
+                    else {
+                        if ( move > 0 ) move = 0;
+                        if ( -1 * move > parallaxRoom ) move = -1 * parallaxRoom;
+                    }
+                }
+            }
+            
+            // if overflow loops
+            else {
+                while ( move < parallaxRoom ) {
+                    move += parallaxRoom;
+                    
+                    var loopCountChange = opts.reverseDirection ? -1 : 1;
+                    
+                    if ( vertical ) loopCount += loopCountChange;
+                    else loopCountX += loopCountChange;
+                }
+                
+                while ( move > ( opts.reverseDirection ? -1 : 0 ) ) {
+                    move -= parallaxRoom;
+                    
+                    var loopCountChange = opts.reverseDirection ? -1 : 1;
+                    
+                    if ( vertical ) loopCount -= loopCountChange;
+                    else loopCountX -= loopCountChange;
+                }
+            }
+            
+            return move;
+        }
+    };
+    
+    $.fn.scrollingParallax = function ( options )
+    {
+        
+        this.each( function() 
+            {
+                new $.scrollingParallax( this, options );
+            }
+        );
+        
+        return this;
+    };
+})( jQuery );

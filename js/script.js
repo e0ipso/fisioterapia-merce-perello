@@ -67,6 +67,16 @@ $(document).ready(function () {
 //  jQuery('.parallax-layer').parallax({
 //    mouseport: jQuery("#port")
 //  });
+  $(function() {
+      
+      $.scrollingParallax('/img/body-2.svg', {
+          bgHeight : '5252px',
+          bgWidth : '2300px',
+          staticSpeed : .25,
+          staticScrollLimit : false
+      });
+  }); 
+  
   // Scrolling for the navigation
   $('a[href*=#]').bind('click',function(event){
     var $anchor = $(this);

@@ -4,11 +4,10 @@ body {
   font: normal 12px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   background-image: url('../img/body-bg.png');
   background-color: #f5f5f5;
-  background-image: url('../img/body-2.svg'), url('../img/bg.jpg');
-  background-position: left top, left top;
-  background-repeat: no-repeat, repeat;
+  background-image: url('../img/bg.jpg');
+  background-position: left top;
+  background-repeat: repeat;
   position: relative;
-  background-size: auto 100%, auto;  
 }
 a, a:link, a:visited {
   color: #7AF;
