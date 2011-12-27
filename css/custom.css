@@ -122,6 +122,37 @@ nav ul li a.location { background-position-x: -128px; }
 nav ul li a.available { background-position-x: -192px; }
 nav ul li a.contact { background-position-x: -256px; }
 
+#messages {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  font: bold 1.8em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  color: #FFF;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#2fde14 0%,
+		#337a28);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#2fde14),
+		to(#337a28));
+	border-radius: 31px;
+	-moz-border-radius: 31px;
+	-webkit-border-radius: 31px;
+	border: 5px solid #FFF;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+
 /* @end */
 
 #container {
