@@ -116,10 +116,20 @@ nav ul li a:hover {
 nav ul li.active a {
   background-position-y: -128px;
 }
-nav ul li a.about { background-position-x: -64px; }
-nav ul li a.location { background-position-x: -128px; }
-nav ul li a.available { background-position-x: -192px; }
-nav ul li a.contact { background-position-x: -256px; }
+nav ul li a.about { background-position: 25% top; }
+nav ul li a.location { background-position: 50% top; }
+nav ul li a.available { background-position: 75% top; }
+nav ul li a.contact { background-position: 100% top; }
+
+nav ul li a.about:hover { background-position: 25% center; }
+nav ul li a.location:hover { background-position: 50% center; }
+nav ul li a.available:hover { background-position: 75% center; }
+nav ul li a.contact:hover { background-position: 100% center; }
+
+nav ul li.active a.about { background-position: 25% bottom; }
+nav ul li.active a.location { background-position: 50% bottom; }
+nav ul li.active a.available { background-position: 75% bottom; }
+nav ul li.active a.contact { background-position: 100% bottom; }
 
 #messages {
   position: absolute;
@@ -444,7 +454,7 @@ section#about {
   overflow: hidden;
 }
 #show-facebook {
-  background-position-y: -60px;
+  background-position: center bottom;
   margin-left: 10px;
 }
 #social-buttons {
