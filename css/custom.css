@@ -381,7 +381,7 @@ section#about {
   -khtml-transform: rotate(-3deg);
   transform: rotate(-3deg);
   box-shadow: 2px 2px 10px #CCC;
-  width: 300px;
+  width: 33%;
 }
 /* Description section */
 #show-twitter, #show-facebook {
