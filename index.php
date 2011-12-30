@@ -125,7 +125,7 @@
           }).render().setUser('rceperello').start();
           </script>
         </div>
-        <div style="text-align: center">Si cliques el botó de <em>Twitter</em> o de <em>Facebook</em> s'obrirà una finestreta amb el que faig a aquestes xarxes socials.</div>
+        <div class="help" style="text-align: center">Si cliques el botó de <em>Twitter</em> o de <em>Facebook</em> s'obrirà una finestreta amb el que faig a aquestes xarxes socials.</div>
       </section>
       <section id="about">
         <h2>Sobre mi</h2>

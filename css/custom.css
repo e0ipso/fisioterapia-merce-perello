@@ -1,3 +1,6 @@
+/* @override 
+	http://merceperello.local.mac:8888/css/custom.css */
+
 /* Default Styles */
 body {
   color: #666;
@@ -58,7 +61,6 @@ section > p, section header {
   font: 1.8em/1.5em "Museo Slab", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: #57A;
   text-shadow: 0 -1px 0 black, 0 1px 1px #FFF;
-  
 }
 
 /* @group Navigation */
@@ -255,67 +257,6 @@ a.button, button, input[type="submit"], input[type="reset"] {
     font-size: 2em;
     font-weight: bold;
   }
-/*table.availability {
-  width: 450px;
-  margin: 120px auto 0 auto;
-  position: relative;
-  z-index: 4;
-  -webkit-transform: rotate(-15deg);
-  -mox-transform: rotate(-15deg);
-  -o-transform: rotate(-15deg);
-  -khtml-transform: rotate(-15deg);
-  transform: rotate(-15deg);
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;	
-  transition: all 0.5s ease-in-out;
-}
-table.availability:hover {
-  -webkit-transform: rotate(0);
-  -mox-transform: rotate(0);
-  -o-transform: rotate(0);
-  -khtml-transform: rotate(0);
-  transform: rotate(0);
-}
-  table.availability::before, table.availability::after {
-    content: '';
-    position: absolute;
-    z-index: -2;
-    top: -98px;
-    left: -63px;
-    padding: 302px;
-    border-radius: 302px;
-    border: none;
-    background-color: #000;
-    opacity: 0.45;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;	
-    transition: all 0.5s ease-in-out;
-  }
-    table.availability:hover::before, table.availability:hover::after {
-      background-color: #267;
-      opacity: 0.2;
-    }
-  table.availability::after {
-    padding: 290px;
-    border: 2px dashed #FFF;
-    background-color: transparent;
-    margin: 10px;
-  }
-  
-table.availability td.not-available { background-color: #C28882; }
-table.availability td.available {
-  background-color: #82C2A8;
-  text-align: center;
-}
-table.availability td.available:after {
-  content: 'SI';
-  color: white;
-  text-shadow: 0 1px 1px #4a6149;
-}*/
 
 /* Mapa de localització */
 #map_canvas {
@@ -350,7 +291,6 @@ table.availability td.available:after {
   font-size: 1.2em;
   width: 580px;
   margin: 0 auto;
-  padding-left: 130px;
 }
 #contact label {
   display: inline-block;
@@ -468,13 +408,6 @@ section#about {
   display: none;
 }
 
-.parallax-layer-2 {
-  position: relative;
-  display: inline-block;
-}
-#port-2 {
-  position: relative;
-}
 /* @group Colorbox */
 
 /*
@@ -517,3 +450,98 @@ section#about {
 
 /* @end */
 
+/* @group Mobile devices */
+
+@media screen and (max-width: 640px) {
+  /* Phone styles */
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+  /* Tablet styles */
+  section > p, section header {
+    font: 1.1em/1.5em "Museo Slab", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    color: #57A;
+    text-shadow: 0 1px 1px #FFF;
+  }
+  ul.circles {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* Both phone and tablet styles */
+  
+  /* NAVIGATION */
+  nav ul li a:link, nav ul li a {
+    background: none;
+    color: white;
+    display: inline;
+  }
+  nav ul li:hover, nav ul li {
+    float: left;
+    padding: 7px;
+    margin: 5px 3px;
+    text-indent: 0;
+  }
+  nav ul li:hover {
+    border-radius: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: white;
+  }
+  nav ul li.active {
+    padding: 6px;
+    border: 1px solid #6f6f6f;
+    border-radius: 3px;
+    background-image: none;
+    background-color: rgba(0, 0, 0, .07);
+    box-shadow: inset 0px 1px 2px #888, 0px 1px 1px #ccc;
+  }
+  nav ul li a:hover {
+    color: auto;
+    text-decoration: none;
+  }
+  
+  /* HOME */
+  .txtlzr-data { display: block; }
+    .txtlzr-data li { font-size: 1.2em; line-height: 1.5em; list-style: circle; margin: 20px 0; color: #57A; font-weight: bold; text-shadow: 0 1px 1px #FFF; }
+  .txtlzr-container {
+    display: none;
+  }
+  
+  /* DESCRIPTION */
+  #description .help { display: none; }
+  
+  /* MAP */
+  #map_canvas {
+    height: 400px; width: 100%; float: none;
+    border: 10px solid white;
+  }
+  
+  #locations { list-style: none; width: 100%; float: none; margin: 0; padding: 0; }
+    #locations li { display: inline-block; float: left; width: 33%; padding: 0; text-align: center; }
+      #locations li h3 { margin: 10px 0; }
+      #locations li:hover, #locations li.hover { background-color: rgba(0, 0, 0, 0.05); }
+      #locations li:hover h3, #locations li.hover h3 { color: red; text-shadow: 0 1px 0px rgba(255,255,255,0.3); }
+      #locations li p { display: none; }
+  
+  #more-info { width: 100%; float: none; background-color: rgba(0, 0, 0, 0.05); height: 400px; margin-top: 20px; border-radius: 10px; }
+    #more-info * { position: static; }
+    #more-info > div { padding: 20px; }
+  
+  /* CONTACT */
+  #contact label {
+    display: block;
+  }
+  #contact input, #contact textarea {
+    width: 100%;
+  }
+  #contact input[type="reset"], #contact input[type="submit"] {
+    width: 44%;
+    margin: 3%;
+  }
+}
+
+
+/* @end */

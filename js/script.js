@@ -14,6 +14,74 @@ $(document).ready(function () {
   sectionSize();
   $('h1').fitText(0.7);
   $('h2').fitText(1.2);
+  
+  if ($(window).width() > 960) {
+      $("#block-1").qtip({
+        position: {
+          my: 'middle left',
+          at: 'middle right'
+        },
+        style: {
+          classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
+        },
+        content: $('#block-1 .tooltip').text()
+      });
+      $("#block-2").qtip({
+        position: {
+          my: 'bottom center',
+          at: 'top center'
+        },
+        style: {
+          classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
+        },
+        content: $('#block-2 .tooltip').text()
+      });
+      $("#block-3").qtip({
+        position: {
+          my: 'middle right',
+          at: 'middle left'
+        },
+        style: {
+          classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
+        },
+        content: $('#block-3 .tooltip').text()
+      });
+      // Colorbox popups
+      $("#show-facebook").colorbox({
+        iframe:true,
+        width:"600px",
+        height:"600px"
+      });
+      $("#show-twitter").click(function (e) {
+        $("#twtr-widget-1").slideToggle(1000, 'easeInOutExpo');
+        e.preventDefault();
+      });
+    //   Declare parallax on layers
+    //  jQuery('.parallax-layer').parallax({
+    //    mouseport: jQuery("#port")
+    //  });
+      $(function() {
+          
+          $.scrollingParallax('/img/body-2.svg', {
+              bgHeight : '5252px',
+              bgWidth : '2300px',
+              staticSpeed : .25,
+              staticScrollLimit : false
+          });
+      }); 
+      
+      var list = [];
+      $('ul#txtlzr-data-1 li').each(function () { list.push($(this).text()) });
+      var txtlizer = $('#txtlzr-container-1');
+      txtlizer.textualizer(list);
+      txtlizer.textualizer('start');
+    
+  }
+  else {
+    $('#show-facebook').attr('href', 'https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133');
+    $('#show-twitter').attr('href', 'https://twitter.com/#!/rceperello');
+    
+  }
   $('abbr[title], input[title], img[title], a[title], li[title]').qtip({
      position: {
        my: 'bottom center',  // Position my top left...
@@ -23,60 +91,6 @@ $(document).ready(function () {
        classes: 'ui-tooltip-cream ui-tooltip-shadow'
      }
   });
-  $("#block-1").qtip({
-    position: {
-      my: 'middle left',
-      at: 'middle right'
-    },
-    style: {
-      classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
-    },
-    content: $('#block-1 .tooltip').text()
-  });
-  $("#block-2").qtip({
-    position: {
-      my: 'bottom center',
-      at: 'top center'
-    },
-    style: {
-      classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
-    },
-    content: $('#block-2 .tooltip').text()
-  });
-  $("#block-3").qtip({
-    position: {
-      my: 'middle right',
-      at: 'middle left'
-    },
-    style: {
-      classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
-    },
-    content: $('#block-3 .tooltip').text()
-  });
-  // Colorbox popups
-  $("#show-facebook").colorbox({
-    iframe:true,
-    width:"600px",
-    height:"600px"
-  });
-  $("#show-twitter").click(function (e) {
-    $("#twtr-widget-1").slideToggle(1000, 'easeInOutExpo');
-    e.preventDefault();
-  });
-//   Declare parallax on layers
-//  jQuery('.parallax-layer').parallax({
-//    mouseport: jQuery("#port")
-//  });
-  $(function() {
-      
-      $.scrollingParallax('/img/body-2.svg', {
-          bgHeight : '5252px',
-          bgWidth : '2300px',
-          staticSpeed : .25,
-          staticScrollLimit : false
-      });
-  }); 
-  
   // Scrolling for the navigation
   $('a[href*=#]').bind('click',function(event){
     var $anchor = $(this);
@@ -151,9 +165,5 @@ $(document).ready(function () {
   });
   
   $("#locations li:first").trigger("mouseenter");
-  var list = [];
-  $('ul#txtlzr-data-1 li').each(function () { list.push($(this).text()) });
-  var txtlizer = $('#txtlzr-container-1');
-  txtlizer.textualizer(list);
-  txtlizer.textualizer('start');
+
 });
