@@ -3,6 +3,11 @@
 //error_reporting(E_ALL);
 error_reporting(E_STRICT);
 
+if (!isset($_REQUEST['name']) || !isset($_REQUEST['email']) || !isset($_REQUEST['phone']) || !isset($_REQUEST['message']) || !$_REQUEST['name'] || !$_REQUEST['email'] || !$_REQUEST['phone'] || !$_REQUEST['message']) {
+  header('Location: http://merceperello.es/?message=' . urlencode('Has d\'emplenar tots els camps obligatoris'));
+  die;
+}
+
 date_default_timezone_set('Europe/Madrid');
 
 $message = $name = $phone = $date = $time = '[buit]';

@@ -15,6 +15,9 @@ $(document).ready(function () {
   $('h1').fitText(0.7);
   $('h2').fitText(1.2);
   
+  /* Do not submit the form if there are errors. */
+  $('#contact form').submit ( function () { if($('*:invalid', $(this)).length){ alert("Has d'emplenar tots els camps obligatoris."); return false; }} );
+  
   if ($(window).width() > 960) {
       $("#block-1").qtip({
         position: {

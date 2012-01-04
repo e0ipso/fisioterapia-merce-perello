@@ -186,13 +186,13 @@
         <header>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte en tu. Si vols també em pots telefonar al 660-082-398.</header>
         <form action="contact.php" method="post">
           <label class="required">El teu nom:</label>
-          <input type="text" id="name" name="name" placeholder="Perico de los Palotes" required><br />
+          <input type="text" id="name" name="name" placeholder="Perico de los Palotes" required><div></div><br />
         
           <label class="required">Adreça d'email:</label>
-          <input type="email" id="email" name="email" placeholder="example@example.org" required><br />
+          <input type="email" id="email" name="email" placeholder="example@example.org" required><div></div><br />
               
           <label class="required">Teléfon:</label>
-          <input type="text" pattern="[0-9]*" id="phone" name="phone" required><br />
+          <input type="text" pattern="[0-9]*" id="phone" name="phone" required><div></div><br />
       
           <label>Quin dia vols venir?</label>
           <input type="date" id="date" name="date" title="Entra una data del tipus 2012-10-25"><br />
@@ -201,7 +201,7 @@
           <input type="time" id="time" name="time" title="Entra una hora del tipus 16:32"><br />
             
           <label class="required">Comentaris:</label>
-          <textarea rows="4" cols="50" name="message" id="message" required></textarea><br />
+          <textarea rows="4" cols="50" name="message" id="message" required></textarea><div></div><br />
         
           <input type="reset" value="Esborra" /><input type="submit" value="Contacta" />
         </form>

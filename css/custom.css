@@ -289,7 +289,7 @@ a.button, button, input[type="submit"], input[type="reset"] {
 /* Contact form */
 #contact form {
   font-size: 1.2em;
-  width: 580px;
+  width: 600px;
   margin: 0 auto;
 }
 #contact label {
@@ -314,9 +314,9 @@ a.button, button, input[type="submit"], input[type="reset"] {
   background-image: -o-linear-gradient(top, #e2e2e2, #f5f5f5);
   background-image: linear-gradient(top, #e2e2e2, #f5f5f5);
 }
-input:invalid::after {
-  content: 'X';
-}
+#contact *:invalid + div, #contact *:valid + div { display: inline-block; margin-left: 5px; width: 16px; height: 16px; background-image: url('../img/accept.png'); }
+#contact *:invalid + div { background-image: url('../img/cancel.png'); }
+
 #contact input[type="reset"] {
   margin-left: 250px;
   margin-right: 10px;
@@ -531,16 +531,10 @@ section#about {
     #more-info > div { padding: 20px; }
   
   /* CONTACT */
-  #contact label {
-    display: block;
-  }
-  #contact input, #contact textarea {
-    width: 100%;
-  }
-  #contact input[type="reset"], #contact input[type="submit"] {
-    width: 44%;
-    margin: 3%;
-  }
+  #contact label { display: block; }
+  #contact input, #contact textarea { width: 100%; }
+  #contact input[type="reset"], #contact input[type="submit"] { width: 44%; margin: 3%; }  
+  
 }
 
 
