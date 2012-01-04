@@ -183,7 +183,7 @@
       </section>
       <section id="contact">
         <h2>Contacta</h2>
-        <header>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte en tu. Si vols també em pots telefonar al 660-082-398.</header>
+        <header>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte en tu. Si vols també em pots telefonar al 660-082-398 o escriure a <a href="mailto:hola@merceperello.es">hola@merceperello.es</a></header>
         <form action="contact.php" method="post">
           <label class="required">El teu nom:</label>
           <input type="text" id="name" name="name" placeholder="Perico de los Palotes" required><div></div><br />
