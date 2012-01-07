@@ -19,36 +19,6 @@ $(document).ready(function () {
   $('#contact form').submit ( function () { if($('*:invalid', $(this)).length){ alert("Has d'emplenar tots els camps obligatoris."); return false; }} );
   
   if ($(window).width() > 960) {
-      $("#block-1").qtip({
-        position: {
-          my: 'middle left',
-          at: 'middle right'
-        },
-        style: {
-          classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
-        },
-        content: $('#block-1 .tooltip').text()
-      });
-      $("#block-2").qtip({
-        position: {
-          my: 'bottom center',
-          at: 'top center'
-        },
-        style: {
-          classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
-        },
-        content: $('#block-2 .tooltip').text()
-      });
-      $("#block-3").qtip({
-        position: {
-          my: 'middle right',
-          at: 'middle left'
-        },
-        style: {
-          classes: 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-big'
-        },
-        content: $('#block-3 .tooltip').text()
-      });
       // Colorbox popups
       $("#show-facebook").colorbox({
         iframe:true,
@@ -77,6 +47,7 @@ $(document).ready(function () {
       $('ul#txtlzr-data-1 li').each(function () { list.push($(this).text()) });
       var txtlizer = $('#txtlzr-container-1');
       txtlizer.textualizer(list);
+      // Animació més curta i mostrar més temps el text
       txtlizer.textualizer('start');
     
   }

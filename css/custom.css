@@ -23,7 +23,8 @@ a:hover {
 h1, h2, h3 {
   display: block;
   width: 100%;
-  font: normal 1em/1.5em "Museo Slab";
+  font: bold 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  letter-spacing: 0.0em;
   text-transform: uppercase;
   color: red;
   text-align: center;
@@ -323,32 +324,6 @@ a.button, button, input[type="submit"], input[type="reset"] {
 }
 
 /* Home section */
-ul.circles { list-style-type: none; margin: 20px auto; width: 760px;color: #FFFFFF; text-decoration: none; overflow: hidden; width: 100%; }
-ul.circles a { color: #FFFFFF; text-decoration: none; display: block; width: 20%; margin: 0 auto; height: 100%; font-size: 100%; }
-ul.circles li {
-    background: url(../img/circle.png) no-repeat;
-    background-size: 100%;
-    opacity: 0.4;
-    float: left;
-    width: 24%;
-    height: 120px;
-    text-align: center;
-    text-transform:uppercase;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: -5%;
-    padding-top: 10%;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-}
-ul.circles li:hover { opacity: 1; }
 #home p {
   text-align: center;
   margin-top: 3em;
@@ -407,6 +382,11 @@ section#about {
   margin: 20px auto;
   display: none;
 }
+#treatments { text-align: center; margin: 20px 0; }
+  #treatments .treatment { display: none; }
+    #treatments .treatment:first-child { display: block; }
+    #treatments .treatment .explanation { display: none; }
+
 
 /* @group Colorbox */
 

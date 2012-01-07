@@ -74,24 +74,24 @@
         <h1>Fisioteràpia</h1>
         <h2>Mercè Perelló</h2>
         <ul id="txtlzr-data-1" class="txtlzr-data">
-          <li>Per a la teva tranquilitat evita aquells que et venen salud sense la preparació adient</li>
-          <li>Tractament de lesions esportives per a poder estar be ràpidament.</li>
-          <li>Alleuja el teu dolor</li>
-          <li>És el complement ideal a la rehabilitació de la teva assegurança</li>
-          <li>Un ambient comfortable a Muro, Ca'n Picafort o a casa teva</li>
+          <li>Per a la teva tranquilitat evita aquells que et venen salud sense la preparació adient.</li>
+          <li>Tractament de lesions esportives per a una ràpida recuperació.</li>
+          <li>Alleuja el teu dolor.</li>
+          <li>És el complement ideal a la rehabilitació de la teva assegurança.</li>
+          <li>Un ambient comfortable a Muro, Ca'n Picafort o a casa teva.</li>
         </ul>
         <header id="txtlzr-container-1" class="txtlzr-container"></header>
         <p><a href="#description" class="button">Què faig?</a></p>
       </section>
       <section id="description">
-        <h2>El que faig</h2>
-        <header>Estic especialitzada en el tractament del dolor i la rehabilitació utilitzant, entre d'altres, els següents tractaments:</header>
-        <ul class="circles">
-          <li title="Massoteràpia, Kinesioteràpia, o Teràpia pel Moviment, Fisioteràpia Manipulativa Articular, Reeducació postural, Fisioteràpia Respiratòria, Embenat funcional i Kinesio-Taping.">Manual</li>
-          <li title="Eliminació del líquid limfàtic excessiu produit per diverses causes.">Drenatge</li>
-          <li title="Maniobra terapèutica consistent en la mobilització del teixit conectiu, efectuada en profunditat, en punts precisos, codificats, on és possible trobar una alteració de l'elasticitat i consistència de la fàscia.">Fàscies</li>
-          <li title="Tècniques que s'apliquen per el tractament de les seqüel·les en lesions del sistema nerviós central o perifèric.">Neurologia</li>
-          <li title="Aquí només he descrit les pràctiques més habituals">Molt més…</li>
+        <h2>Tractaments</h2>
+        <header>Especialitzada en el tractament del dolor i la rehabilitació funcional.</header>
+        <ul id="treatments">
+          <li class="treatment"><a href="#">Manual</a><div class="explanation">Massoteràpia, Kinesioteràpia, o Teràpia pel Moviment, Fisioteràpia Manipulativa Articular, Reeducació postural, Fisioteràpia Respiratòria, Embenat funcional i Kinesio-Taping.</div></li>
+          <li class="treatment"><a href="#">Drenatge</a><div class="explanation">Eliminació del líquid limfàtic excessiu produit per diverses causes.</div></li>
+          <li class="treatment"><a href="#">Fàscies</a><div class="explanation">Maniobra terapèutica consistent en la mobilització del teixit conectiu, efectuada en profunditat, en punts precisos, codificats, on és possible trobar una alteració de l'elasticitat i consistència de la fàscia.</div></li>
+          <li class="treatment"><a href="#">Neurologia</a><div class="explanation">Tècniques que s'apliquen per el tractament de les seqüel·les en lesions del sistema nerviós central o perifèric.</div></li>
+          <li class="treatment"><a href="#">Molt més…</a><div class="explanation">Aquí només he descrit les pràctiques més habituals.</div></li>
         </ul>        
         <div id="social-buttons">
           <a id="show-twitter" href="#">Twitter</a>
@@ -163,23 +163,7 @@
       </section>
       <section id="available">
         <h2>Disponibilitat</h2>
-        <header>A grans trets aquesta és la meva disponibilitat. Això no significa que no pugui estar ocupada o disponible contradint l'horari de sota.</header>
-        <div id="block-1" class="block-33">
-          <h3>Dilluns, dimecres i divendres</h3>
-          <p>Podem quedar en qualsevol moment del dia. Des de les 10h de dematí fins a les 21h de la nit.</p>
-          <div class="tooltip">de 10h a 22h</div>
-        </div>
-        <div id="block-2" class="block-33">
-          <h3>Dimarts i dijous</h3>
-          <p>Els dimarts i dijous són els dies que ho tenc més difícil. Així i tot, telefona'm per a saber si tenc un forat lliure a l'hora que et convé.</p>
-          <div class="tooltip">Telefona (660-082-398)</div>
-        </div>
-        <div id="block-3" class="block-33">
-          <h3>Dissabte i diumenge</h3>
-          <p>Podem quedar entre les 12h del matí fins a les 21h. Els caps de setmana m'agrada dormir una mica més pel matí.</p>
-          <div class="tooltip">de 12h a 22h</div>
-        </div>
-        
+        <header>A grans trets aquesta és la meva disponibilitat. Això no significa que no pugui estar ocupada o disponible contradint l'horari de sota.</header>        
       </section>
       <section id="contact">
         <h2>Contacta</h2>
@@ -200,7 +184,7 @@
           <label>A quina hora?</label>
           <input type="time" id="time" name="time" title="Entra una hora del tipus 16:32"><br />
             
-          <label class="required">Comentaris:</label>
+          <label class="required">Què et passa?:</label>
           <textarea rows="4" cols="50" name="message" id="message" required></textarea><div></div><br />
         
           <input type="reset" value="Esborra" /><input type="submit" value="Contacta" />
