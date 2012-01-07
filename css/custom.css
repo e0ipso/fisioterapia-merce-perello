@@ -59,7 +59,7 @@ section {
 }
 
 section > p, section header {
-  font: 1.8em/1.5em "Museo Slab", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font: 1.8em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: #57A;
   text-shadow: 0 -1px 0 black, 0 1px 1px #FFF;
 }
@@ -439,7 +439,7 @@ section#about {
 @media screen and (min-width: 641px) and (max-width: 960px) {
   /* Tablet styles */
   section > p, section header {
-    font: 1.1em/1.5em "Museo Slab", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font: 1.1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     color: #57A;
     text-shadow: 0 1px 1px #FFF;
   }
