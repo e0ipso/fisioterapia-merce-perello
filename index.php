@@ -82,7 +82,7 @@
           <li>Un ambient comfortable a Muro, Ca'n Picafort o a casa teva.</li>
         </ul>
         <header id="txtlzr-container-1" class="txtlzr-container"></header>
-        <p><a href="#about" class="button">Qui soc?</a></p>
+        <p><a href="#description" class="button" style="margin-right: 10px">Què faig?</a><a href="#about" class="button">Qui soc?</a></p>
       </section>
       <section id="description">
         <h2>Tractaments</h2>
