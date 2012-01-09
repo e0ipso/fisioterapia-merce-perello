@@ -150,7 +150,461 @@ jQuery.extend( jQuery.easing,
 // (c) 2011 Jack Moore - jacklmoore.com
 // License: http://www.opensource.org/licenses/mit-license.php
 (function(a,b,c){function Z(c,d,e){var g=b.createElement(c);return d&&(g.id=f+d),e&&(g.style.cssText=e),a(g)}function $(a){var b=y.length,c=(Q+a)%b;return c<0?b+c:c}function _(a,b){return Math.round((/%/.test(a)?(b==="x"?z.width():z.height())/100:1)*parseInt(a,10))}function ba(a){return K.photo||/\.(gif|png|jpe?g|bmp|ico)((#|\?).*)?$/i.test(a)}function bb(){var b;K=a.extend({},a.data(P,e));for(b in K)a.isFunction(K[b])&&b.slice(0,2)!=="on"&&(K[b]=K[b].call(P));K.rel=K.rel||P.rel||"nofollow",K.href=K.href||a(P).attr("href"),K.title=K.title||P.title,typeof K.href=="string"&&(K.href=a.trim(K.href))}function bc(b,c){a.event.trigger(b),c&&c.call(P)}function bd(){var a,b=f+"Slideshow_",c="click."+f,d,e,g;K.slideshow&&y[1]?(d=function(){F.text(K.slideshowStop).unbind(c).bind(j,function(){if(K.loop||y[Q+1])a=setTimeout(W.next,K.slideshowSpeed)}).bind(i,function(){clearTimeout(a)}).one(c+" "+k,e),r.removeClass(b+"off").addClass(b+"on"),a=setTimeout(W.next,K.slideshowSpeed)},e=function(){clearTimeout(a),F.text(K.slideshowStart).unbind([j,i,k,c].join(" ")).one(c,function(){W.next(),d()}),r.removeClass(b+"on").addClass(b+"off")},K.slideshowAuto?d():e()):r.removeClass(b+"off "+b+"on")}function be(b){U||(P=b,bb(),y=a(P),Q=0,K.rel!=="nofollow"&&(y=a("."+g).filter(function(){var b=a.data(this,e).rel||this.rel;return b===K.rel}),Q=y.index(P),Q===-1&&(y=y.add(P),Q=y.length-1)),S||(S=T=!0,r.show(),K.returnFocus&&a(P).blur().one(l,function(){a(this).focus()}),q.css({opacity:+K.opacity,cursor:K.overlayClose?"pointer":"auto"}).show(),K.w=_(K.initialWidth,"x"),K.h=_(K.initialHeight,"y"),W.position(),o&&z.bind("resize."+p+" scroll."+p,function(){q.css({width:z.width(),height:z.height(),top:z.scrollTop(),left:z.scrollLeft()})}).trigger("resize."+p),bc(h,K.onOpen),J.add(D).hide(),I.html(K.close).show()),W.load(!0))}function bf(){!r&&b.body&&(Y=!1,z=a(c),r=Z(X).attr({id:e,"class":n?f+(o?"IE6":"IE"):""}).hide(),q=Z(X,"Overlay",o?"position:absolute":"").hide(),s=Z(X,"Wrapper"),t=Z(X,"Content").append(A=Z(X,"LoadedContent","width:0; height:0; overflow:hidden"),C=Z(X,"LoadingOverlay").add(Z(X,"LoadingGraphic")),D=Z(X,"Title"),E=Z(X,"Current"),G=Z(X,"Next"),H=Z(X,"Previous"),F=Z(X,"Slideshow").bind(h,bd),I=Z(X,"Close")),s.append(Z(X).append(Z(X,"TopLeft"),u=Z(X,"TopCenter"),Z(X,"TopRight")),Z(X,!1,"clear:left").append(v=Z(X,"MiddleLeft"),t,w=Z(X,"MiddleRight")),Z(X,!1,"clear:left").append(Z(X,"BottomLeft"),x=Z(X,"BottomCenter"),Z(X,"BottomRight"))).find("div div").css({"float":"left"}),B=Z(X,!1,"position:absolute; width:9999px; visibility:hidden; display:none"),J=G.add(H).add(E).add(F),a(b.body).append(q,r.append(s,B)))}function bg(){return r?(Y||(Y=!0,L=u.height()+x.height()+t.outerHeight(!0)-t.height(),M=v.width()+w.width()+t.outerWidth(!0)-t.width(),N=A.outerHeight(!0),O=A.outerWidth(!0),r.css({"padding-bottom":L,"padding-right":M}),G.click(function(){W.next()}),H.click(function(){W.prev()}),I.click(function(){W.close()}),q.click(function(){K.overlayClose&&W.close()}),a(b).bind("keydown."+f,function(a){var b=a.keyCode;S&&K.escKey&&b===27&&(a.preventDefault(),W.close()),S&&K.arrowKey&&y[1]&&(b===37?(a.preventDefault(),H.click()):b===39&&(a.preventDefault(),G.click()))}),a("."+g,b).live("click",function(a){a.which>1||a.shiftKey||a.altKey||a.metaKey||(a.preventDefault(),be(this))})),!0):!1}var d={transition:"elastic",speed:300,width:!1,initialWidth:"600",innerWidth:!1,maxWidth:!1,height:!1,initialHeight:"450",innerHeight:!1,maxHeight:!1,scalePhotos:!0,scrolling:!0,inline:!1,html:!1,iframe:!1,fastIframe:!0,photo:!1,href:!1,title:!1,rel:!1,opacity:.9,preloading:!0,current:"image {current} of {total}",previous:"previous",next:"next",close:"close",open:!1,returnFocus:!0,reposition:!0,loop:!0,slideshow:!1,slideshowAuto:!0,slideshowSpeed:2500,slideshowStart:"start slideshow",slideshowStop:"stop slideshow",onOpen:!1,onLoad:!1,onComplete:!1,onCleanup:!1,onClosed:!1,overlayClose:!0,escKey:!0,arrowKey:!0,top:!1,bottom:!1,left:!1,right:!1,fixed:!1,data:undefined},e="colorbox",f="cbox",g=f+"Element",h=f+"_open",i=f+"_load",j=f+"_complete",k=f+"_cleanup",l=f+"_closed",m=f+"_purge",n=!a.support.opacity&&!a.support.style,o=n&&!c.XMLHttpRequest,p=f+"_IE6",q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X="div",Y;if(a.colorbox)return;a(bf),W=a.fn[e]=a[e]=function(b,c){var f=this;b=b||{},bf();if(bg()){if(!f[0]){if(f.selector)return f;f=a("<a/>"),b.open=!0}c&&(b.onComplete=c),f.each(function(){a.data(this,e,a.extend({},a.data(this,e)||d,b))}).addClass(g),(a.isFunction(b.open)&&b.open.call(f)||b.open)&&be(f[0])}return f},W.position=function(a,b){function i(a){u[0].style.width=x[0].style.width=t[0].style.width=a.style.width,t[0].style.height=v[0].style.height=w[0].style.height=a.style.height}var c=0,d=0,e=r.offset(),g=z.scrollTop(),h=z.scrollLeft();z.unbind("resize."+f),r.css({top:-9e4,left:-9e4}),K.fixed&&!o?(e.top-=g,e.left-=h,r.css({position:"fixed"})):(c=g,d=h,r.css({position:"absolute"})),K.right!==!1?d+=Math.max(z.width()-K.w-O-M-_(K.right,"x"),0):K.left!==!1?d+=_(K.left,"x"):d+=Math.round(Math.max(z.width()-K.w-O-M,0)/2),K.bottom!==!1?c+=Math.max(z.height()-K.h-N-L-_(K.bottom,"y"),0):K.top!==!1?c+=_(K.top,"y"):c+=Math.round(Math.max(z.height()-K.h-N-L,0)/2),r.css({top:e.top,left:e.left}),a=r.width()===K.w+O&&r.height()===K.h+N?0:a||0,s[0].style.width=s[0].style.height="9999px",r.dequeue().animate({width:K.w+O,height:K.h+N,top:c,left:d},{duration:a,complete:function(){i(this),T=!1,s[0].style.width=K.w+O+M+"px",s[0].style.height=K.h+N+L+"px",K.reposition&&setTimeout(function(){z.bind("resize."+f,W.position)},1),b&&b()},step:function(){i(this)}})},W.resize=function(a){S&&(a=a||{},a.width&&(K.w=_(a.width,"x")-O-M),a.innerWidth&&(K.w=_(a.innerWidth,"x")),A.css({width:K.w}),a.height&&(K.h=_(a.height,"y")-N-L),a.innerHeight&&(K.h=_(a.innerHeight,"y")),!a.innerHeight&&!a.height&&(A.css({height:"auto"}),K.h=A.height()),A.css({height:K.h}),W.position(K.transition==="none"?0:K.speed))},W.prep=function(b){function g(){return K.w=K.w||A.width(),K.w=K.mw&&K.mw<K.w?K.mw:K.w,K.w}function h(){return K.h=K.h||A.height(),K.h=K.mh&&K.mh<K.h?K.mh:K.h,K.h}if(!S)return;var c,d=K.transition==="none"?0:K.speed;A.remove(),A=Z(X,"LoadedContent").append(b),A.hide().appendTo(B.show()).css({width:g(),overflow:K.scrolling?"auto":"hidden"}).css({height:h()}).prependTo(t),B.hide(),a(R).css({"float":"none"}),o&&a("select").not(r.find("select")).filter(function(){return this.style.visibility!=="hidden"}).css({visibility:"hidden"}).one(k,function(){this.style.visibility="inherit"}),c=function(){function q(){n&&r[0].style.removeAttribute("filter")}var b,c,g=y.length,h,i="frameBorder",k="allowTransparency",l,o,p;if(!S)return;l=function(){clearTimeout(V),C.hide(),bc(j,K.onComplete)},n&&R&&A.fadeIn(100),D.html(K.title).add(A).show();if(g>1){typeof K.current=="string"&&E.html(K.current.replace("{current}",Q+1).replace("{total}",g)).show(),G[K.loop||Q<g-1?"show":"hide"]().html(K.next),H[K.loop||Q?"show":"hide"]().html(K.previous),K.slideshow&&F.show();if(K.preloading){b=[$(-1),$(1)];while(c=y[b.pop()])o=a.data(c,e).href||c.href,a.isFunction(o)&&(o=o.call(c)),ba(o)&&(p=new Image,p.src=o)}}else J.hide();K.iframe?(h=Z("iframe")[0],i in h&&(h[i]=0),k in h&&(h[k]="true"),h.name=f+ +(new Date),K.fastIframe?l():a(h).one("load",l),h.src=K.href,K.scrolling||(h.scrolling="no"),a(h).addClass(f+"Iframe").appendTo(A).one(m,function(){h.src="//about:blank"})):l(),K.transition==="fade"?r.fadeTo(d,1,q):q()},K.transition==="fade"?r.fadeTo(d,0,function(){W.position(0,c)}):W.position(d,c)},W.load=function(b){var c,d,e=W.prep;T=!0,R=!1,P=y[Q],b||bb(),bc(m),bc(i,K.onLoad),K.h=K.height?_(K.height,"y")-N-L:K.innerHeight&&_(K.innerHeight,"y"),K.w=K.width?_(K.width,"x")-O-M:K.innerWidth&&_(K.innerWidth,"x"),K.mw=K.w,K.mh=K.h,K.maxWidth&&(K.mw=_(K.maxWidth,"x")-O-M,K.mw=K.w&&K.w<K.mw?K.w:K.mw),K.maxHeight&&(K.mh=_(K.maxHeight,"y")-N-L,K.mh=K.h&&K.h<K.mh?K.h:K.mh),c=K.href,V=setTimeout(function(){C.show()},100),K.inline?(Z(X).hide().insertBefore(a(c)[0]).one(m,function(){a(this).replaceWith(A.children())}),e(a(c))):K.iframe?e(" "):K.html?e(K.html):ba(c)?(a(R=new Image).addClass(f+"Photo").error(function(){K.title=!1,e(Z(X,"Error").text("This image could not be loaded"))}).load(function(){var a;R.onload=null,K.scalePhotos&&(d=function(){R.height-=R.height*a,R.width-=R.width*a},K.mw&&R.width>K.mw&&(a=(R.width-K.mw)/R.width,d()),K.mh&&R.height>K.mh&&(a=(R.height-K.mh)/R.height,d())),K.h&&(R.style.marginTop=Math.max(K.h-R.height,0)/2+"px"),y[1]&&(K.loop||y[Q+1])&&(R.style.cursor="pointer",R.onclick=function(){W.next()}),n&&(R.style.msInterpolationMode="bicubic"),setTimeout(function(){e(R)},1)}),setTimeout(function(){R.src=c},1)):c&&B.load(c,K.data,function(b,c,d){e(c==="error"?Z(X,"Error").text("Request unsuccessful: "+d.statusText):a(this).contents())})},W.next=function(){!T&&y[1]&&(K.loop||y[Q+1])&&(Q=$(1),W.load())},W.prev=function(){!T&&y[1]&&(K.loop||Q)&&(Q=$(-1),W.load())},W.close=function(){S&&!U&&(U=!0,S=!1,bc(k,K.onCleanup),z.unbind("."+f+" ."+p),q.fadeTo(200,0),r.stop().fadeTo(300,0,function(){r.add(q).css({opacity:1,cursor:"auto"}).hide(),bc(m),A.remove(),setTimeout(function(){U=!1,bc(l,K.onClosed)},1)}))},W.remove=function(){a([]).add(r).add(q).remove(),r=null,a("."+g).removeData(e).removeClass(g).die()},W.element=function(){return a(P)},W.settings=d})(jQuery,document,this);
-(function(e){e(function(){function l(b,a){window.getComputedStyle?(styles=window.getComputedStyle(b[0],null),e.each(styles,function(c,b){a.css(b,styles.getPropertyValue(b))})):(styles=b[0].currentStyle,e.each(styles,function(b,d){a.css(b,d)}))}function q(){var b=this,a=[function(c){var a=e.Deferred();c.animate({top:b._position.bottom,opacity:"hide"},a.resolve);return a.promise()},function(b){var a=e.Deferred();b.fadeOut(1E3,a.resolve);return a.promise()}];return a[Math.floor(Math.random()*a.length)]} function m(b){var a=this,c="random"===this.options.effect?e.fn.textualizer.effects[g[Math.floor(Math.random()*g.length)]]:e.fn.textualizer.effects[this.options.effect],d=e.Deferred(),f=[];e.each(b.chars,function(b,d){if(!d.inserted){d.domNode.css({left:d.pos.left,top:d.pos.top});var k=e.Deferred();setTimeout(function(){c.call(a,d,k)},Math.random()*r);f.push(k)}});e.when.apply(null,f).done(function(){d.resolve()});return d.promise()}var r=2E3;e.fn.textualizer=function(b,a){var c=arguments,d,f=this.data("textualizer"); if(!f){f=[];if(1===c.length&&c[0]instanceof Array)f=c[0];else if(1===c.length&&"object"===typeof c[0])d=c[0];else if(2===c.length)f=c[0],d=c[1];else throw"textualizer: invalid argument(s)";d=e.extend({},e.fn.textualizer.defaults,d);f=new i(this,f,d);this.data("textualizer",f)}d=f;"string"===typeof c[0]&&d[c[0]]&&d[c[0]].apply(d,Array.prototype.slice.call(c,1));return this};e.fn.textualizer.defaults={effect:"random",duration:2E3,rearrangeDuration:1E3};e.fn.textualizer.effects={none:function(b){this.container.append(b.domNode.show())}, fadeIn:function(b,a){this.container.append(b.domNode.fadeIn(2E3,a.resolve));return a.promise()},slideLeft:function(b,a){b.domNode.appendTo(this.container).css({left:-1E3}).show().animate({left:b.pos.left},2E3,a.resolve);return a.promise()},slideTop:function(b,a){b.domNode.appendTo(this.container).css({top:-1E3}).show().animate({top:b.pos.top},2E3,a.resolve);return a.promise()}};var g=[];e.each(e.fn.textualizer.effects,function(b){"none"!==b&&g.push(b)});var n=function(){this.str="";this.chars=[]}; n.prototype={use:function(b){for(var a=0,c=this.chars.length;a<c;a++){var d=this.chars[a];if(d.ch===b&&!d.used)return d.used=!0,d}return null},reset:function(){e.each(this.chars,function(b,a){a.inserted=!1;a.used=!1})}};var s=function(){this.pos=this.domNode=this.ch=null;this.visited=this.inserted=this.used=!1},i=function(b,a,c){this.options=c;c=b.clone().removeAttr("id").appendTo(document.body);l(b,c);c.css({position:"absolute",top:"-1000px"});this.phantomContainer=e("<div />").css({position:"relative", visibility:"hidden"}).appendTo(c);b.css("overflow","hidden");this.elementHeight=b.height();this.container=e("<div />").css("position","relative").appendTo(b);this._previous=null;this._position={};this._position.bottom=b.height();this.blurbs=[];a&&a instanceof Array&&this.data(a)};i.prototype={data:function(b){this.stop();this.list=b;this.blurbs=[]},start:function(){function b(c){a._pause||a._rotate(c).done(function(){setTimeout(function(){c===a.list.length-1&&(c=-1,e.each(a.blurbs,function(b,c){c.reset()})); c++;a._index=c;b(c)},a.options.duration)})}if(this.list&&0!==this.list.length){var a=this,c=this._index||0;this._pause=!1;b(c)}},stop:function(){this.pause();this._previous=null;this._index=0;this.container.empty();this.phantomContainer.empty()},pause:function(){this._pause=!0},_rotate:function(b){var a=e.Deferred(),c=this.blurbs[b];if(!c){var d=[],f,j,h,c=new n;c.str=this.list[b];this.blurbs.push(c);for(b=0,f=c.str.length;b<f;b++)j=c.str.charAt(b),""===j?this.phantomContainer.append(" "):(h=new s, h.ch=j,h.domNode=e("<span/>").text(j),this.phantomContainer.append(h.domNode),d.push(h));var k=this.options.centered?(this.elementHeight-this.phantomContainer.height())/2:0;e.each(d,function(b,a){a.pos=a.domNode.position();a.domNode=a.domNode.clone();a.pos.top+=k;a.domNode.css({left:a.pos.left,top:a.pos.top,position:"absolute"});c.chars.push(a)});this.phantomContainer.html("")}if(this._previous){var g=this,i=[],o=[],p=[],l=q.call(this);e.each(this._previous.chars,function(a,b){var d=c.use(b.ch);if(d)d.domNode= b.domNode,d.inserted=!0,i.push(d);else{var f=e.Deferred();o.push(f);l(b.domNode.delay(2E3*Math.random())).done(function(){b.domNode.remove();f.resolve()})}});e.when.apply(null,o).done(function(){setTimeout(function(){e.each(i,function(b,a){var c=e.Deferred();a.domNode.animate({left:a.pos.left,top:a.pos.top},g.options.rearrangeDuration,c.resolve);p.push(c.promise())});e.when.apply(null,p).done(function(){setTimeout(function(){m.call(g,c).done(function(){a.resolve()})},500)})},1E3)})}else m.call(this, c).done(function(){a.resolve()});this._previous=c;return a.promise()},destroy:function(){this.container.parent().removeData("textualizer").end().remove();this.phantomContainer.remove()}}})})(jQuery);
+/**
+Textualizer v2.3.1
+    
+Dual licensed under the MIT or GPL Version 2 licenses.
+
+Copyright (c) 2011 Kirollos Risk
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+(function ($) {
+    $(function () {
+
+        var COMMON_CHARACTER_ARRANGE_DELAY = 250,
+            REMAINING_CHARACTERS_DELAY = 125,
+            EFFECT_DURATION = 1000,
+            REMAINING_CHARACTERS_APPEARANCE_MAX_DELAY = 500,
+            REMOVE_CHARACTERS_MAX_DELAY = 500;
+
+        /**
+         * Overloads:
+         * 1. textualizer(data, options)
+         * 2. textualizer(data)
+         * 3. textualizer(options)
+         *
+         * @param data: Array of texts to transition
+         * @param options:
+         * <effect> - name of the effect to apply: random, fadeIn, slideLeft, slideTop.
+         * <duration> - Time (ms) to keep a blurb on the screen before transitioning to the next one
+         * <rearrangeDuration> - Time (ms) for characters to arrange into position
+         */
+        $.fn.textualizer = function (data, options) {
+            var args = arguments;
+
+            // Creates a textualizer instance (if it doesn't already exist)
+            var txtlzr = (function (ele) {
+                var obj = ele.data('textualizer');
+                if (!obj) {
+                    var data = [],
+                        options;
+
+                    if (args.length === 1 && args[0] instanceof Array) {
+                        data = args[0];
+                    } else if (args.length === 1 && typeof args[0] === 'object') {
+                        options = args[0];
+                    } else if (args.length === 2) {
+                        data = args[0];
+                        options = args[1];
+                    }
+
+                    if (data.length === 0) {
+                        ele.find("p").each(function () {
+                            data.push($(this).text());
+                        });
+                    }
+
+                    // Clear the contents in the container, since this is where the blurbs will go
+                    ele.html("");
+
+                    // Create a textualizer instance, and store in the HTML node's metadata
+                    obj = new Textualizer(ele, data, $.extend({}, $.fn.textualizer.defaults, options));
+                    ele.data('textualizer', obj);
+                }
+                return obj;
+            })(this);
+
+            if (typeof args[0] === 'string' && txtlzr[args[0]]) {
+                txtlzr[args[0]].apply(txtlzr, Array.prototype.slice.call(args, 1));
+            }
+
+            return this;
+        }
+
+        $.fn.textualizer.defaults = {
+            effect: 'random',
+            duration: 2000,
+            rearrangeDuration: 1000
+        };
+
+        // Effects for characters transition+animation. Customize as you please
+        $.fn.textualizer.effects = {
+            none: function (item) {
+                this.container.append(item.domNode.show());
+            },
+            fadeIn: function (item, dfd) {
+                this.container.append(item.domNode.fadeIn(EFFECT_DURATION, dfd.resolve));
+
+                return dfd.promise();
+            },
+            slideLeft: function (item, dfd) {
+                item.domNode.appendTo(this.container).css({
+                    'left': -1000
+                }).show().animate({
+                    'left': item.pos.left
+                }, EFFECT_DURATION, dfd.resolve);
+
+                return dfd.promise();
+            },
+            slideTop: function (item, dfd) {
+                item.domNode.appendTo(this.container).css({
+                    'top': -1000
+                }).show().animate({
+                    'top': item.pos.top
+                }, EFFECT_DURATION, dfd.resolve);
+
+                return dfd.promise();
+            }
+        }
+
+        // Copy all effects into an array ==> Makes randomization easy
+        var effectList = [];
+        $.each($.fn.textualizer.effects, function (key, value) {
+            if (key !== 'none') {
+                effectList.push(key);
+            }
+        });
+
+        var Blurb = function () {
+                this.str = ''; // The text string
+                this.chars = []; // Array of ch objects
+            }
+        Blurb.prototype = {
+            // Loops through <chars>, and find the first ch whose character matches c, and hasn't been already used.
+            use: function (c) {
+                for (var i = 0, len = this.chars.length; i < len; i++) {
+                    var l = this.chars[i];
+                    if (l.ch === c && !l.used) {
+                        l.used = true; // Mark as used.  
+                        return l;
+                    }
+                }
+                return null;
+            },
+            // Resets ever character in <chars>
+            reset: function () {
+                $.each(this.chars, function (index, ch) {
+                    ch.inserted = false;
+                    ch.used = false;
+                });
+            }
+        }
+
+        var Character = function () {
+                this.ch = null; // A character
+                this.domNode = null; // The span element that wraps around the character
+                this.pos = null; // The domNode position
+                this.used = false;
+                this.inserted = false;
+                this.visited = false;
+            }
+
+        function copyStyle(fromElem, toElem) {
+            var style;
+            if (window.getComputedStyle) {
+                styles = window.getComputedStyle(fromElem[0], null);
+                $.each(styles, function (key, value) {
+                    toElem.css(value, styles.getPropertyValue(value));
+                });
+            } else {
+                styles = fromElem[0].currentStyle;
+                $.each(styles, function (key, value) {
+                    toElem.css(key, value);
+                });
+            }
+        }
+
+        var Textualizer = function (element, data, options) {
+                this.options = options;
+
+                // Clone the target element, and remove the id attribute (if it has one)
+                // Why remove the id? Cuz when we clone an element, the id is also copied.  That's a very bad thing,
+                var clone = element.clone().removeAttr('id').appendTo(document.body);
+
+                // Copy all the styles.  This is especially necessary if the clone was being styled by id in a stylesheet)
+                copyStyle(element, clone);
+
+                // Note that the clone needs to be visible so we can do the proper calculation
+                // of the position of every character.  Ergo, move the clone outside of the window's 
+                // visible area.
+                clone.css({
+                    position: 'absolute',
+                    top: '-1000px'
+                });
+
+                this.phantomContainer = $('<div />').css({
+                    'position': 'relative',
+                    'visibility': 'hidden'
+                }).appendTo(clone);
+
+                // Make sure any animating character disappear when outside the boundaries of 
+                // the element
+                element.css('overflow', 'hidden');
+
+                this.elementHeight = element.height();
+
+                // Contains transitioning text           
+                this.container = $('<div />').css('position', 'relative').appendTo(element);
+
+                // Holds the previous blurb
+                this._previous = null;
+
+                this._position = {}
+                this._position.bottom = element.height();
+
+                this.blurbs = [];
+
+                if (data && data instanceof Array) {
+                    this.data(data);
+                }
+            }
+
+        Textualizer.prototype = {
+            data: function (d) {
+                this.stop();
+                this.list = d;
+                this.blurbs = [];
+            },
+            start: function () {
+                // If there are no items, then simply exit
+                if (!this.list || this.list.length === 0) {
+                    return;
+                }
+
+                var self = this,
+                    index = this._index || 0;
+
+                this._pause = false;
+
+                // Begin transitioning through the items
+                function rotate(i) {
+                    if (self._pause) {
+                        return;
+                    }
+                    // <_rotate> returns a promise, which completes when a blurb has finished animating.  When that 
+                    // promise is fulfilled, transition to the next blurb.
+                    self._rotate(i).done(function () {
+                        setTimeout(function () {
+                            // If we've reached the last blurb, reset the position of every character in every blurb
+                            if (i === self.list.length - 1) {
+                                i = -1;
+                                $.each(self.blurbs, function (j, item) {
+                                    item.reset();
+                                });
+                            }
+                            i++;
+                            self._index = i;
+                            rotate(i); // rotate the next blurb
+                        }, self.options.duration);
+                    });
+                }
+
+                // Begin iterating through the list of blurbs to display
+                rotate(index);
+            },
+            stop: function () {
+                this.pause();
+                this._previous = null;
+                this._index = 0;
+                this.container.empty();
+                this.phantomContainer.empty();
+            },
+            pause: function () {
+                this._pause = true;
+            },
+            _rotate: function (index) {
+                var dfd = $.Deferred(),
+                    current = this.blurbs[index];
+
+                // If this is the first time the blurb is encountered, each character in the blurb is wrapped in
+                // a span and appended to an invisible container, thus we're able to calculate the character's position
+                if (!current) {
+                    var phantomBlurbs = [],
+                        i, len, ch, c;
+
+                    current = new Blurb();
+                    current.str = this.list[index];
+                    this.blurbs.push(current);
+
+                    // Add all chars first to the phantom container. Let the browser deal with the formatting.
+                    for (i = 0, len = current.str.length; i < len; i++) {
+                        ch = current.str.charAt(i);
+
+                        if (ch === '') {
+                            this.phantomContainer.append(' ');
+                        } else {
+                            c = new Character();
+                            c.ch = ch;
+                            c.domNode = $('<span/>').text(ch);
+
+                            this.phantomContainer.append(c.domNode);
+                            phantomBlurbs.push(c);
+                        }
+                    }
+
+                    // If options.centered is true, then we need to center the text.
+                    // This cannot be done solely with CSS, because of the absolutely positioned characters
+                    // within a relative container.  Ergo, to achieve a vertically-aligned look, do 
+                    // the following simple math:
+                    var height = this.options.centered ? (this.elementHeight - this.phantomContainer.height()) / 2 : 0;
+
+                    // Figure out the positioning, and clone the DOM domNode
+                    $.each(phantomBlurbs, function (index, c) {
+                        c.pos = c.domNode.position();
+                        c.domNode = c.domNode.clone();
+
+                        c.pos.top += height;
+
+                        c.domNode.css({
+                            'left': c.pos.left,
+                            'top': c.pos.top,
+                            'position': 'absolute'
+                        });
+                        current.chars.push(c);
+                    });
+
+                    this.phantomContainer.html('');
+                }
+
+                if (this._previous) {
+                    // For every character in the previous text, check if it exists in the current text.
+                    // YES ==> keep the character in the DOM
+                    // NO ==> remove the character from the DOM
+                    var self = this,
+                        keepList = [],
+                        removeList = [],
+                        dfds = [];
+
+                    var randomHideEffect = getRandomHideEffect.call(this);
+
+                    $.each(this._previous.chars, function (index, prevC) {
+                        var currC = current.use(prevC.ch);
+
+                        if (currC) {
+                            currC.domNode = prevC.domNode; // use the previous DOM domNode
+                            currC.inserted = true;
+
+                            keepList.push(currC);
+                        } else {
+                            var d = $.Deferred();
+                            removeList.push(d);
+
+                            randomHideEffect(prevC.domNode.delay(Math.random() * REMOVE_CHARACTERS_MAX_DELAY)).done(function () {
+                                prevC.domNode.remove();
+                                d.resolve();
+                            });
+                        }
+                    });
+
+                    // When all characters that aren't common to the blurbs have been removed...
+                    $.when.apply(null, removeList).done(function () {
+                        // Move charactes that are common to their new position
+                        setTimeout(function () {
+                            $.each(keepList, function (index, item) {
+                                var d = $.Deferred();
+                                item.domNode.animate({
+                                    'left': item.pos.left,
+                                    'top': item.pos.top
+                                }, self.options.rearrangeDuration, d.resolve);
+                                dfds.push(d.promise());
+                            });
+                            // When all the characters have moved to their new position, show the remaining characters
+                            $.when.apply(null, dfds).done(function () {
+                                setTimeout(function () {
+                                    showCharacters.call(self, current).done(function () {
+                                        dfd.resolve();
+                                    });
+                                }, REMAINING_CHARACTERS_DELAY);
+                            });
+                        }, COMMON_CHARACTER_ARRANGE_DELAY);
+                    });
+
+                } else {
+                    showCharacters.call(this, current).done(function () {
+                        dfd.resolve();
+                    });
+                }
+                this._previous = current;
+
+                return dfd.promise();
+            },
+            destroy: function () {
+                this.container.parent().removeData('textualizer').end().remove();
+                this.phantomContainer.remove();
+            }
+        }
+
+        function getRandomHideEffect() {
+            var self = this;
+            var eff = [
+
+            function (target) {
+                var d = $.Deferred();
+                target.animate({
+                    top: self._position.bottom,
+                    opacity: 'hide'
+                }, d.resolve);
+                return d.promise();
+            }, function (target) {
+                var d = $.Deferred();
+                target.fadeOut(1000, d.resolve);
+                return d.promise();
+            }];
+
+            return eff[Math.floor(Math.random() * eff.length)];
+        }
+
+        function showCharacters(item) {
+            var self = this,
+                effect = this.options.effect === 'random' ? $.fn.textualizer.effects[effectList[Math.floor(Math.random() * effectList.length)]] : $.fn.textualizer.effects[this.options.effect],
+                finalDfd = $.Deferred(),
+                animationDfdList = [];
+
+            // Iterate through all ch objects
+            $.each(item.chars, function (index, ch) {
+                // If the character has not been already inserted, animate it, with a delay
+                if (!ch.inserted) {
+                    ch.domNode.css({
+                        'left': ch.pos.left,
+                        'top': ch.pos.top
+                    });
+
+                    var animationDfd = $.Deferred();
+
+                    setTimeout(function () {
+                        effect.call(self, ch, animationDfd);
+                    }, Math.random() * REMAINING_CHARACTERS_APPEARANCE_MAX_DELAY);
+
+                    animationDfdList.push(animationDfd);
+                }
+            });
+
+            // When all characters have finished moving to their position, resolve the final promise
+            $.when.apply(null, animationDfdList).done(function () {
+                finalDfd.resolve();
+            });
+
+            return finalDfd.promise();
+        }
+    });
+})(jQuery);
 /**
  * jQuery Scrolling Parallax v0.1
  * http://jonraasch.com/blog/scrolling-parallax-jquery-plugin

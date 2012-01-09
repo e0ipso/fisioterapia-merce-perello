@@ -46,7 +46,12 @@ $(document).ready(function () {
       var list = [];
       $('ul#txtlzr-data-1 li').each(function () { list.push($(this).text()) });
       var txtlizer = $('#txtlzr-container-1');
-      txtlizer.textualizer(list);
+      txtlizer.textualizer(list, {
+        duration: 5000,          // Time (ms) each blurb will remain on screen
+        rearrangeDuration: 500, // Time (ms) a character takes to reach its position
+        effect: 'random',        // Animation effect the characters use to appear
+        centered: true
+      });
       // Animació més curta i mostrar més temps el text
       txtlizer.textualizer('start');
     
