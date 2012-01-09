@@ -60,8 +60,8 @@
         <ul>
           <li><a class="home" href="#home">Inici</a></li>
           <li><a class="about" href="#description">Què faig</a></li>
+          <li><a class="available" href="#about">Qui soc</a></li>
           <li><a class="location" href="#location">On estic</a></li>
-          <li><a class="available" href="#available">Disponibilitat</a></li>
           <li><a class="contact" href="#contact">Contacte</a></li>
         </ul>
       </nav>
@@ -192,10 +192,6 @@
             <p>Passa per sobre de les localitzacions de l'esquerra. (JavaScript ha d'estar activat)</p>
           </div>
         </div>
-      </section>
-      <section id="available">
-        <h2>Disponibilitat</h2>
-        <header>A grans trets aquesta és la meva disponibilitat. Això no significa que no pugui estar ocupada o disponible contradint l'horari de sota.</header>        
       </section>
       <section id="contact">
         <h2>Contacta</h2>
