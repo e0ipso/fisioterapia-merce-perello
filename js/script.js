@@ -3,8 +3,13 @@
 */
 
 function sectionSize() {
-  $('section').height($(window).height());
+  $('section').css('min-height', $(window).height() + 'px');
 }
+
+//function displayTreatment(i) {
+//  if (i == $('#treatments .treatment').length) i = 0;
+//  setTimeout(function(){ $($('#treatments .treatment').get(i-1)).fadeOut(500, function () { $($('#treatments .treatment').get(i)).fadeIn(1000); }); displayTreatment(i+1); }, 3000);
+//}
 
 $(document).ready(function () {
   var initialLocation = $(document).attr('location').hash.substring(1) || 'home';
@@ -20,46 +25,62 @@ $(document).ready(function () {
   
   if ($(window).width() > 960) {
       // Colorbox popups
-      $("#show-facebook").colorbox({
-        iframe:true,
-        width:"600px",
-        height:"600px"
-      });
-      $("#show-twitter").click(function (e) {
-        $("#twtr-widget-1").slideToggle(1000, 'easeInOutExpo');
-        e.preventDefault();
-      });
-    //   Declare parallax on layers
-    //  jQuery('.parallax-layer').parallax({
-    //    mouseport: jQuery("#port")
-    //  });
-      $(function() {
-          
-          $.scrollingParallax('/img/body-2.svg', {
-              bgHeight : '5252px',
-              bgWidth : '2300px',
-              staticSpeed : .25,
-              staticScrollLimit : false
-          });
-      }); 
-      
-      var list = [];
-      $('ul#txtlzr-data-1 li').each(function () { list.push($(this).text()) });
-      var txtlizer = $('#txtlzr-container-1');
-      txtlizer.textualizer(list, {
-        duration: 5000,          // Time (ms) each blurb will remain on screen
-        rearrangeDuration: 500, // Time (ms) a character takes to reach its position
-        effect: 'random',        // Animation effect the characters use to appear
-        centered: true
-      });
-      // Animació més curta i mostrar més temps el text
-      txtlizer.textualizer('start');
+//      $('#treatments .treatment a').each(function () {
+//        var $expl = $(this).parent().find('.explanation');
+//        $(this).colorbox({
+//          inline: true,
+//          width: '50%',
+//          height: '50%',
+//          href: $expl
+//        });
+//      });
+    $("#show-facebook").colorbox({
+      iframe:true,
+      width:"600px",
+      height:"600px"
+    });
+    $("#show-twitter").click(function (e) {
+      $("#twtr-widget-1").slideToggle(1000, 'easeInOutExpo');
+      e.preventDefault();
+    });
+    // Parallax Scroll
+    $(function() {
+        
+        $.scrollingParallax('/img/body-2.svg', {
+            bgHeight : '5252px',
+            bgWidth : '2300px',
+            staticSpeed : .25,
+            staticScrollLimit : false
+        });
+    }); 
     
+    var list = [];
+    $('ul#txtlzr-data-1 li').each(function () { list.push($(this).text()) });
+    var txtlizer = $('#txtlzr-container-1');
+    txtlizer.textualizer(list, {
+      duration: 5000,          // Time (ms) each blurb will remain on screen
+      rearrangeDuration: 500, // Time (ms) a character takes to reach its position
+      effect: 'random',        // Animation effect the characters use to appear
+      centered: true
+    });
+    // Animació més curta i mostrar més temps el text
+    txtlizer.textualizer('start');
+    // SlideDeck
+    $('.slidedeck').slidedeck({
+        autoPlay: true, // auto play turned on
+        autoPlayInterval: 5000, // Time spent on each slide
+        cycle: true // Continue from the beginning after reaching the end
+    });
   }
   else {
     $('#show-facebook').attr('href', 'https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133');
     $('#show-twitter').attr('href', 'https://twitter.com/#!/rceperello');
-    
+    $('#description dl dt:first-of-type').addClass('active');
+    $('#description dl dt').click(function () {
+      if (this == $('#description dl dt.active').get(0)) { return false; };
+      var $clicked = $(this);
+      $('#description dl dt.active').removeClass('active').next('dd').slideUp(500, function () { $clicked.addClass('active').next('dd').slideDown(500); })
+    });
   }
   $('abbr[title], input[title], img[title], a[title], li[title]').qtip({
      position: {

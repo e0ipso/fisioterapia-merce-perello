@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/jquery.qtip.min.css">
+  <link rel="stylesheet" media="screen and (min-width: 960px)" href="css/slidedeck.css">
   <!-- <link rel="stylesheet" href="font-face/museo-slab.css"> -->
   <!-- end CSS-->
 
@@ -58,7 +59,7 @@
       <nav>
         <ul>
           <li><a class="home" href="#home">Inici</a></li>
-          <li><a class="about" href="#about">Qui soc</a></li>
+          <li><a class="about" href="#description">Què faig</a></li>
           <li><a class="location" href="#location">On estic</a></li>
           <li><a class="available" href="#available">Disponibilitat</a></li>
           <li><a class="contact" href="#contact">Contacte</a></li>
@@ -81,18 +82,49 @@
           <li>Un ambient comfortable a Muro, Ca'n Picafort o a casa teva.</li>
         </ul>
         <header id="txtlzr-container-1" class="txtlzr-container"></header>
-        <p><a href="#description" class="button">Què faig?</a></p>
+        <p><a href="#about" class="button">Qui soc?</a></p>
       </section>
       <section id="description">
         <h2>Tractaments</h2>
         <header>Especialitzada en el tractament del dolor i la rehabilitació funcional.</header>
-        <ul id="treatments">
-          <li class="treatment"><a href="#">Manual</a><div class="explanation">Massoteràpia, Kinesioteràpia, o Teràpia pel Moviment, Fisioteràpia Manipulativa Articular, Reeducació postural, Fisioteràpia Respiratòria, Embenat funcional i Kinesio-Taping.</div></li>
-          <li class="treatment"><a href="#">Drenatge</a><div class="explanation">Eliminació del líquid limfàtic excessiu produit per diverses causes.</div></li>
-          <li class="treatment"><a href="#">Fàscies</a><div class="explanation">Maniobra terapèutica consistent en la mobilització del teixit conectiu, efectuada en profunditat, en punts precisos, codificats, on és possible trobar una alteració de l'elasticitat i consistència de la fàscia.</div></li>
-          <li class="treatment"><a href="#">Neurologia</a><div class="explanation">Tècniques que s'apliquen per el tractament de les seqüel·les en lesions del sistema nerviós central o perifèric.</div></li>
-          <li class="treatment"><a href="#">Molt més…</a><div class="explanation">Aquí només he descrit les pràctiques més habituals.</div></li>
-        </ul>        
+        <div id="slidedeck_frame" class="skin-stitch"><dl id="treatments" class="slidedeck">
+          <dt>Pediatria</dt>
+          <dd class="treatment">
+            <img src="/img/pediatria.jpg" alt="Pediatria" class="image" />
+            <h3>Pediatria</h3>
+            <div class="explanation"><p>La fisioteràpia pediàtrica consisteix en el tractament de qualsevol afecció en la infància, tant aguda com crònica, que pertorbi el desenvolupament motor i, per tant, limiti el potencial per a la  independència durant la vida adulta. La fisioteràpia aplicada a l’edat pediàtrica és una especialitat de la fisioteràpia la formació de la qual requereix uns coneixements i una pràctica específics.</p>
+            <p>La fisioteràpia pediàtrica constitueix una ciència clínica en un procés d’evolució continu. Les troballes científiques, derivades de les recents investigacions en neurociència i ciència del moviment, han desembocat en un canvi radical i en una actuació de la pràctica fisioterapèutica. Això requereix per part del professional reflexió i flexibilitat davant la incorporació de nous coneixements.</p>
+            <p>El coneixement del desenvolupament psicomotor, l’aprenentatge i el control del moviment i les adaptacions al creixement són aspectes que ajuden el fisioterapeuta pediàtric a l’hora de trobar les estratègies terapèutiques adients i descobrir el potencial motor de l’infant.</p>
+            <p>Per això, el fisioterapeuta ha de saber identificar, després de fer-ne una valoració, els objectius de la intervenció terapèutica tenint en compte la naturalesa interactiva del desenvolupament de tots els subsistemes que influeixen en el creixement de l’infant.</p>
+            <p>El nostre objectiu és ajudar a l’infant a aconseguir el màxim potencial d’independència a través de l’observació, la valoració, la promoció de la salut i el benestar, així com saber aplicar una àmplia varietat d’estratègies terapèutiques i d’ajuts posturals o de mobilitat. A més de  proporcionar suport a les seves famílies, des de la infància fins a l'adolescència i col·laborar amb altres especialistes mèdics, de l’àmbit de l’educació i socials, afavorint així la participació de l’infant en les  activitats de la vida diària a casa, a l’escola i a la comunitat.</p></div>
+          </dd>
+          <dt>Lesions esportives</dt>
+          <dd class="treatment">
+            <img src="/img/lesions.jpg" alt="Lesions" class="image" />
+            <h3>Lesions esportives</h3>
+            <div class="explanation"><p>La conscienciació d'una gran part de la població dels beneficis de l'activitat física per a la salut ha fet que aquesta pràctica sigui cada cop més generalitzada. Dins de les disciplines mèdiques es tendeix cada cop més a la prescripció de l’exercici físic com a mesura bàsica per millorar la qualitat i l’expectativa de vida. </p>
+            <p>Malauradament l’exercici físic també implica problemes derivats de la propia pràctica com, sobrecàrregues musculars, lesions osteoarticulars, ruptura de fibres musculars, tendinitis,… molt relacionades amb l’esport o amb l’activitat que es practica. La recuperació d’aquestes lesions necessiten especificitat el el procés rehabilitació.</p>
+            <p>Aquesta cura de la salut de l’esportista es tradueix en potenciació del seu rendiment, readaptació a l’activitat física després de la lesió i una reincorporació més ràpida a l’activitat física.</p></div>
+          </dd>
+          <dt>Neurologia</dt>
+          <dd class="treatment">
+            <img src="/img/neurologia.jpg" alt="Neurologia" class="image" />
+            <h3>Neurologia</h3>
+            <div class="explanation">Tècniques que s'apliquen per el tractament de les seqüel·les en lesions del sistema nerviós central o perifèric.</div>
+          </dd>
+          <dt>Lesions de columna</dt>
+          <dd class="treatment">
+            <img src="/img/columna.jpg" alt="Lesions de columna" class="image" />
+            <h3>Lesions de columna</h3>
+            <div class="explanation">Tècniques que s'apliquen per el tractament de les seqüel·les en lesions del sistema nerviós central o perifèric.</div>
+          </dd>
+          <dt>Molt més…</dt>
+          <dd class="treatment">
+            <img src="/img/moltmes.jpg" alt="Molt més…" class="image" />
+            <h3>Molt més…</h3>
+            <div class="explanation">Aquí només he descrit les pràctiques més habituals.</div>
+          </dd>
+        </dl></div>        
         <div id="social-buttons">
           <a id="show-twitter" href="#">Twitter</a>
           <a id="show-facebook" href="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FMerc%C3%A8-Perell%C3%B3-Fisioter%C3%A0pia%2F205104012886133&amp;width=600&amp;height=600&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=false&amp;appId=216318715105952">Facebook</a>
@@ -171,6 +203,7 @@
         <form action="contact.php" method="post">
           <label class="required">El teu nom:</label>
           <input type="text" id="name" name="name" placeholder="Perico de los Palotes" required><div></div><br />
+          <input type="text" id="family-name" name="family-name" placeholder="Palotes">
         
           <label class="required">Adreça d'email:</label>
           <input type="email" id="email" name="email" placeholder="example@example.org" required><div></div><br />

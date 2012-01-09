@@ -322,6 +322,7 @@ a.button, button, input[type="submit"], input[type="reset"] {
   margin-left: 250px;
   margin-right: 10px;
 }
+#contact #family-name { display: none; }
 
 /* Home section */
 #home p {
@@ -359,6 +360,10 @@ section#about {
   width: 33%;
 }
 /* Description section */
+#treatments { }
+  #treatments h3 { font-size: 1.5em; text-shadow: none; }
+  #treatments dd { background-color: #eee; }
+  #treatments .image { max-width: 50%; max-height: 75%; float: right; margin: 10px 0 5px 10px; border: 5px solid white; line-height: 150px; background-color: #f0f0f0; text-align: center; }
 #show-twitter, #show-facebook {
   background-image: url('../img/social-buttons.png');
   display: inline-block;
@@ -382,11 +387,8 @@ section#about {
   margin: 20px auto;
   display: none;
 }
-#treatments { text-align: center; margin: 20px 0; }
-  #treatments .treatment { display: none; }
-    #treatments .treatment:first-child { display: block; }
-    #treatments .treatment .explanation { display: none; }
 
+#description header { text-align: center; }
 
 /* @group Colorbox */
 
@@ -492,7 +494,14 @@ section#about {
   
   /* DESCRIPTION */
   #description .help { display: none; }
-  
+    #description h3 { display: none; }
+    #description dl dd { display: none; margin: 0; background: none; overflow: hidden; }
+      #description dl dd:first-of-type { display: block; }
+    #description dl dt { padding: 5px; border-radius: 3px; background-color: #f5f5f5; font-weight: bold; color: #57A; font-size: 1.4em; margin: 3px 0; cursor: pointer; }
+      #description dl dt.active { cursor: text; }
+    #description dl dt:after { content: ''; display: block; float: right; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 5px solid #999; margin: 5px; }
+      #description dl dt.active:after { border-bottom-color: transparent; border-top: 5px solid #999; margin: 5px; }
+    
   /* MAP */
   #map_canvas {
     height: 400px; width: 100%; float: none;
