@@ -197,7 +197,7 @@
         <header><p>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte en tu. Si vols també em pots telefonar al 660-082-398 o escriure a <a href="mailto:hola@merceperello.es">hola@merceperello.es</a></p><p>A part, també pots posar-te en contacte o dir-me qualsevol cosa a través de Twitter (<a target="blank" href="https://twitter.com/#!/rceperello">@rceperello</a>) o de Facebook (<a target="blank" href="https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133">Mercè Perelló Fisioteràpia</a>).</p></header>
         <form action="contact.php" method="post">
           <label class="required">El teu nom:</label>
-          <input type="text" id="name" name="name" placeholder="Perico de los Palotes" required><div></div><br />
+          <input type="text" id="name" name="name" required><div></div><br />
           <input type="text" id="family-name" name="family-name" placeholder="Palotes">
         
           <label class="required">Adreça d'email:</label>
