@@ -75,7 +75,7 @@
         <h1>Fisioteràpia</h1>
         <h2>Mercè Perelló</h2>
         <ul id="txtlzr-data-1" class="txtlzr-data">
-          <li>Per a la teva tranquilitat evita aquells que et venen salud sense la preparació adient.</li>
+          <li>Per a la teva tranquil·litat evita aquells que et venen salut sense la preparació adient.</li>
           <li>Tractament de lesions esportives per a una ràpida recuperació.</li>
           <li>Alleuja el teu dolor.</li>
           <li>És el complement ideal a la rehabilitació de la teva assegurança.</li>
@@ -92,11 +92,8 @@
           <dd class="treatment">
             <img src="/img/pediatria.jpg" alt="Pediatria" class="image" />
             <h3>Pediatria</h3>
-            <div class="explanation"><p>La fisioteràpia pediàtrica consisteix en el tractament de qualsevol afecció en la infància, tant aguda com crònica, que pertorbi el desenvolupament motor i, per tant, limiti el potencial per a la  independència durant la vida adulta. La fisioteràpia aplicada a l’edat pediàtrica és una especialitat de la fisioteràpia la formació de la qual requereix uns coneixements i una pràctica específics.</p>
-            <p>La fisioteràpia pediàtrica constitueix una ciència clínica en un procés d’evolució continu. Les troballes científiques, derivades de les recents investigacions en neurociència i ciència del moviment, han desembocat en un canvi radical i en una actuació de la pràctica fisioterapèutica. Això requereix per part del professional reflexió i flexibilitat davant la incorporació de nous coneixements.</p>
-            <p>El coneixement del desenvolupament psicomotor, l’aprenentatge i el control del moviment i les adaptacions al creixement són aspectes que ajuden el fisioterapeuta pediàtric a l’hora de trobar les estratègies terapèutiques adients i descobrir el potencial motor de l’infant.</p>
-            <p>Per això, el fisioterapeuta ha de saber identificar, després de fer-ne una valoració, els objectius de la intervenció terapèutica tenint en compte la naturalesa interactiva del desenvolupament de tots els subsistemes que influeixen en el creixement de l’infant.</p>
-            <p>El nostre objectiu és ajudar a l’infant a aconseguir el màxim potencial d’independència a través de l’observació, la valoració, la promoció de la salut i el benestar, així com saber aplicar una àmplia varietat d’estratègies terapèutiques i d’ajuts posturals o de mobilitat. A més de  proporcionar suport a les seves famílies, des de la infància fins a l'adolescència i col·laborar amb altres especialistes mèdics, de l’àmbit de l’educació i socials, afavorint així la participació de l’infant en les  activitats de la vida diària a casa, a l’escola i a la comunitat.</p></div>
+            <div class="explanation"><p>La fisioteràpia pediàtrica consisteix en el tractament de qualsevol afecció en la infància, tant aguda com crònica, que pertorbi el desenvolupament motor i, per tant, limiti el potencial per a la independència durant la vida adulta. La fisioteràpia aplicada a l’edat pediàtrica és una especialitat de la fisioteràpia la formació de la qual requereix uns coneixements i una pràctica específics.</p>
+            <p>El nostre objectiu és ajudar a l’infant a aconseguir el màxim potencial de independència a través de l’observació, la valoració, la promoció de la salut i el benestar, així com saber aplicar una àmplia varietat d’estratègies terapèutiques i d’ajuts posturals o de mobilitat; proporcionar suport a les seves famílies, des de la infància fins a l'adolescència i col·laborar amb altres especialistes mèdics, de l’àmbit de l’educació i socials, afavorint així la participació de l’infant en les  activitats de la vida diària a casa, a l’escola i a la comunitat.</p></div>
           </dd>
           <dt>Lesions esportives</dt>
           <dd class="treatment">
@@ -110,19 +107,21 @@
           <dd class="treatment">
             <img src="/img/neurologia.jpg" alt="Neurologia" class="image" />
             <h3>Neurologia</h3>
-            <div class="explanation">Tècniques que s'apliquen per el tractament de les seqüel·les en lesions del sistema nerviós central o perifèric.</div>
+            <div class="explanation"><p>Les lesions del Sistema Nerviós Central com lesions medul·lars, d’any cerebral adquirit o esclerosis múltiple, ... i les lesions del Sistema Nerviós Perifèric com el Sd. de Guillem Barré o malalties neuromusculars, es veuen beneficiades per el tractament de fisioteràpia millorant la funció motriu i la qualitat de vida de les persones que les pateixen.</p> 
+            <p>El tractament de lesions del SNC i del SNP es dur a terme de manera individualitzada. Després d’una valoració inicial, s’estableixen els objectius que s’ajustin a les necessitats específiques de cada pacient i de la seva família, per millorar la funcionalitat i la seva qualitat de vida.</p></div>
           </dd>
-          <dt>Lesions de columna</dt>
+          <dt>Problemes de columna</dt>
           <dd class="treatment">
-            <img src="/img/columna.jpg" alt="Lesions de columna" class="image" />
-            <h3>Lesions de columna</h3>
-            <div class="explanation">Tècniques que s'apliquen per el tractament de les seqüel·les en lesions del sistema nerviós central o perifèric.</div>
+            <img src="/img/columna.jpg" alt="Problemes de columna" class="image" />
+            <h3>Problemes de columna</h3>
+            <div class="explanation"><p>El tractament de fisioteràpia és un dels mètodes més utilitzats i més efectius en el mal d’esquena tan aguts com crònics. El paper del fisioterapeuta en el tractament d’aquestes dolències implica l’ús de tècniques encaminades a reduir el dolor i millorar la capacitat funcional del pacient i a una incorporació més ràpida a les activitats de la vida diària. </p>
+            <p>A més de les funció rehabilitadora, la fisioteràpia també té una funció preventiva amb l’objectiu de millorar la capacitat del pacient per a minimitzar els problemes d’esquena i evitat que tornin a aparèixer a través d’un procés d’educació.</p></div>
           </dd>
           <dt>Molt més…</dt>
           <dd class="treatment">
             <img src="/img/moltmes.jpg" alt="Molt més…" class="image" />
             <h3>Molt més…</h3>
-            <div class="explanation">Aquí només he descrit les pràctiques més habituals.</div>
+            <div class="explanation"><p>A més d’aquests tractaments també pots <a href="#contact">contactar</a> amb nosaltres si tens algun problema derivat de <strong>lesions al sistema limfàtic</strong>, si necessites reeducació de la <strong>musculatura abdominal</strong> després de l’embaràs, si tens <strong>dolor articular</strong>, <strong>traumatismes</strong> o lesions agudes, <strong>postoperatoris</strong>, ... o si vols donar-te un <strong>plaer</strong> amb un massatge relaxant.</p></div>
           </dd>
         </dl></div>        
         <div id="social-buttons">
@@ -162,9 +161,9 @@
       <section id="about">
         <h2>Sobre mi</h2>
         <img id="me" src="/img/face.jpg" alt="Jo" title="Aquesta foto està presa a Cala Matzoc!" />
-        <p>Jo soc na Mercè. Soc una al·lota de 25 anys originària de Muro que viu a Ca'n Picafort durant tot l'any.</p>
-        <p>M'encanta sortir a córrer i cansar-me abans de sortir a sopar a fora amb els amics, encara que també disfruto molt estant a casa disfrutant dels petits plaers.</p>
-        <p>Potser la meva afició més gran és la d'estudiar. Després d'haver acabat la carrera de fisioteràpia i estudiat dos postgraus, ara mateix estic estudiant anglès a la <abbr title="Escola Oficial d'Idiomes">EOI</abbr> i la carrera de psicologia a distància per la <abbr title="Universitat Oberta de Catalunya">UOC</abbr>.</p>
+        <p>Jo soc na Mercè. Soc una al·lota de 25 anys originària de Muro que viu a Ca'n Picafort.</p>
+        <p>M'encanta sortir a córrer, llegir, escoltar música i estar amb els amics, encara que també disfruto molt estant a casa disfrutant dels petits plaers.</p>
+        <p>Disfruto amb la meva feina i ara mateix la compagino amb l'estudi de psicologia a la <abbr title="Universitat Oberta de Catalunya">UOC</abbr> i amb la meva assignatura pendent, l'anglès.
       </section>
       <section id="location">
         <h2>On estic</h2>
@@ -195,7 +194,7 @@
       </section>
       <section id="contact">
         <h2>Contacta</h2>
-        <header>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte en tu. Si vols també em pots telefonar al 660-082-398 o escriure a <a href="mailto:hola@merceperello.es">hola@merceperello.es</a></header>
+        <header><p>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte en tu. Si vols també em pots telefonar al 660-082-398 o escriure a <a href="mailto:hola@merceperello.es">hola@merceperello.es</a></p><p>A part, també pots posar-te en contacte o dir-me qualsevol cosa a través de Twitter (<a target="blank" href="https://twitter.com/#!/rceperello">@rceperello</a>) o de Facebook (<a target="blank" href="https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133">Mercè Perelló Fisioteràpia</a>).</p></header>
         <form action="contact.php" method="post">
           <label class="required">El teu nom:</label>
           <input type="text" id="name" name="name" placeholder="Perico de los Palotes" required><div></div><br />
