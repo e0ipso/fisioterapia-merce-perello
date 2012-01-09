@@ -3,6 +3,10 @@
 //error_reporting(E_ALL);
 error_reporting(E_STRICT);
 
+if (isset($_REQUEST['family-name']) && $_REQUEST['family-name']) {
+  die;
+}
+
 if (!isset($_REQUEST['name']) || !isset($_REQUEST['email']) || !isset($_REQUEST['phone']) || !isset($_REQUEST['message']) || !$_REQUEST['name'] || !$_REQUEST['email'] || !$_REQUEST['phone'] || !$_REQUEST['message']) {
   header('Location: http://merceperello.es/?message=' . urlencode('Has d\'emplenar tots els camps obligatoris'));
   die;
