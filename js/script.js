@@ -66,7 +66,9 @@ $(document).ready(function () {
     // Animació més curta i mostrar més temps el text
     txtlizer.textualizer('start');
     // SlideDeck
-    $('.slidedeck').slidedeck();
+    $('.slidedeck').slidedeck({
+      start: 2 // Default open slide
+    });
   }
   else {
     $('#show-facebook').attr('href', 'https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133');
