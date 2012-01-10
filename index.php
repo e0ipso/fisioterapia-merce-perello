@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>Fisioteràpia Mallorca Nord | Mercè Perelló</title>
-  <meta name="description" content="Centre de fisioteràpia a Mallorca. Estic a Ca'n Picafort i Muro. També vaig a domicili.">
+  <meta name="description" content="Centre de fisioteràpia a Mallorca. Estic a Can Picafort i Muro. També vaig a domicili.">
   <meta name="author" content="Human Bits">
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
@@ -32,7 +32,7 @@
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
   <meta property="og:title" content="Mercè Perelló Fisioteràpia" />
-  <meta property="og:description" content="El centre de fisioteràpia del Nord de Mallorca. Estic a Ca'n Picafort i Muro. També vaig a domicili." />
+  <meta property="og:description" content="El centre de fisioteràpia del Nord de Mallorca. Estic a Can Picafort i Muro. També vaig a domicili." />
   <meta property="og:image" content="http://merceperello.es/img/face.jpg" />
   <meta property="og:url" content="http://merceperello.es" />
   
@@ -60,7 +60,7 @@
         <ul>
           <li><a class="home" href="#home">Inici</a></li>
           <li><a class="about" href="#description">Què faig</a></li>
-          <li><a class="available" href="#about">Qui soc</a></li>
+          <li><a class="available" href="#about">Qui sóc</a></li>
           <li><a class="location" href="#location">On estic</a></li>
           <li><a class="contact" href="#contact">Contacte</a></li>
         </ul>
@@ -79,10 +79,10 @@
           <li>Tractament de lesions esportives per a una ràpida recuperació.</li>
           <li>Alleuja el teu dolor.</li>
           <li>És el complement ideal a la rehabilitació de la teva assegurança.</li>
-          <li>Un ambient comfortable a Muro, Ca'n Picafort o a casa teva.</li>
+          <li>Un ambient comfortable a Muro, Can Picafort o a casa teva.</li>
         </ul>
         <header id="txtlzr-container-1" class="txtlzr-container"></header>
-        <p><a href="#description" class="button" style="margin-right: 10px">Què faig?</a><a href="#about" class="button">Qui soc?</a></p>
+        <p><a href="#description" class="button" style="margin-right: 10px">Què faig?</a><a href="#about" class="button">Qui sóc?</a></p>
       </section>
       <section id="description">
         <h2>Tractaments</h2>
@@ -93,29 +93,29 @@
             <img src="/img/pediatria.jpg" alt="Pediatria" class="image" />
             <h3>Pediatria</h3>
             <div class="explanation"><p>La fisioteràpia pediàtrica consisteix en el tractament de qualsevol afecció en la infància, tant aguda com crònica, que pertorbi el desenvolupament motor i, per tant, limiti el potencial per a la independència durant la vida adulta. La fisioteràpia aplicada a l’edat pediàtrica és una especialitat de la fisioteràpia la formació de la qual requereix uns coneixements i una pràctica específics.</p>
-            <p>El nostre objectiu és ajudar a l’infant a aconseguir el màxim potencial de independència a través de l’observació, la valoració, la promoció de la salut i el benestar, així com saber aplicar una àmplia varietat d’estratègies terapèutiques i d’ajuts posturals o de mobilitat; proporcionar suport a les seves famílies, des de la infància fins a l'adolescència i col·laborar amb altres especialistes mèdics, de l’àmbit de l’educació i socials, afavorint així la participació de l’infant en les  activitats de la vida diària a casa, a l’escola i a la comunitat.</p></div>
+            <p>El nostre objectiu és ajudar l’infant a aconseguir el màxim potencial d'independència a través de l’observació, la valoració, la promoció de la salut i el benestar; així com saber aplicar una àmplia varietat d’estratègies terapèutiques i d’ajuts posturals o de mobilitat; proporcionar suport a les seves famílies, des de la infància fins a l'adolescència i col·laborar amb altres especialistes mèdics de l’àmbit de l’educació i del social, per afavorir així la participació de l’infant en les  activitats de la vida diària a casa, a l’escola i a la comunitat.</p></div>
           </dd>
           <dt>Lesions esportives</dt>
           <dd class="treatment">
             <img src="/img/lesions.jpg" alt="Lesions" class="image" />
             <h3>Lesions esportives</h3>
             <div class="explanation"><p>La conscienciació d'una gran part de la població dels beneficis de l'activitat física per a la salut ha fet que aquesta pràctica sigui cada cop més generalitzada. Dins de les disciplines mèdiques es tendeix cada cop més a la prescripció de l’exercici físic com a mesura bàsica per millorar la qualitat i l’expectativa de vida. </p>
-            <p>Malauradament l’exercici físic també implica problemes derivats de la propia pràctica com, sobrecàrregues musculars, lesions osteoarticulars, ruptura de fibres musculars, tendinitis,… molt relacionades amb l’esport o amb l’activitat que es practica. La recuperació d’aquestes lesions necessiten especificitat el el procés rehabilitació.</p>
+            <p>Malauradament l’exercici físic també implica problemes derivats de la pròpia pràctica com sobrecàrregues musculars, lesions osteoarticulars, ruptura de fibres musculars, tendinitis … molt relacionades amb l’esport o amb l’activitat que es practica. La recuperació d’aquestes lesions necessiten especificitat en el procés rehabilitació.</p>
             <p>Aquesta cura de la salut de l’esportista es tradueix en potenciació del seu rendiment, readaptació a l’activitat física després de la lesió i una reincorporació més ràpida a l’activitat física.</p></div>
           </dd>
           <dt>Neurologia</dt>
           <dd class="treatment">
             <img src="/img/neurologia.jpg" alt="Neurologia" class="image" />
             <h3>Neurologia</h3>
-            <div class="explanation"><p>Les lesions del Sistema Nerviós Central com lesions medul·lars, d’any cerebral adquirit o esclerosis múltiple, ... i les lesions del Sistema Nerviós Perifèric com el Sd. de Guillem Barré o malalties neuromusculars, es veuen beneficiades per el tractament de fisioteràpia millorant la funció motriu i la qualitat de vida de les persones que les pateixen.</p> 
-            <p>El tractament de lesions del SNC i del SNP es dur a terme de manera individualitzada. Després d’una valoració inicial, s’estableixen els objectius que s’ajustin a les necessitats específiques de cada pacient i de la seva família, per millorar la funcionalitat i la seva qualitat de vida.</p></div>
+            <div class="explanation"><p>Les lesions del Sistema Nerviós Central com lesions medul·lars, dany cerebral adquirit o esclerosi múltiple, … i les lesions del Sistema Nerviós Perifèric com el Sd. de Guillem Barré o malalties neuromusculars, es veuen beneficiades pel tractament de fisioteràpia amb el qual es millora la funció motriu i la qualitat de vida de les persones que les pateixen.</p> 
+            <p>El tractament de lesions del SNC i del SNP es du a terme de manera individualitzada. Després d’una valoració inicial, s’estableixen els objectius que s’ajustin a les necessitats específiques de cada pacient i de la seva família per millorar la funcionalitat i la qualitat de vida.</p></div>
           </dd>
           <dt>Problemes de columna</dt>
           <dd class="treatment">
             <img src="/img/columna.jpg" alt="Problemes de columna" class="image" />
             <h3>Problemes de columna</h3>
-            <div class="explanation"><p>El tractament de fisioteràpia és un dels mètodes més utilitzats i més efectius en el mal d’esquena tan aguts com crònics. El paper del fisioterapeuta en el tractament d’aquestes dolències implica l’ús de tècniques encaminades a reduir el dolor i millorar la capacitat funcional del pacient i a una incorporació més ràpida a les activitats de la vida diària. </p>
-            <p>A més de les funció rehabilitadora, la fisioteràpia també té una funció preventiva amb l’objectiu de millorar la capacitat del pacient per a minimitzar els problemes d’esquena i evitat que tornin a aparèixer a través d’un procés d’educació.</p></div>
+            <div class="explanation"><p>El tractament de fisioteràpia és un dels mètodes més utilitzats i més efectius en el mal d’esquena tan agut com crònic. El paper del fisioterapeuta en el tractament d’aquestes dolències implica l’ús de tècniques encaminades a reduir el dolor i millorar la capacitat funcional del pacient i també una incorporació més ràpida a les activitats de la vida diària. </p>
+            <p>A més de la funció rehabilitadora, la fisioteràpia també té una funció preventiva amb l’objectiu de millorar la capacitat del pacient per a minimitzar els problemes d’esquena i evitat que tornin a aparèixer a través d’un procés d’educació.</p></div>
           </dd>
           <dt>Molt més…</dt>
           <dd class="treatment">
@@ -161,17 +161,17 @@
       <section id="about">
         <h2>Sobre mi</h2>
         <img id="me" src="/img/face.jpg" alt="Jo" title="Aquesta foto està presa a Cala Matzoc!" />
-        <p>Jo soc na Mercè. Soc una al·lota de 25 anys originària de Muro que viu a Ca'n Picafort.</p>
-        <p>M'encanta sortir a córrer, llegir, escoltar música i estar amb els amics, encara que també disfruto molt estant a casa disfrutant dels petits plaers.</p>
-        <p>Disfruto amb la meva feina i ara mateix la compagino amb l'estudi de psicologia a la <abbr title="Universitat Oberta de Catalunya">UOC</abbr> i amb la meva assignatura pendent, l'anglès.
+        <p>Sóc na Mercè. Soc una al·lota de 25 anys originària de Muro que viu a Can Picafort.</p>
+        <p>M'encanta sortir a córrer, llegir, escoltar música i estar amb els amics; encara que també disfruto molt estant a casa aprofitant els petits plaers.</p>
+        <p>Gaudesc amb la meva feina i ara mateix la compagino amb l'estudi de psicologia a la <abbr title="Universitat Oberta de Catalunya">UOC</abbr> i amb la meva assignatura pendent, l'anglès.
       </section>
       <section id="location">
         <h2>On estic</h2>
         <ul id="locations">
           <li data-geo-lat="39.761723" data-geo-long="3.162496">
-            <h3>Ca'n Picafort</h3>
+            <h3>Can Picafort</h3>
             <p>Carrer Violeta 3</p>
-            <div class="longdesc"><p>Aquí és on visc. Per a mi és el lloc més còmode per a atendre't ja que és casa meva.</p> <p>Tenc totes les comoditats preparades per a que estiguis a gust el 100%, com aire acondicionat a l'estiu i calefacció a l'hivern.</p> <p>Es troba entre l'ajuntament i el gimnàs, és el carrer que queda enmig. És un xalet de dos pisos, jo estic al primer pis. Per a entrar has d'entrar per la porteta de més amunt.</p></div>
+            <div class="longdesc"><p>Aquí és on visc. Per a mi és el lloc més còmode per atendre't ja que és casa meva.</p> <p>Tenc totes les comoditats preparades perquè estiguis a gust el 100%, com aire acondicionat a l'estiu i calefacció a l'hivern.</p> <p>Es troba entre l'ajuntament i el gimnàs, és el carrer que queda enmig. És un xalet de dos pisos, jo estic al primer pis. Per a entrar has de fer-ho per la porteta de més amunt.</p></div>
           </li>
           <li data-geo-lat="39.735145" data-geo-long="3.0604">
             <h3>Muro</h3>
@@ -181,7 +181,7 @@
           <li data-geo-lat="39.574336" data-geo-long="3.20142">
             <h3>A domicili</h3>
             <p>On em necessitis</p>
-            <div class="longdesc"><p>Aquesta és l'opció que acaba optant més gent. Ja que si necessites una fisio tampoc deus tenir moltes ganes de venir fins a Muro o Ca'n Picafort, no?</p> <p>Les tarifes són una mica més cares, per a cobrir la benzina i el temps de desplaçament.</p> <p>A Manacor, per exemple no et cobraré extra si és el dimarts o dijous ja que hi he d'anar igualment.</p></div>
+            <div class="longdesc"><p>Aquesta és l'opció que acaba optant més gent. Ja que si necessites una fisio tampoc deus tenir moltes ganes de venir fins a Muro o Can Picafort, no?</p><p>A Manacor, per exemple hi vaig cada dimarts i dijous.</p></div>
           </li>
         </ul>
         <div id="map_canvas"></div>
@@ -194,7 +194,7 @@
       </section>
       <section id="contact">
         <h2>Contacta</h2>
-        <header><p>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte en tu. Si vols també em pots telefonar al 660-082-398 o escriure a <a href="mailto:hola@merceperello.es">hola@merceperello.es</a></p><p>A part, també pots posar-te en contacte o dir-me qualsevol cosa a través de Twitter (<a target="blank" href="https://twitter.com/#!/rceperello">@rceperello</a>) o de Facebook (<a target="blank" href="https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133">Mercè Perelló Fisioteràpia</a>).</p></header>
+        <header><p>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte amb tu. Si vols també em pots telefonar al 660-082-398 o escriure a <a href="mailto:hola@merceperello.es">hola@merceperello.es</a></p><p>A part, també pots posar-te en contacte o dir-me qualsevol cosa a través de Twitter (<a target="blank" href="https://twitter.com/#!/rceperello">@rceperello</a>) o de Facebook (<a target="blank" href="https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133">Mercè Perelló Fisioteràpia</a>).</p></header>
         <form action="contact.php" method="post">
           <label class="required">El teu nom:</label>
           <input type="text" id="name" name="name" required><div></div><br />
