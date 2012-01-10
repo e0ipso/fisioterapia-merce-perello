@@ -171,17 +171,17 @@
           <li data-geo-lat="39.761723" data-geo-long="3.162496">
             <h3>Can Picafort</h3>
             <p>Carrer Violeta 3</p>
-            <div class="longdesc"><p>Aquí és on visc. Per a mi és el lloc més còmode per atendre't ja que és casa meva.</p> <p>Tenc totes les comoditats preparades perquè estiguis a gust el 100%, com aire acondicionat a l'estiu i calefacció a l'hivern.</p> <p>Es troba entre l'ajuntament i el gimnàs, és el carrer que queda enmig. És un xalet de dos pisos, jo estic al primer pis. Per a entrar has de fer-ho per la porteta de més amunt.</p></div>
+            <div class="longdesc"><p>Aquí és on visc.</p> <p>Tenim totes les comoditats preparades perquè estiguis a gust al 100%. Aire acondicionat a l'estiu i calefacció a l'hivern.</p> <p>Es troba entre l'ajuntament i el gimnàs, és el carrer que queda enmig.</p></div>
           </li>
           <li data-geo-lat="39.735145" data-geo-long="3.0604">
             <h3>Muro</h3>
             <p>Sant Joan 79</p>
-            <div class="longdesc"><p>És l'última casa del carrer de Sant Joan. És la casa aquí on em vaig criar i on encara hi viuen els meus pares, que em guarden l'habitació de la llitera.</p> <p>Si no és dia de partit i juga el Barça o el Madrid no tendràs cap problema per a venir en cotxe i aparcar. És bo de trobar si vens a peu, si vens en cotxe has d'entrar al carrer de Sant Joan pel cap de cantó abans de <em>Ca na Francisca</em>.</p></div>
+            <div class="longdesc"><p>És la casa aquí on em vaig criar i on encara hi viuen els meus pares</p><p>Si no és dia de partit, no juga el Barça ni el Madrid, no tendràs cap problema per a venir en cotxe i aparcar. És bo de trobar.</p></div>
           </li>
           <li data-geo-lat="39.574336" data-geo-long="3.20142">
             <h3>A domicili</h3>
             <p>On em necessitis</p>
-            <div class="longdesc"><p>Aquesta és l'opció que acaba optant més gent. Ja que si necessites una fisio tampoc deus tenir moltes ganes de venir fins a Muro o Can Picafort, no?</p><p>A Manacor, per exemple hi vaig cada dimarts i dijous.</p></div>
+            <div class="longdesc"><p>Aquesta és l'opció que acaba optant més gent. Ja que si necessites una fisio tampoc tens moltes ganes de venir fins a Muro o Can Picafort, no?</p></div>
           </li>
         </ul>
         <div id="map_canvas"></div>
