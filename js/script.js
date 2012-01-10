@@ -66,11 +66,7 @@ $(document).ready(function () {
     // Animació més curta i mostrar més temps el text
     txtlizer.textualizer('start');
     // SlideDeck
-    $('.slidedeck').slidedeck({
-        autoPlay: true, // auto play turned on
-        autoPlayInterval: 5000, // Time spent on each slide
-        cycle: true // Continue from the beginning after reaching the end
-    });
+    $('.slidedeck').slidedeck();
   }
   else {
     $('#show-facebook').attr('href', 'https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133');
@@ -97,7 +93,7 @@ $(document).ready(function () {
 
     $('html, body').stop().animate({
       scrollTop: $($anchor.attr('href')).offset().top
-    }, 3000,'easeInOutExpo');
+    }, 1500,'easeInOutExpo');
     event.preventDefault();
   });
   
