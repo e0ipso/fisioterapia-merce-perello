@@ -161,7 +161,7 @@
       <section id="about">
         <h2>Sobre mi</h2>
         <img id="me" src="/img/face.jpg" alt="Jo" title="Aquesta foto està presa a Cala Matzoc!" />
-        <p>Sóc na Mercè. Soc una al·lota de 25 anys originària de Muro que viu a Can Picafort.</p>
+        <p>Sóc na Mercè, una al·lota de 25 anys originària de Muro que viu a Can Picafort.</p>
         <p>M'encanta sortir a córrer, llegir, escoltar música i estar amb els amics; encara que també disfruto molt estant a casa aprofitant els petits plaers.</p>
         <p>Gaudesc amb la meva feina i ara mateix la compagino amb l'estudi de psicologia a la <abbr title="Universitat Oberta de Catalunya">UOC</abbr> i amb la meva assignatura pendent, l'anglès.
       </section>
