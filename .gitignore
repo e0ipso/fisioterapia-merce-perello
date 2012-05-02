@@ -1,3 +1,4 @@
 *.espressostorage
 ._*
 .DS_Store
+stats/*
