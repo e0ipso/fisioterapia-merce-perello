@@ -79,7 +79,7 @@
           <li>Tractament de lesions esportives per a una ràpida recuperació.</li>
           <li>Alleuja el teu dolor.</li>
           <li>És el complement ideal a la rehabilitació de la teva assegurança.</li>
-          <li>Un ambient comfortable a Muro, Can Picafort o a casa teva.</li>
+          <li>Un ambient comfortable a <strong>Muro</strong>, <strong>Can Picafort</strong> o a casa teva.</li>
         </ul>
         <header id="txtlzr-container-1" class="txtlzr-container"></header>
         <p><a href="#description" class="button" style="margin-right: 10px">Què faig?</a><a href="#about" class="button">Qui sóc?</a></p>
@@ -161,7 +161,7 @@
       <section id="about">
         <h2>Sobre mi</h2>
         <img id="me" src="/img/face.jpg" alt="Jo" title="Aquesta foto està presa a Cala Matzoc!" />
-        <p>Sóc na Mercè, una al·lota de 25 anys originària de Muro que viu a Can Picafort.</p>
+        <p>Sóc na Mercè, una al·lota de 25 anys originària de <strong>Muro</strong> que viu a <strong>Can Picafort</strong>.</p>
         <p>M'encanta sortir a córrer, llegir, escoltar música i estar amb els amics; encara que també disfruto molt estant a casa aprofitant els petits plaers.</p>
         <p>Gaudesc amb la meva feina i ara mateix la compagino amb l'estudi de psicologia a la <abbr title="Universitat Oberta de Catalunya">UOC</abbr> i amb la meva assignatura pendent, l'anglès.
       </section>
@@ -181,7 +181,7 @@
           <li data-geo-lat="39.574336" data-geo-long="3.20142">
             <h3>A domicili</h3>
             <p>On em necessitis</p>
-            <div class="longdesc"><p>Aquesta és l'opció que acaba optant més gent. Ja que si necessites una fisio tampoc tens moltes ganes de venir fins a Muro o Can Picafort, no?</p></div>
+            <div class="longdesc"><p>Aquesta és l'opció que acaba optant més gent. Ja que si necessites una fisio tampoc tens moltes ganes de venir fins a <strong>Muro</strong> o <strong>Can Picafort</strong>, no?</p><p>Normalment treballo a la zona nord de Mallorca (<strong>Artà</strong>, <strong>Alcúdia</strong>, <strong>Sa Pobla</strong>, <strong>Santa Margalida</strong>, <strong>Pollença</strong>, ...) però em desplaço allà on sigui necessari.</p></div>
           </li>
         </ul>
         <div id="map_canvas"></div>
