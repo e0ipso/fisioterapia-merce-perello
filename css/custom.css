@@ -353,7 +353,6 @@ a.button, button, input[type="submit"], input[type="reset"] {
 /* Home section */
 #home p {
   text-align: center;
-  margin: 3em 0;
 }
 #slogans {
   font-size: 3em;
