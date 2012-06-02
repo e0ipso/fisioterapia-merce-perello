@@ -189,7 +189,6 @@ nav ul li.active a.contact { background-position: 100% bottom; }
 
 
 /* @end */
-
 #container {
   max-width: 1024px;
   margin: 0 auto;
@@ -354,19 +353,22 @@ a.button, button, input[type="submit"], input[type="reset"] {
 /* Home section */
 #home p {
   text-align: center;
-  margin-top: 3em;
+  margin: 3em 0;
 }
-.txtlzr-data {
-  display: none;
-}
-.txtlzr-container {
-  position: relative;
-  min-height: 135px;
-  font: bold 2.5em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-  letter-spacing: 3px;
+#slogans {
+  font-size: 3em;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #2e4268;
+  color: #4b6dac;
   text-transform: uppercase;
-  margin: 0 !important;
-  color: #666;
+  text-align: center;
+  width: 100%;
+}
+
+#slogans li {
+  list-style: none;
+  display: block;
 }
 
 /* About section */
@@ -471,6 +473,9 @@ section#about {
 
 @media screen and (min-width: 641px) and (max-width: 960px) {
   /* Tablet styles */
+  #slogans {
+    font-size: 1.5em;
+  }
   section > p, section header {
     font: 1.1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     color: #57A;
@@ -482,6 +487,9 @@ section#about {
 }
 
 @media screen and (max-width: 960px) {
+  #slogans {
+    font-size: 2em;
+  }
   /* Both phone and tablet styles */
   
   /* NAVIGATION */

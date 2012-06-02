@@ -151,461 +151,6 @@ jQuery.extend( jQuery.easing,
 // License: http://www.opensource.org/licenses/mit-license.php
 (function(a,b,c){function Z(c,d,e){var g=b.createElement(c);return d&&(g.id=f+d),e&&(g.style.cssText=e),a(g)}function $(a){var b=y.length,c=(Q+a)%b;return c<0?b+c:c}function _(a,b){return Math.round((/%/.test(a)?(b==="x"?z.width():z.height())/100:1)*parseInt(a,10))}function ba(a){return K.photo||/\.(gif|png|jpe?g|bmp|ico)((#|\?).*)?$/i.test(a)}function bb(){var b;K=a.extend({},a.data(P,e));for(b in K)a.isFunction(K[b])&&b.slice(0,2)!=="on"&&(K[b]=K[b].call(P));K.rel=K.rel||P.rel||"nofollow",K.href=K.href||a(P).attr("href"),K.title=K.title||P.title,typeof K.href=="string"&&(K.href=a.trim(K.href))}function bc(b,c){a.event.trigger(b),c&&c.call(P)}function bd(){var a,b=f+"Slideshow_",c="click."+f,d,e,g;K.slideshow&&y[1]?(d=function(){F.text(K.slideshowStop).unbind(c).bind(j,function(){if(K.loop||y[Q+1])a=setTimeout(W.next,K.slideshowSpeed)}).bind(i,function(){clearTimeout(a)}).one(c+" "+k,e),r.removeClass(b+"off").addClass(b+"on"),a=setTimeout(W.next,K.slideshowSpeed)},e=function(){clearTimeout(a),F.text(K.slideshowStart).unbind([j,i,k,c].join(" ")).one(c,function(){W.next(),d()}),r.removeClass(b+"on").addClass(b+"off")},K.slideshowAuto?d():e()):r.removeClass(b+"off "+b+"on")}function be(b){U||(P=b,bb(),y=a(P),Q=0,K.rel!=="nofollow"&&(y=a("."+g).filter(function(){var b=a.data(this,e).rel||this.rel;return b===K.rel}),Q=y.index(P),Q===-1&&(y=y.add(P),Q=y.length-1)),S||(S=T=!0,r.show(),K.returnFocus&&a(P).blur().one(l,function(){a(this).focus()}),q.css({opacity:+K.opacity,cursor:K.overlayClose?"pointer":"auto"}).show(),K.w=_(K.initialWidth,"x"),K.h=_(K.initialHeight,"y"),W.position(),o&&z.bind("resize."+p+" scroll."+p,function(){q.css({width:z.width(),height:z.height(),top:z.scrollTop(),left:z.scrollLeft()})}).trigger("resize."+p),bc(h,K.onOpen),J.add(D).hide(),I.html(K.close).show()),W.load(!0))}function bf(){!r&&b.body&&(Y=!1,z=a(c),r=Z(X).attr({id:e,"class":n?f+(o?"IE6":"IE"):""}).hide(),q=Z(X,"Overlay",o?"position:absolute":"").hide(),s=Z(X,"Wrapper"),t=Z(X,"Content").append(A=Z(X,"LoadedContent","width:0; height:0; overflow:hidden"),C=Z(X,"LoadingOverlay").add(Z(X,"LoadingGraphic")),D=Z(X,"Title"),E=Z(X,"Current"),G=Z(X,"Next"),H=Z(X,"Previous"),F=Z(X,"Slideshow").bind(h,bd),I=Z(X,"Close")),s.append(Z(X).append(Z(X,"TopLeft"),u=Z(X,"TopCenter"),Z(X,"TopRight")),Z(X,!1,"clear:left").append(v=Z(X,"MiddleLeft"),t,w=Z(X,"MiddleRight")),Z(X,!1,"clear:left").append(Z(X,"BottomLeft"),x=Z(X,"BottomCenter"),Z(X,"BottomRight"))).find("div div").css({"float":"left"}),B=Z(X,!1,"position:absolute; width:9999px; visibility:hidden; display:none"),J=G.add(H).add(E).add(F),a(b.body).append(q,r.append(s,B)))}function bg(){return r?(Y||(Y=!0,L=u.height()+x.height()+t.outerHeight(!0)-t.height(),M=v.width()+w.width()+t.outerWidth(!0)-t.width(),N=A.outerHeight(!0),O=A.outerWidth(!0),r.css({"padding-bottom":L,"padding-right":M}),G.click(function(){W.next()}),H.click(function(){W.prev()}),I.click(function(){W.close()}),q.click(function(){K.overlayClose&&W.close()}),a(b).bind("keydown."+f,function(a){var b=a.keyCode;S&&K.escKey&&b===27&&(a.preventDefault(),W.close()),S&&K.arrowKey&&y[1]&&(b===37?(a.preventDefault(),H.click()):b===39&&(a.preventDefault(),G.click()))}),a("."+g,b).live("click",function(a){a.which>1||a.shiftKey||a.altKey||a.metaKey||(a.preventDefault(),be(this))})),!0):!1}var d={transition:"elastic",speed:300,width:!1,initialWidth:"600",innerWidth:!1,maxWidth:!1,height:!1,initialHeight:"450",innerHeight:!1,maxHeight:!1,scalePhotos:!0,scrolling:!0,inline:!1,html:!1,iframe:!1,fastIframe:!0,photo:!1,href:!1,title:!1,rel:!1,opacity:.9,preloading:!0,current:"image {current} of {total}",previous:"previous",next:"next",close:"close",open:!1,returnFocus:!0,reposition:!0,loop:!0,slideshow:!1,slideshowAuto:!0,slideshowSpeed:2500,slideshowStart:"start slideshow",slideshowStop:"stop slideshow",onOpen:!1,onLoad:!1,onComplete:!1,onCleanup:!1,onClosed:!1,overlayClose:!0,escKey:!0,arrowKey:!0,top:!1,bottom:!1,left:!1,right:!1,fixed:!1,data:undefined},e="colorbox",f="cbox",g=f+"Element",h=f+"_open",i=f+"_load",j=f+"_complete",k=f+"_cleanup",l=f+"_closed",m=f+"_purge",n=!a.support.opacity&&!a.support.style,o=n&&!c.XMLHttpRequest,p=f+"_IE6",q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X="div",Y;if(a.colorbox)return;a(bf),W=a.fn[e]=a[e]=function(b,c){var f=this;b=b||{},bf();if(bg()){if(!f[0]){if(f.selector)return f;f=a("<a/>"),b.open=!0}c&&(b.onComplete=c),f.each(function(){a.data(this,e,a.extend({},a.data(this,e)||d,b))}).addClass(g),(a.isFunction(b.open)&&b.open.call(f)||b.open)&&be(f[0])}return f},W.position=function(a,b){function i(a){u[0].style.width=x[0].style.width=t[0].style.width=a.style.width,t[0].style.height=v[0].style.height=w[0].style.height=a.style.height}var c=0,d=0,e=r.offset(),g=z.scrollTop(),h=z.scrollLeft();z.unbind("resize."+f),r.css({top:-9e4,left:-9e4}),K.fixed&&!o?(e.top-=g,e.left-=h,r.css({position:"fixed"})):(c=g,d=h,r.css({position:"absolute"})),K.right!==!1?d+=Math.max(z.width()-K.w-O-M-_(K.right,"x"),0):K.left!==!1?d+=_(K.left,"x"):d+=Math.round(Math.max(z.width()-K.w-O-M,0)/2),K.bottom!==!1?c+=Math.max(z.height()-K.h-N-L-_(K.bottom,"y"),0):K.top!==!1?c+=_(K.top,"y"):c+=Math.round(Math.max(z.height()-K.h-N-L,0)/2),r.css({top:e.top,left:e.left}),a=r.width()===K.w+O&&r.height()===K.h+N?0:a||0,s[0].style.width=s[0].style.height="9999px",r.dequeue().animate({width:K.w+O,height:K.h+N,top:c,left:d},{duration:a,complete:function(){i(this),T=!1,s[0].style.width=K.w+O+M+"px",s[0].style.height=K.h+N+L+"px",K.reposition&&setTimeout(function(){z.bind("resize."+f,W.position)},1),b&&b()},step:function(){i(this)}})},W.resize=function(a){S&&(a=a||{},a.width&&(K.w=_(a.width,"x")-O-M),a.innerWidth&&(K.w=_(a.innerWidth,"x")),A.css({width:K.w}),a.height&&(K.h=_(a.height,"y")-N-L),a.innerHeight&&(K.h=_(a.innerHeight,"y")),!a.innerHeight&&!a.height&&(A.css({height:"auto"}),K.h=A.height()),A.css({height:K.h}),W.position(K.transition==="none"?0:K.speed))},W.prep=function(b){function g(){return K.w=K.w||A.width(),K.w=K.mw&&K.mw<K.w?K.mw:K.w,K.w}function h(){return K.h=K.h||A.height(),K.h=K.mh&&K.mh<K.h?K.mh:K.h,K.h}if(!S)return;var c,d=K.transition==="none"?0:K.speed;A.remove(),A=Z(X,"LoadedContent").append(b),A.hide().appendTo(B.show()).css({width:g(),overflow:K.scrolling?"auto":"hidden"}).css({height:h()}).prependTo(t),B.hide(),a(R).css({"float":"none"}),o&&a("select").not(r.find("select")).filter(function(){return this.style.visibility!=="hidden"}).css({visibility:"hidden"}).one(k,function(){this.style.visibility="inherit"}),c=function(){function q(){n&&r[0].style.removeAttribute("filter")}var b,c,g=y.length,h,i="frameBorder",k="allowTransparency",l,o,p;if(!S)return;l=function(){clearTimeout(V),C.hide(),bc(j,K.onComplete)},n&&R&&A.fadeIn(100),D.html(K.title).add(A).show();if(g>1){typeof K.current=="string"&&E.html(K.current.replace("{current}",Q+1).replace("{total}",g)).show(),G[K.loop||Q<g-1?"show":"hide"]().html(K.next),H[K.loop||Q?"show":"hide"]().html(K.previous),K.slideshow&&F.show();if(K.preloading){b=[$(-1),$(1)];while(c=y[b.pop()])o=a.data(c,e).href||c.href,a.isFunction(o)&&(o=o.call(c)),ba(o)&&(p=new Image,p.src=o)}}else J.hide();K.iframe?(h=Z("iframe")[0],i in h&&(h[i]=0),k in h&&(h[k]="true"),h.name=f+ +(new Date),K.fastIframe?l():a(h).one("load",l),h.src=K.href,K.scrolling||(h.scrolling="no"),a(h).addClass(f+"Iframe").appendTo(A).one(m,function(){h.src="//about:blank"})):l(),K.transition==="fade"?r.fadeTo(d,1,q):q()},K.transition==="fade"?r.fadeTo(d,0,function(){W.position(0,c)}):W.position(d,c)},W.load=function(b){var c,d,e=W.prep;T=!0,R=!1,P=y[Q],b||bb(),bc(m),bc(i,K.onLoad),K.h=K.height?_(K.height,"y")-N-L:K.innerHeight&&_(K.innerHeight,"y"),K.w=K.width?_(K.width,"x")-O-M:K.innerWidth&&_(K.innerWidth,"x"),K.mw=K.w,K.mh=K.h,K.maxWidth&&(K.mw=_(K.maxWidth,"x")-O-M,K.mw=K.w&&K.w<K.mw?K.w:K.mw),K.maxHeight&&(K.mh=_(K.maxHeight,"y")-N-L,K.mh=K.h&&K.h<K.mh?K.h:K.mh),c=K.href,V=setTimeout(function(){C.show()},100),K.inline?(Z(X).hide().insertBefore(a(c)[0]).one(m,function(){a(this).replaceWith(A.children())}),e(a(c))):K.iframe?e(" "):K.html?e(K.html):ba(c)?(a(R=new Image).addClass(f+"Photo").error(function(){K.title=!1,e(Z(X,"Error").text("This image could not be loaded"))}).load(function(){var a;R.onload=null,K.scalePhotos&&(d=function(){R.height-=R.height*a,R.width-=R.width*a},K.mw&&R.width>K.mw&&(a=(R.width-K.mw)/R.width,d()),K.mh&&R.height>K.mh&&(a=(R.height-K.mh)/R.height,d())),K.h&&(R.style.marginTop=Math.max(K.h-R.height,0)/2+"px"),y[1]&&(K.loop||y[Q+1])&&(R.style.cursor="pointer",R.onclick=function(){W.next()}),n&&(R.style.msInterpolationMode="bicubic"),setTimeout(function(){e(R)},1)}),setTimeout(function(){R.src=c},1)):c&&B.load(c,K.data,function(b,c,d){e(c==="error"?Z(X,"Error").text("Request unsuccessful: "+d.statusText):a(this).contents())})},W.next=function(){!T&&y[1]&&(K.loop||y[Q+1])&&(Q=$(1),W.load())},W.prev=function(){!T&&y[1]&&(K.loop||Q)&&(Q=$(-1),W.load())},W.close=function(){S&&!U&&(U=!0,S=!1,bc(k,K.onCleanup),z.unbind("."+f+" ."+p),q.fadeTo(200,0),r.stop().fadeTo(300,0,function(){r.add(q).css({opacity:1,cursor:"auto"}).hide(),bc(m),A.remove(),setTimeout(function(){U=!1,bc(l,K.onClosed)},1)}))},W.remove=function(){a([]).add(r).add(q).remove(),r=null,a("."+g).removeData(e).removeClass(g).die()},W.element=function(){return a(P)},W.settings=d})(jQuery,document,this);
 /**
-Textualizer v2.3.1
-    
-Dual licensed under the MIT or GPL Version 2 licenses.
-
-Copyright (c) 2011 Kirollos Risk
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-*/
-(function ($) {
-    $(function () {
-
-        var COMMON_CHARACTER_ARRANGE_DELAY = 250,
-            REMAINING_CHARACTERS_DELAY = 125,
-            EFFECT_DURATION = 1000,
-            REMAINING_CHARACTERS_APPEARANCE_MAX_DELAY = 500,
-            REMOVE_CHARACTERS_MAX_DELAY = 500;
-
-        /**
-         * Overloads:
-         * 1. textualizer(data, options)
-         * 2. textualizer(data)
-         * 3. textualizer(options)
-         *
-         * @param data: Array of texts to transition
-         * @param options:
-         * <effect> - name of the effect to apply: random, fadeIn, slideLeft, slideTop.
-         * <duration> - Time (ms) to keep a blurb on the screen before transitioning to the next one
-         * <rearrangeDuration> - Time (ms) for characters to arrange into position
-         */
-        $.fn.textualizer = function (data, options) {
-            var args = arguments;
-
-            // Creates a textualizer instance (if it doesn't already exist)
-            var txtlzr = (function (ele) {
-                var obj = ele.data('textualizer');
-                if (!obj) {
-                    var data = [],
-                        options;
-
-                    if (args.length === 1 && args[0] instanceof Array) {
-                        data = args[0];
-                    } else if (args.length === 1 && typeof args[0] === 'object') {
-                        options = args[0];
-                    } else if (args.length === 2) {
-                        data = args[0];
-                        options = args[1];
-                    }
-
-                    if (data.length === 0) {
-                        ele.find("p").each(function () {
-                            data.push($(this).text());
-                        });
-                    }
-
-                    // Clear the contents in the container, since this is where the blurbs will go
-                    ele.html("");
-
-                    // Create a textualizer instance, and store in the HTML node's metadata
-                    obj = new Textualizer(ele, data, $.extend({}, $.fn.textualizer.defaults, options));
-                    ele.data('textualizer', obj);
-                }
-                return obj;
-            })(this);
-
-            if (typeof args[0] === 'string' && txtlzr[args[0]]) {
-                txtlzr[args[0]].apply(txtlzr, Array.prototype.slice.call(args, 1));
-            }
-
-            return this;
-        }
-
-        $.fn.textualizer.defaults = {
-            effect: 'random',
-            duration: 2000,
-            rearrangeDuration: 1000
-        };
-
-        // Effects for characters transition+animation. Customize as you please
-        $.fn.textualizer.effects = {
-            none: function (item) {
-                this.container.append(item.domNode.show());
-            },
-            fadeIn: function (item, dfd) {
-                this.container.append(item.domNode.fadeIn(EFFECT_DURATION, dfd.resolve));
-
-                return dfd.promise();
-            },
-            slideLeft: function (item, dfd) {
-                item.domNode.appendTo(this.container).css({
-                    'left': -1000
-                }).show().animate({
-                    'left': item.pos.left
-                }, EFFECT_DURATION, dfd.resolve);
-
-                return dfd.promise();
-            },
-            slideTop: function (item, dfd) {
-                item.domNode.appendTo(this.container).css({
-                    'top': -1000
-                }).show().animate({
-                    'top': item.pos.top
-                }, EFFECT_DURATION, dfd.resolve);
-
-                return dfd.promise();
-            }
-        }
-
-        // Copy all effects into an array ==> Makes randomization easy
-        var effectList = [];
-        $.each($.fn.textualizer.effects, function (key, value) {
-            if (key !== 'none') {
-                effectList.push(key);
-            }
-        });
-
-        var Blurb = function () {
-                this.str = ''; // The text string
-                this.chars = []; // Array of ch objects
-            }
-        Blurb.prototype = {
-            // Loops through <chars>, and find the first ch whose character matches c, and hasn't been already used.
-            use: function (c) {
-                for (var i = 0, len = this.chars.length; i < len; i++) {
-                    var l = this.chars[i];
-                    if (l.ch === c && !l.used) {
-                        l.used = true; // Mark as used.  
-                        return l;
-                    }
-                }
-                return null;
-            },
-            // Resets ever character in <chars>
-            reset: function () {
-                $.each(this.chars, function (index, ch) {
-                    ch.inserted = false;
-                    ch.used = false;
-                });
-            }
-        }
-
-        var Character = function () {
-                this.ch = null; // A character
-                this.domNode = null; // The span element that wraps around the character
-                this.pos = null; // The domNode position
-                this.used = false;
-                this.inserted = false;
-                this.visited = false;
-            }
-
-        function copyStyle(fromElem, toElem) {
-            var style;
-            if (window.getComputedStyle) {
-                styles = window.getComputedStyle(fromElem[0], null);
-                $.each(styles, function (key, value) {
-                    toElem.css(value, styles.getPropertyValue(value));
-                });
-            } else {
-                styles = fromElem[0].currentStyle;
-                $.each(styles, function (key, value) {
-                    toElem.css(key, value);
-                });
-            }
-        }
-
-        var Textualizer = function (element, data, options) {
-                this.options = options;
-
-                // Clone the target element, and remove the id attribute (if it has one)
-                // Why remove the id? Cuz when we clone an element, the id is also copied.  That's a very bad thing,
-                var clone = element.clone().removeAttr('id').appendTo(document.body);
-
-                // Copy all the styles.  This is especially necessary if the clone was being styled by id in a stylesheet)
-                copyStyle(element, clone);
-
-                // Note that the clone needs to be visible so we can do the proper calculation
-                // of the position of every character.  Ergo, move the clone outside of the window's 
-                // visible area.
-                clone.css({
-                    position: 'absolute',
-                    top: '-1000px'
-                });
-
-                this.phantomContainer = $('<div />').css({
-                    'position': 'relative',
-                    'visibility': 'hidden'
-                }).appendTo(clone);
-
-                // Make sure any animating character disappear when outside the boundaries of 
-                // the element
-                element.css('overflow', 'hidden');
-
-                this.elementHeight = element.height();
-
-                // Contains transitioning text           
-                this.container = $('<div />').css('position', 'relative').appendTo(element);
-
-                // Holds the previous blurb
-                this._previous = null;
-
-                this._position = {}
-                this._position.bottom = element.height();
-
-                this.blurbs = [];
-
-                if (data && data instanceof Array) {
-                    this.data(data);
-                }
-            }
-
-        Textualizer.prototype = {
-            data: function (d) {
-                this.stop();
-                this.list = d;
-                this.blurbs = [];
-            },
-            start: function () {
-                // If there are no items, then simply exit
-                if (!this.list || this.list.length === 0) {
-                    return;
-                }
-
-                var self = this,
-                    index = this._index || 0;
-
-                this._pause = false;
-
-                // Begin transitioning through the items
-                function rotate(i) {
-                    if (self._pause) {
-                        return;
-                    }
-                    // <_rotate> returns a promise, which completes when a blurb has finished animating.  When that 
-                    // promise is fulfilled, transition to the next blurb.
-                    self._rotate(i).done(function () {
-                        setTimeout(function () {
-                            // If we've reached the last blurb, reset the position of every character in every blurb
-                            if (i === self.list.length - 1) {
-                                i = -1;
-                                $.each(self.blurbs, function (j, item) {
-                                    item.reset();
-                                });
-                            }
-                            i++;
-                            self._index = i;
-                            rotate(i); // rotate the next blurb
-                        }, self.options.duration);
-                    });
-                }
-
-                // Begin iterating through the list of blurbs to display
-                rotate(index);
-            },
-            stop: function () {
-                this.pause();
-                this._previous = null;
-                this._index = 0;
-                this.container.empty();
-                this.phantomContainer.empty();
-            },
-            pause: function () {
-                this._pause = true;
-            },
-            _rotate: function (index) {
-                var dfd = $.Deferred(),
-                    current = this.blurbs[index];
-
-                // If this is the first time the blurb is encountered, each character in the blurb is wrapped in
-                // a span and appended to an invisible container, thus we're able to calculate the character's position
-                if (!current) {
-                    var phantomBlurbs = [],
-                        i, len, ch, c;
-
-                    current = new Blurb();
-                    current.str = this.list[index];
-                    this.blurbs.push(current);
-
-                    // Add all chars first to the phantom container. Let the browser deal with the formatting.
-                    for (i = 0, len = current.str.length; i < len; i++) {
-                        ch = current.str.charAt(i);
-
-                        if (ch === '') {
-                            this.phantomContainer.append(' ');
-                        } else {
-                            c = new Character();
-                            c.ch = ch;
-                            c.domNode = $('<span/>').text(ch);
-
-                            this.phantomContainer.append(c.domNode);
-                            phantomBlurbs.push(c);
-                        }
-                    }
-
-                    // If options.centered is true, then we need to center the text.
-                    // This cannot be done solely with CSS, because of the absolutely positioned characters
-                    // within a relative container.  Ergo, to achieve a vertically-aligned look, do 
-                    // the following simple math:
-                    var height = this.options.centered ? (this.elementHeight - this.phantomContainer.height()) / 2 : 0;
-
-                    // Figure out the positioning, and clone the DOM domNode
-                    $.each(phantomBlurbs, function (index, c) {
-                        c.pos = c.domNode.position();
-                        c.domNode = c.domNode.clone();
-
-                        c.pos.top += height;
-
-                        c.domNode.css({
-                            'left': c.pos.left,
-                            'top': c.pos.top,
-                            'position': 'absolute'
-                        });
-                        current.chars.push(c);
-                    });
-
-                    this.phantomContainer.html('');
-                }
-
-                if (this._previous) {
-                    // For every character in the previous text, check if it exists in the current text.
-                    // YES ==> keep the character in the DOM
-                    // NO ==> remove the character from the DOM
-                    var self = this,
-                        keepList = [],
-                        removeList = [],
-                        dfds = [];
-
-                    var randomHideEffect = getRandomHideEffect.call(this);
-
-                    $.each(this._previous.chars, function (index, prevC) {
-                        var currC = current.use(prevC.ch);
-
-                        if (currC) {
-                            currC.domNode = prevC.domNode; // use the previous DOM domNode
-                            currC.inserted = true;
-
-                            keepList.push(currC);
-                        } else {
-                            var d = $.Deferred();
-                            removeList.push(d);
-
-                            randomHideEffect(prevC.domNode.delay(Math.random() * REMOVE_CHARACTERS_MAX_DELAY)).done(function () {
-                                prevC.domNode.remove();
-                                d.resolve();
-                            });
-                        }
-                    });
-
-                    // When all characters that aren't common to the blurbs have been removed...
-                    $.when.apply(null, removeList).done(function () {
-                        // Move charactes that are common to their new position
-                        setTimeout(function () {
-                            $.each(keepList, function (index, item) {
-                                var d = $.Deferred();
-                                item.domNode.animate({
-                                    'left': item.pos.left,
-                                    'top': item.pos.top
-                                }, self.options.rearrangeDuration, d.resolve);
-                                dfds.push(d.promise());
-                            });
-                            // When all the characters have moved to their new position, show the remaining characters
-                            $.when.apply(null, dfds).done(function () {
-                                setTimeout(function () {
-                                    showCharacters.call(self, current).done(function () {
-                                        dfd.resolve();
-                                    });
-                                }, REMAINING_CHARACTERS_DELAY);
-                            });
-                        }, COMMON_CHARACTER_ARRANGE_DELAY);
-                    });
-
-                } else {
-                    showCharacters.call(this, current).done(function () {
-                        dfd.resolve();
-                    });
-                }
-                this._previous = current;
-
-                return dfd.promise();
-            },
-            destroy: function () {
-                this.container.parent().removeData('textualizer').end().remove();
-                this.phantomContainer.remove();
-            }
-        }
-
-        function getRandomHideEffect() {
-            var self = this;
-            var eff = [
-
-            function (target) {
-                var d = $.Deferred();
-                target.animate({
-                    top: self._position.bottom,
-                    opacity: 'hide'
-                }, d.resolve);
-                return d.promise();
-            }, function (target) {
-                var d = $.Deferred();
-                target.fadeOut(1000, d.resolve);
-                return d.promise();
-            }];
-
-            return eff[Math.floor(Math.random() * eff.length)];
-        }
-
-        function showCharacters(item) {
-            var self = this,
-                effect = this.options.effect === 'random' ? $.fn.textualizer.effects[effectList[Math.floor(Math.random() * effectList.length)]] : $.fn.textualizer.effects[this.options.effect],
-                finalDfd = $.Deferred(),
-                animationDfdList = [];
-
-            // Iterate through all ch objects
-            $.each(item.chars, function (index, ch) {
-                // If the character has not been already inserted, animate it, with a delay
-                if (!ch.inserted) {
-                    ch.domNode.css({
-                        'left': ch.pos.left,
-                        'top': ch.pos.top
-                    });
-
-                    var animationDfd = $.Deferred();
-
-                    setTimeout(function () {
-                        effect.call(self, ch, animationDfd);
-                    }, Math.random() * REMAINING_CHARACTERS_APPEARANCE_MAX_DELAY);
-
-                    animationDfdList.push(animationDfd);
-                }
-            });
-
-            // When all characters have finished moving to their position, resolve the final promise
-            $.when.apply(null, animationDfdList).done(function () {
-                finalDfd.resolve();
-            });
-
-            return finalDfd.promise();
-        }
-    });
-})(jQuery);
-/**
  * jQuery Scrolling Parallax v0.1
  * http://jonraasch.com/blog/scrolling-parallax-jquery-plugin
  *
@@ -1082,3 +627,235 @@ THE SOFTWARE.
  */
 
 var SlideDeck;var SlideDeckSkin={};(function($){window.SlideDeck=function(u,v){var w=this,u=$(u);var x="1.3.2";this.options={speed:500,transition:'swing',start:1,activeCorner:true,index:true,scroll:true,keys:true,autoPlay:false,autoPlayInterval:5000,hideSpines:false,cycle:false,slideTransition:'slide'};this.classes={slide:'slide',spine:'spine',label:'label',index:'index',active:'active',indicator:'indicator',activeCorner:'activeCorner',disabled:'disabled',vertical:'slidesVertical',previous:'previous',next:'next'};this.current=1;this.deck=u;this.former=-1;this.spines=u.children('dt');this.slides=u.children('dd');this.controlTo=1;this.session=[];this.disabledSlides=[];this.pauseAutoPlay=false;this.isLoaded=false;var y=navigator.userAgent.toLowerCase();this.browser={chrome:y.match(/chrome/)?true:false,firefox:y.match(/firefox/)?true:false,firefox2:y.match(/firefox\/2/)?true:false,firefox30:y.match(/firefox\/3\.0/)?true:false,msie:y.match(/msie/)?true:false,msie6:(y.match(/msie 6/)&&!y.match(/msie 7|8/))?true:false,msie7:y.match(/msie 7/)?true:false,msie8:y.match(/msie 8/)?true:false,msie9:y.match(/msie 9/)?true:false,chromeFrame:(y.match(/msie/)&&y.match(/chrome/))?true:false,opera:y.match(/opera/)?true:false,safari:(y.match(/safari/)&&!y.match(/chrome/))?true:false};for(var b in this.browser){if(this.browser[b]===true){this.browser._this=b}}if(this.browser.chrome===true&&!this.browser.chromeFrame){this.browser.version=y.match(/chrome\/([0-9\.]+)/)[1]}if(this.browser.firefox===true){this.browser.version=y.match(/firefox\/([0-9\.]+)/)[1]}if(this.browser.msie===true){this.browser.version=y.match(/msie ([0-9\.]+)/)[1]}if(this.browser.opera===true){this.browser.version=y.match(/version\/([0-9\.]+)/)[1]}if(this.browser.safari===true){this.browser.version=y.match(/version\/([0-9\.]+)/)[1]}var A;var B;var C,spine_outer_width,slide_width,spine_half_width;this.looping=false;var D="";switch(w.browser._this){case"firefox":case"firefox3":D="-moz-";break;case"chrome":case"safari":D="-webkit-";break;case"opera":D="-o-";break}var E=function(a){if(w.browser.msie&&!w.browser.msie9){var b=a.css('background-color');var c=b;if(c=="transparent"){b="#ffffff"}else{if(c.match('#')){if(c.length<7){var t="#"+c.substr(1,1)+c.substr(1,1)+c.substr(2,1)+c.substr(2,1)+c.substr(3,1)+c.substr(3,1);b=t}}}b=b.replace("#","");var d={r:b.substr(0,2),g:b.substr(2,2),b:b.substr(4,2)};var e="#";var f="01234567890ABCDEF";for(var k in d){d[k]=Math.max(0,(parseInt(d[k],16)-1));d[k]=f.charAt((d[k]-d[k]%16)/16)+f.charAt(d[k]%16);e+=d[k]}a.find('.'+w.classes.index).css({'filter':'progid:DXImageTransform.Microsoft.BasicImage(rotation=1) chroma(color='+e+')',backgroundColor:e})}};var F={id:"SlideDeck_Bug"+(Math.round(Math.random()*100000000)),styles:"position:absolute !important;height:"+13+"px !important;width:"+130+"px !important;display:block !important;margin:0 !important;overflow:hidden !important;visibility:visible !important;opacity:1 !important;padding:0 !important;z-index:20000 !important",width:130,height:13};var G=function(){if(!document.getElementById(F.id)){var a=document.createElement('A');a.id=F.id;a.href="http://www.slidedeck.com/ref?utm_source=LiteUser&utm_medium=Link&utm_campaign=SDbug";a.target="_blank";var b=document.createElement('IMG');b.src=(document.location.protocol=="https:"?"https:":"http:")+"//www.slidedeck.com/6885858486f31043e5839c735d99457f045affd0/"+x+"/lite";b.alt="Powered by SlideDeck&trade;";b.width=F.width;b.height=F.height;b.border="0";a.appendChild(b);F.top=(u.offset().top+u.height()+5);F.left=u.offset().left+u.width()-F.width;var s=document.createElement('STYLE');s.type="text/css";var c='#'+F.id+'{top:'+F.top+'px;left:'+F.left+'px;'+F.styles+'}'+'#'+F.id+' img{top:0 !important;left:0 !important;'+F.styles+'}';if(s.styleSheet){s.styleSheet.cssText=c}else{s.appendChild(document.createTextNode(c))}$('head').append(s);if(Math.random()<0.5){$(document.body).prepend(a)}else{$(document.body).append(a)}$(window).resize(function(){G()})}F.top=(u.offset().top+u.height()+5);F.left=u.offset().left+u.width()-F.width;$('#'+F.id).css({top:F.top+"px",left:F.left+"px"})};var H=function(){gotoNext=function(){if(w.pauseAutoPlay===false){if(w.options.cycle===false&&w.current==w.slides.length){w.pauseAutoPlay=true}else{w.next()}}};setInterval(gotoNext,w.options.autoPlayInterval)};var I=function(a,i){var b={display:'block'};b[D+'transform-origin']="50% 50%";b[D+'transform']="";if(i<w.current){var c=i*spine_outer_width;if(w.options.hideSpines===true){if(i==w.current-1){c=0}else{c=0-(w.options.start-i-1)*u.width()}}}else{var c=i*spine_outer_width+slide_width;if(w.options.hideSpines===true){c=(i+1-w.options.start)*u.width()}}switch(a){case"slide":default:b.left=c;b.zIndex=1;break}w.slides.eq(i).css(D+'transition',"").css(b);return c};var J=function(){if($.inArray(u.css('position'),['position','absolute','fixed'])){u.css('position','relative')}u.css('overflow','hidden');for(var i=0;i<w.slides.length;i++){var e=$(w.slides[i]);if(w.spines.length>i){var f=$(w.spines[i])}var g={top:parseInt(e.css('padding-top'),10),right:parseInt(e.css('padding-right'),10),bottom:parseInt(e.css('padding-bottom'),10),left:parseInt(e.css('padding-left'),10)};var h={top:parseInt(e.css('border-top-width'),10),right:parseInt(e.css('border-right-width'),10),bottom:parseInt(e.css('border-bottom-width'),10),left:parseInt(e.css('border-left-width'),10)};for(var k in h){h[k]=isNaN(h[k])?0:h[k]}if(i<w.current){if(i==w.current-1){if(w.options.hideSpines!==true){f.addClass(w.classes.active)}e.addClass(w.classes.active)}}w.slide_width=(slide_width-g.left-g.right-h.left-h.right);var j={position:'absolute',zIndex:1,height:(B-g.top-g.bottom-h.top-h.bottom)+"px",width:w.slide_width+"px",margin:0,paddingLeft:g.left+spine_outer_width+"px"};var l=I(w.options.slideTransition,i);e.css(j).addClass(w.classes.slide).addClass(w.classes.slide+"_"+(i+1));if(w.options.hideSpines!==true){var m={top:parseInt(f.css('padding-top'),10),right:parseInt(f.css('padding-right'),10),bottom:parseInt(f.css('padding-bottom'),10),left:parseInt(f.css('padding-left'),10)};for(var k in m){if(m[k]<10&&(k=="left"||k=="right")){m[k]=10}}var n=m.top+"px "+m.right+"px "+m.bottom+"px "+m.left+"px";var o={position:'absolute',zIndex:3,display:'block',left:l,width:(B-m.left-m.right)+"px",height:C+"px",padding:n,rotation:'270deg','-webkit-transform':'rotate(270deg)','-webkit-transform-origin':spine_half_width+'px 0px','-moz-transform':'rotate(270deg)','-moz-transform-origin':spine_half_width+'px 0px','-o-transform':'rotate(270deg)','-o-transform-origin':spine_half_width+'px 0px',textAlign:'right'};if(!w.browser.msie9){o.top=(w.browser.msie)?0:(B-spine_half_width)+"px";o.marginLeft=((w.browser.msie)?0:(0-spine_half_width))+"px";o.filter='progid:DXImageTransform.Microsoft.BasicImage(rotation=3)'}f.css(o).addClass(w.classes.spine).addClass(w.classes.spine+"_"+(i+1));if(w.browser.msie9){f[0].style.msTransform='rotate(270deg)';f[0].style.msTransformOrigin=Math.round(parseInt(u[0].style.height,10)/2)+'px '+Math.round(parseInt(u[0].style.height,10)/2)+'px'}}else{if(typeof(f)!="undefined"){f.hide()}}if(i==w.slides.length-1){e.addClass('last');if(w.options.hideSpines!==true){f.addClass('last')}}if(w.options.activeCorner===true&&w.options.hideSpines===false){var p=document.createElement('DIV');p.className=w.classes.activeCorner+' '+(w.classes.spine+'_'+(i+1));f.after(p);f.next('.'+w.classes.activeCorner).css({position:'absolute',top:'25px',left:l+spine_outer_width+"px",overflow:"hidden",zIndex:"20000"}).hide();if(f.hasClass(w.classes.active)){f.next('.'+w.classes.activeCorner).show()}}if(w.options.hideSpines!==true){var q=document.createElement('DIV');q.className=w.classes.index;if(w.options.index!==false){var r;if(typeof(w.options.index)!='boolean'){r=w.options.index[i%w.options.index.length]}else{r=""+(i+1)}q.appendChild(document.createTextNode(r))}f.append(q);f.find('.'+w.classes.index).css({position:'absolute',zIndex:2,display:'block',width:C+"px",height:C+"px",textAlign:'center',bottom:((w.browser.msie)?0:(0-spine_half_width))+"px",left:((w.browser.msie)?5:20)+"px",rotation:"90deg",'-webkit-transform':'rotate(90deg)','-webkit-transform-origin':spine_half_width+'px 0px','-moz-transform':'rotate(90deg)','-moz-transform-origin':spine_half_width+'px 0px','-o-transform':'rotate(90deg)','-o-transform-origin':spine_half_width+'px 0px'});if(w.browser.msie9){f.find('.'+w.classes.index)[0].style.msTransform='rotate(90deg)'}E(f)}}G();if(w.options.hideSpines!==true){w.spines.bind('click',function(a){a.preventDefault();w.goTo(w.spines.index(this)+1)})}if(w.options.keys!==false){$(document).bind('keydown',function(a){if($(a.target).parents().index(w.deck)==-1){if(a.keyCode==39){w.pauseAutoPlay=true;w.next()}else if(a.keyCode==37){w.pauseAutoPlay=true;w.prev()}}})}if(typeof($.event.special.mousewheel)!="undefined"){u.bind("mousewheel",function(a,b){if(w.options.scroll!==false){var c=a.detail?a.detail:a.wheelDelta;if(typeof(c)=='undefined'){c=0-b}if(w.browser.msie||w.browser.safari||w.browser.chrome){c=0-c}var d=false;if($(a.originalTarget).parents(w.deck).length){if($.inArray(a.originalTarget.nodeName.toLowerCase(),['input','select','option','textarea'])!=-1){d=true}}if(d!==true){if(c>0){switch(w.options.scroll){case"stop":a.preventDefault();break;case true:default:if(w.current<w.slides.length||w.options.cycle==true){a.preventDefault()}break}w.pauseAutoPlay=true;w.next()}else{switch(w.options.scroll){case"stop":a.preventDefault();break;case true:default:if(w.current!=1||w.options.cycle==true){a.preventDefault()}break}w.pauseAutoPlay=true;w.prev()}}}})}$(w.spines[w.current-2]).addClass(w.classes.previous);$(w.spines[w.current]).addClass(w.classes.next);if(w.options.autoPlay===true){H()}w.isLoaded=true};var K=function(a){a=Math.min(w.slides.length,Math.max(1,a));return a};var L=function(a){var b=[];if(typeof(w.options.complete)=="function"){b.push(function(){w.options.complete(w)})}switch(typeof(a)){case"function":b.push(function(){a(w)});break;case"object":b.push(function(){a.complete(w)});break}var c=function(){w.looping=false;for(var z=0;z<b.length;z++){b[z]()}};return c};var M={slide:function(a,b,c){for(var i=0;i<w.slides.length;i++){var d=0;if(w.options.hideSpines!==true){var e=$(w.spines[i])}var f=$(w.slides[i]);if(i<w.current){if(i==(w.current-1)){f.addClass(w.classes.active);if(w.options.hideSpines!==true){e.addClass(w.classes.active);e.next('.'+w.classes.activeCorner).show()}}d=i*spine_outer_width}else{d=i*spine_outer_width+slide_width}if(w.options.hideSpines===true){d=(i-w.current+1)*u.width()}var g={duration:w.options.speed,easing:w.options.transition};if(i==(c===true&&w.current-1)||i==(c===false&&w.current)){if(i===0){g.complete=L(b)}}f.stop().animate({left:d+"px",width:w.slide_width+"px"},g);if(w.options.hideSpines!==true){E(e);if(e.css('left')!=d+"px"){e.stop().animate({left:d+"px"},{duration:w.options.speed,easing:w.options.transition});e.next('.'+w.classes.activeCorner).stop().animate({left:d+spine_outer_width+"px"},{duration:w.options.speed,easing:w.options.transition})}}}}};var N=function(a,b){a=K(a);if((a<=w.controlTo||w.options.controlProgress!==true)&&w.looping===false){var c=true;if(a<w.current){c=false}var d=[w.classes.active,w.classes.next,w.classes.previous].join(' ');w.former=w.current;w.current=a;if(typeof(w.options.before)=="function"){w.options.before(w)}if(typeof(b)!="undefined"){if(typeof(b.before)=="function"){b.before(w)}}if(w.current!=w.former){w.spines.removeClass(d);w.slides.removeClass(d);u.find('.'+w.classes.activeCorner).hide();w.spines.eq(w.current-2).addClass(w.classes.previous);w.spines.eq(w.current).addClass(w.classes.next);var e='slide';if(typeof(M[w.options.slideTransition])!='undefined'){e=w.options.slideTransition}M[e](a,b,c)}G()}};var O=function(a,b){var c=a;if(typeof(a)==="string"){c={};c[a]=b}for(var d in c){b=c[d];switch(d){case"speed":case"start":b=parseFloat(b);if(isNaN(b)){b=w.options[d]}break;case"scroll":case"keys":case"activeCorner":case"hideSpines":case"autoPlay":case"cycle":if(typeof(b)!=="boolean"){b=w.options[d]}break;case"transition":if(typeof(b)!=="string"){b=w.options[d]}break;case"complete":case"before":if(typeof(b)!=="function"){b=w.options[d]}break;case"index":if(typeof(b)!=="boolean"){if(!$.isArray(b)){b=w.options[d]}}break}w.options[d]=b}};var P=function(){B=u.height();A=u.width();u.css('height',B+"px");C=0;spine_outer_width=0;if(w.options.hideSpines!==true&&w.spines.length>0){C=$(w.spines[0]).height();spine_outer_width=$(w.spines[0]).outerHeight()}slide_width=A-spine_outer_width*w.spines.length;if(w.options.hideSpines===true){slide_width=A}spine_half_width=Math.ceil(C/2)};var Q=function(a){if((w.browser.opera&&w.browser.version<"10.5")||w.browser.msie6||w.browser.firefox2||w.browser.firefox30){if(typeof(console)!="undefined"){if(typeof(console.error)=="function"){console.error("This web browser is not supported by SlideDeck. Please view this page in a modern, CSS3 capable browser or a current version of Inernet Explorer")}}return false}if(typeof(a)!="undefined"){for(var b in a){w.options[b]=a[b]}}if(w.spines.length<1){w.options.hideSpines=true}if(w.options.hideSpines===true){w.options.activeCorner=false}w.options.slideTransition='slide';w.current=Math.min(w.slides.length,Math.max(1,w.options.start));if(u.height()>0){P();J()}else{var c;c=setTimeout(function(){P();if(u.height()>0){clearInterval(c);P();J()}},20)}};var R=function(a){var b;b=setInterval(function(){if(w.isLoaded===true){clearInterval(b);a(w)}},20)};this.loaded=function(a){R(a);return w};this.next=function(a){var b=Math.min(w.slides.length,(w.current+1));if(w.options.cycle===true){if(w.current+1>w.slides.length){b=1}}N(b,a);return w};this.prev=function(a){var b=Math.max(1,(w.current-1));if(w.options.cycle===true){if(w.current-1<1){b=w.slides.length}}N(b,a);return w};this.goTo=function(a,b){w.pauseAutoPlay=true;N(Math.min(w.slides.length,Math.max(1,a)),b);return w};this.setOption=function(a,b){O(a,b);return w};this.vertical=function(){return false};Q(v)};$.fn.slidedeck=function(a){var b=[];for(var i=0;i<this.length;i++){if(!this[i].slidedeck){this[i].slidedeck=new SlideDeck(this[i],a)}b.push(this[i].slidedeck)}return b.length>1?b:b[0]}})(jQuery);
+/*!
+ * jQuery Cycle Lite Plugin
+ * http://malsup.com/jquery/cycle/lite/
+ * Copyright (c) 2008-2012 M. Alsup
+ * Version: 1.6 (02-MAY-2012)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ * Requires: jQuery v1.3.2 or later
+ */
+;(function($) {
+"use strict";
+
+var ver = 'Lite-1.6';
+
+$.fn.cycle = function(options) {
+    return this.each(function() {
+        options = options || {};
+        
+        if (this.cycleTimeout) clearTimeout(this.cycleTimeout);
+
+        this.cycleTimeout = 0;
+        this.cyclePause = 0;
+        
+        var $cont = $(this);
+        var $slides = options.slideExpr ? $(options.slideExpr, this) : $cont.children();
+        var els = $slides.get();
+        if (els.length < 2) {
+            if (window.console)
+                console.log('terminating; too few slides: ' + els.length);
+            return; // don't bother
+        }
+
+        // support metadata plugin (v1.0 and v2.0)
+        var opts = $.extend({}, $.fn.cycle.defaults, options || {}, $.metadata ? $cont.metadata() : $.meta ? $cont.data() : {});
+        var meta = $.isFunction($cont.data) ? $cont.data(opts.metaAttr) : null;
+        if (meta)
+            opts = $.extend(opts, meta);
+            
+        opts.before = opts.before ? [opts.before] : [];
+        opts.after = opts.after ? [opts.after] : [];
+        opts.after.unshift(function(){ opts.busy=0; });
+            
+        // allow shorthand overrides of width, height and timeout
+        var cls = this.className;
+        opts.width = parseInt((cls.match(/w:(\d+)/)||[])[1], 10) || opts.width;
+        opts.height = parseInt((cls.match(/h:(\d+)/)||[])[1], 10) || opts.height;
+        opts.timeout = parseInt((cls.match(/t:(\d+)/)||[])[1], 10) || opts.timeout;
+
+        if ($cont.css('position') == 'static') 
+            $cont.css('position', 'relative');
+        if (opts.width) 
+            $cont.width(opts.width);
+        if (opts.height && opts.height != 'auto') 
+            $cont.height(opts.height);
+
+        var first = 0;
+        $slides.css({position: 'absolute', top:0}).each(function(i) {
+            $(this).css('z-index', els.length-i);
+        });
+        
+        $(els[first]).css('opacity',1).show(); // opacity bit needed to handle reinit case
+        if ($.browser.msie) els[first].style.removeAttribute('filter');
+
+        if (opts.fit && opts.width) 
+            $slides.width(opts.width);
+        if (opts.fit && opts.height && opts.height != 'auto') 
+            $slides.height(opts.height);
+        if (opts.pause) 
+            $cont.hover(function(){this.cyclePause=1;}, function(){this.cyclePause=0;});
+
+        var txFn = $.fn.cycle.transitions[opts.fx];
+        if (txFn)
+            txFn($cont, $slides, opts);
+        
+        $slides.each(function() {
+            var $el = $(this);
+            this.cycleH = (opts.fit && opts.height) ? opts.height : $el.height();
+            this.cycleW = (opts.fit && opts.width) ? opts.width : $el.width();
+        });
+
+        if (opts.cssFirst)
+            $($slides[first]).css(opts.cssFirst);
+
+        if (opts.timeout) {
+            // ensure that timeout and speed settings are sane
+            if (opts.speed.constructor == String)
+                opts.speed = {slow: 600, fast: 200}[opts.speed] || 400;
+            if (!opts.sync)
+                opts.speed = opts.speed / 2;
+            while((opts.timeout - opts.speed) < 250)
+                opts.timeout += opts.speed;
+        }
+        opts.speedIn = opts.speed;
+        opts.speedOut = opts.speed;
+
+        opts.slideCount = els.length;
+        opts.currSlide = first;
+        opts.nextSlide = 1;
+
+        // fire artificial events
+        var e0 = $slides[first];
+        if (opts.before.length)
+            opts.before[0].apply(e0, [e0, e0, opts, true]);
+        if (opts.after.length > 1)
+            opts.after[1].apply(e0, [e0, e0, opts, true]);
+        
+        if (opts.click && !opts.next)
+            opts.next = opts.click;
+        if (opts.next)
+            $(opts.next).unbind('click.cycle').bind('click.cycle', function(){return advance(els,opts,opts.rev?-1:1);});
+        if (opts.prev)
+            $(opts.prev).unbind('click.cycle').bind('click.cycle', function(){return advance(els,opts,opts.rev?1:-1);});
+
+        if (opts.timeout)
+            this.cycleTimeout = setTimeout(function() {
+                go(els,opts,0,!opts.rev);
+            }, opts.timeout + (opts.delay||0));
+    });
+};
+
+function go(els, opts, manual, fwd) {
+    if (opts.busy) 
+        return;
+    var p = els[0].parentNode, curr = els[opts.currSlide], next = els[opts.nextSlide];
+    if (p.cycleTimeout === 0 && !manual) 
+        return;
+
+    if (manual || !p.cyclePause) {
+        if (opts.before.length)
+            $.each(opts.before, function(i,o) { o.apply(next, [curr, next, opts, fwd]); });
+        var after = function() {
+            if ($.browser.msie)
+                this.style.removeAttribute('filter');
+            $.each(opts.after, function(i,o) { o.apply(next, [curr, next, opts, fwd]); });
+            queueNext(opts);
+        };
+
+        if (opts.nextSlide != opts.currSlide) {
+            opts.busy = 1;
+            $.fn.cycle.custom(curr, next, opts, after);
+        }
+        var roll = (opts.nextSlide + 1) == els.length;
+        opts.nextSlide = roll ? 0 : opts.nextSlide+1;
+        opts.currSlide = roll ? els.length-1 : opts.nextSlide-1;
+    } else {
+      queueNext(opts);
+    }
+
+    function queueNext(opts) {
+        if (opts.timeout)
+            p.cycleTimeout = setTimeout(function() { go(els,opts,0,!opts.rev); }, opts.timeout);
+    }
+}
+
+// advance slide forward or back
+function advance(els, opts, val) {
+    var p = els[0].parentNode, timeout = p.cycleTimeout;
+    if (timeout) {
+        clearTimeout(timeout);
+        p.cycleTimeout = 0;
+    }
+    opts.nextSlide = opts.currSlide + val;
+    if (opts.nextSlide < 0) {
+        opts.nextSlide = els.length - 1;
+    }
+    else if (opts.nextSlide >= els.length) {
+        opts.nextSlide = 0;
+    }
+    go(els, opts, 1, val>=0);
+    return false;
+}
+
+$.fn.cycle.custom = function(curr, next, opts, cb) {
+    var $l = $(curr), $n = $(next);
+    $n.css(opts.cssBefore);
+    var fn = function() {$n.animate(opts.animIn, opts.speedIn, opts.easeIn, cb);};
+    $l.animate(opts.animOut, opts.speedOut, opts.easeOut, function() {
+        $l.css(opts.cssAfter);
+        if (!opts.sync)
+            fn();
+    });
+    if (opts.sync)
+        fn();
+};
+
+$.fn.cycle.transitions = {
+    fade: function($cont, $slides, opts) {
+        $slides.not(':eq(0)').hide();
+        opts.cssBefore = { opacity: 0, display: 'block' };
+        opts.cssAfter  = { display: 'none' };
+        opts.animOut = { opacity: 0 };
+        opts.animIn = { opacity: 1 };
+    },
+    fadeout: function($cont, $slides, opts) {
+        opts.before.push(function(curr,next,opts,fwd) {
+            $(curr).css('zIndex',opts.slideCount + (fwd === true ? 1 : 0));
+            $(next).css('zIndex',opts.slideCount + (fwd === true ? 0 : 1));
+        });
+        $slides.not(':eq(0)').hide();
+        opts.cssBefore = { opacity: 1, display: 'block', zIndex: 1 };
+        opts.cssAfter  = { display: 'none', zIndex: 0 };
+        opts.animOut = { opacity: 0 };
+        opts.animIn = { opacity: 1 };
+    }
+};
+
+$.fn.cycle.ver = function() { return ver; };
+
+// @see: http://malsup.com/jquery/cycle/lite/
+$.fn.cycle.defaults = {
+    animIn:        {},
+    animOut:       {},
+    fx:           'fade',
+    after:         null,
+    before:        null,
+    cssBefore:     {},
+    cssAfter:      {},
+    delay:         0,
+    fit:           0,
+    height:       'auto',
+    metaAttr:     'cycle',
+    next:          null,
+    pause:         false,
+    prev:          null,
+    speed:         1000,
+    slideExpr:     null,
+    sync:          true,
+    timeout:       4000
+};
+
+})(jQuery);

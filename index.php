@@ -74,15 +74,14 @@
       <section id="home">
         <h1>Fisioteràpia</h1>
         <h2>Mercè Perelló</h2>
-        <ul id="txtlzr-data-1" class="txtlzr-data">
+        <p class="buttons"><a href="#description" class="button" style="margin-right: 10px">Què faig?</a><a href="#about" class="button">Qui sóc?</a></p>
+        <ul id="slogans">
           <li>Per a la teva tranquil·litat evita aquells que et venen salut sense la preparació adient.</li>
           <li>Tractament de lesions esportives per a una ràpida recuperació.</li>
           <li>Alleuja el teu dolor.</li>
           <li>És el complement ideal a la rehabilitació de la teva assegurança.</li>
           <li>Un ambient comfortable a <strong>Muro</strong>, <strong>Can Picafort</strong> o a casa teva.</li>
         </ul>
-        <header id="txtlzr-container-1" class="txtlzr-container"></header>
-        <p><a href="#description" class="button" style="margin-right: 10px">Què faig?</a><a href="#about" class="button">Qui sóc?</a></p>
       </section>
       <section id="description">
         <h2>Tractaments</h2>
