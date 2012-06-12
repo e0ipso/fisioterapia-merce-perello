@@ -30,8 +30,12 @@ $(document).ready(function () {
       + "&subject=" + escape("Formulari de contacte de la web")
       + "&body=" + escape(body)
     ;
-
-    window.location.href = link;
+    
+    window.open(
+      link,
+      '_blank'
+    );
+    return false;
   });
     
   if ($(window).width() > 960) {
