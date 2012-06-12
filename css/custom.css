@@ -310,6 +310,11 @@ a.button, button, input[type="submit"], input[type="reset"] {
 .longdesc { display: none; }
 
 /* Contact form */
+#contact-button {
+  text-align: center;
+  margin-top: 60px;
+}
+
 #contact form {
   font-size: 1.2em;
   width: 600px;
