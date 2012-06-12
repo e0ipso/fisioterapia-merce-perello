@@ -19,7 +19,7 @@ $(document).ready(function () {
   sectionSize();
   $('h1').fitText(0.7);
   $('h2').fitText(1.2);
-
+  
   if ($(window).width() > 960) {
       // Colorbox popups
 //      $('#treatments .treatment a').each(function () {
