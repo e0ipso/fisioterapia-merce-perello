@@ -1,0 +1,15 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+Crawl-delay: 10
+# Directories
+Disallow: /build/
+Disallow: /test/
+Disallow: /img/
+Disallow: /css/
+Disallow: /font-face/
+Disallow: /js/
+# Files
+Disallow: /404.html
+Disallow: /contact.php

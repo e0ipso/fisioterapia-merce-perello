@@ -1,0 +1,259 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="ca"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="ca"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="ca"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ca"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Fisioteràpia Mallorca Nord | Mercè Perelló</title>
+  <meta name="description" content="Centre de fisioteràpia a Mallorca. Estic a Can Picafort i Muro. També vaig a domicili.">
+  <meta name="author" content="Human Bits">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/jquery.qtip.min.css">
+  <link rel="stylesheet" media="screen and (min-width: 960px)" href="css/slidedeck.css">
+  <!-- <link rel="stylesheet" href="font-face/museo-slab.css"> -->
+  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+  <meta property="og:title" content="Mercè Perelló Fisioteràpia" />
+  <meta property="og:description" content="El centre de fisioteràpia del Nord de Mallorca. Estic a Can Picafort i Muro. També vaig a domicili." />
+  <meta property="og:image" content="http://merceperello.es/img/face.jpg" />
+  <meta property="og:url" content="http://merceperello.es" />
+  
+  <link rel="canonical" href="http://merceperello.es">
+  <link rel="author" href="/humans.txt">
+  
+  <!-- For iPhone 4 with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+  <!-- For first-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a class="home" href="#home">Inici</a></li>
+          <li><a class="about" href="#description">Què faig</a></li>
+          <li><a class="available" href="#about">Qui sóc</a></li>
+          <li><a class="location" href="#location">On estic</a></li>
+          <li><a class="contact" href="#contact">Contacte</a></li>
+        </ul>
+      </nav>
+      
+      <?php if (isset($_REQUEST['message'])) {
+        print('<div id="messages">' . $_REQUEST['message'] . '</div>');
+      } ?>
+    </header>
+    <div id="main" role="main">
+      <section id="home">
+        <h1>Fisioteràpia</h1>
+        <h2>Mercè Perelló</h2>
+        <p class="buttons"><a href="#description" class="button" style="margin-right: 10px">Què faig?</a><a href="#about" class="button">Qui sóc?</a></p>
+        <ul id="slogans">
+          <li>Per a la teva tranquil·litat evita aquells que et venen salut sense la preparació adient.</li>
+          <li>Tractament de lesions esportives per a una ràpida recuperació.</li>
+          <li>Alleuja el teu dolor.</li>
+          <li>És el complement ideal a la rehabilitació de la teva assegurança.</li>
+          <li>Un ambient comfortable a <strong>Muro</strong>, <strong>Can Picafort</strong> o a casa teva.</li>
+        </ul>
+      </section>
+      <section id="description">
+        <h2>Tractaments</h2>
+        <header>Especialitzada en el tractament del dolor i la rehabilitació funcional.</header>
+        <div id="slidedeck_frame" class="skin-stitch"><dl id="treatments" class="slidedeck">
+          <dt>Pediatria</dt>
+          <dd class="treatment">
+            <img src="/img/pediatria.jpg" alt="Pediatria" class="image" />
+            <h3>Pediatria</h3>
+            <div class="explanation"><p>La fisioteràpia pediàtrica consisteix en el tractament de qualsevol afecció en la infància, tant aguda com crònica, que pertorbi el desenvolupament motor i, per tant, limiti el potencial per a la independència durant la vida adulta. La fisioteràpia aplicada a l’edat pediàtrica és una especialitat de la fisioteràpia la formació de la qual requereix uns coneixements i una pràctica específics.</p>
+            <p>El nostre objectiu és ajudar l’infant a aconseguir el màxim potencial d'independència a través de l’observació, la valoració, la promoció de la salut i el benestar; així com saber aplicar una àmplia varietat d’estratègies terapèutiques i d’ajuts posturals o de mobilitat; proporcionar suport a les seves famílies, des de la infància fins a l'adolescència i col·laborar amb altres especialistes mèdics de l’àmbit de l’educació i del social, per afavorir així la participació de l’infant en les  activitats de la vida diària a casa, a l’escola i a la comunitat.</p></div>
+          </dd>
+          <dt>Lesions esportives</dt>
+          <dd class="treatment">
+            <img src="/img/lesions.jpg" alt="Lesions" class="image" />
+            <h3>Lesions esportives</h3>
+            <div class="explanation"><p>La conscienciació d'una gran part de la població dels beneficis de l'activitat física per a la salut ha fet que aquesta pràctica sigui cada cop més generalitzada. Dins de les disciplines mèdiques es tendeix cada cop més a la prescripció de l’exercici físic com a mesura bàsica per millorar la qualitat i l’expectativa de vida. </p>
+            <p>Malauradament l’exercici físic també implica problemes derivats de la pròpia pràctica com sobrecàrregues musculars, lesions osteoarticulars, ruptura de fibres musculars, tendinitis … molt relacionades amb l’esport o amb l’activitat que es practica. La recuperació d’aquestes lesions necessiten especificitat en el procés rehabilitació.</p>
+            <p>Aquesta cura de la salut de l’esportista es tradueix en potenciació del seu rendiment, readaptació a l’activitat física després de la lesió i una reincorporació més ràpida a l’activitat física.</p></div>
+          </dd>
+          <dt>Neurologia</dt>
+          <dd class="treatment">
+            <img src="/img/neurologia.jpg" alt="Neurologia" class="image" />
+            <h3>Neurologia</h3>
+            <div class="explanation"><p>Les lesions del Sistema Nerviós Central com lesions medul·lars, dany cerebral adquirit o esclerosi múltiple, … i les lesions del Sistema Nerviós Perifèric com el Sd. de Guillem Barré o malalties neuromusculars, es veuen beneficiades pel tractament de fisioteràpia amb el qual es millora la funció motriu i la qualitat de vida de les persones que les pateixen.</p> 
+            <p>El tractament de lesions del SNC i del SNP es du a terme de manera individualitzada. Després d’una valoració inicial, s’estableixen els objectius que s’ajustin a les necessitats específiques de cada pacient i de la seva família per millorar la funcionalitat i la qualitat de vida.</p></div>
+          </dd>
+          <dt>Problemes de columna</dt>
+          <dd class="treatment">
+            <img src="/img/columna.jpg" alt="Problemes de columna" class="image" />
+            <h3>Problemes de columna</h3>
+            <div class="explanation"><p>El tractament de fisioteràpia és un dels mètodes més utilitzats i més efectius en el mal d’esquena tan agut com crònic. El paper del fisioterapeuta en el tractament d’aquestes dolències implica l’ús de tècniques encaminades a reduir el dolor i millorar la capacitat funcional del pacient i també una incorporació més ràpida a les activitats de la vida diària. </p>
+            <p>A més de la funció rehabilitadora, la fisioteràpia també té una funció preventiva amb l’objectiu de millorar la capacitat del pacient per a minimitzar els problemes d’esquena i evitat que tornin a aparèixer a través d’un procés d’educació.</p></div>
+          </dd>
+          <dt>Molt més…</dt>
+          <dd class="treatment">
+            <img src="/img/moltmes.jpg" alt="Molt més…" class="image" />
+            <h3>Molt més…</h3>
+            <div class="explanation"><p>A més d’aquests tractaments també pots <a href="#contact">contactar</a> amb nosaltres si tens algun problema derivat de <strong>lesions al sistema limfàtic</strong>, si necessites reeducació de la <strong>musculatura abdominal</strong> després de l’embaràs, si tens <strong>dolor articular</strong>, <strong>traumatismes</strong> o lesions agudes, <strong>postoperatoris</strong>, ... o si vols donar-te un <strong>plaer</strong> amb un massatge relaxant.</p></div>
+          </dd>
+        </dl></div>        
+        <div id="social-buttons">
+          <a id="show-twitter" href="#">Twitter</a>
+          <a id="show-facebook" href="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FMerc%C3%A8-Perell%C3%B3-Fisioter%C3%A0pia%2F205104012886133&amp;width=600&amp;height=600&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=false&amp;appId=216318715105952">Facebook</a>
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+          <script>
+          new TWTR.Widget({
+            version: 2,
+            type: 'profile',
+            rpp: 5,
+            interval: 30000,
+            width: 600,
+            height: 600,
+            theme: {
+              shell: {
+                background: '#f0f0eb',
+                color: '#474747'
+              },
+              tweets: {
+                background: '#ffffff',
+                color: '#444444',
+                links: '#4faadb'
+              }
+            },
+            features: {
+              scrollbar: false,
+              loop: false,
+              live: false,
+              behavior: 'all'
+            }
+          }).render().setUser('rceperello').start();
+          </script>
+        </div>
+        <div class="help" style="text-align: center">Si cliques el botó de <em>Twitter</em> o de <em>Facebook</em> s'obrirà una finestreta amb el que faig a aquestes xarxes socials.</div>
+      </section>
+      <section id="about">
+        <h2>Sobre mi</h2>
+        <img id="me" src="/img/face.jpg" alt="Jo" title="Aquesta foto està presa a Cala Matzoc!" />
+        <p>Sóc na Mercè, una al·lota de 25 anys originària de <strong>Muro</strong> que viu a <strong>Can Picafort</strong>.</p>
+        <p>M'encanta sortir a córrer, llegir, escoltar música i estar amb els amics; encara que també disfruto molt estant a casa aprofitant els petits plaers.</p>
+        <p>Gaudesc amb la meva feina i ara mateix la compagino amb l'estudi de psicologia a la <abbr title="Universitat Oberta de Catalunya">UOC</abbr> i amb la meva assignatura pendent, l'anglès.
+      </section>
+      <section id="location">
+        <h2>On estic</h2>
+        <ul id="locations">
+          <li data-geo-lat="39.761723" data-geo-long="3.162496">
+            <h3>Can Picafort</h3>
+            <p>Carrer Violeta 3</p>
+            <div class="longdesc"><p>Aquí és on visc.</p> <p>Tenim totes les comoditats preparades perquè estiguis a gust al 100%. Aire acondicionat a l'estiu i calefacció a l'hivern.</p> <p>Es troba entre l'ajuntament i el gimnàs, és el carrer que queda enmig.</p></div>
+          </li>
+          <li data-geo-lat="39.735145" data-geo-long="3.0604">
+            <h3>Muro</h3>
+            <p>Sant Joan 79</p>
+            <div class="longdesc"><p>És la casa aquí on em vaig criar i on encara hi viuen els meus pares</p><p>Si no és dia de partit, no juga el Barça ni el Madrid, no tendràs cap problema per a venir en cotxe i aparcar. És bo de trobar.</p></div>
+          </li>
+          <li data-geo-lat="39.574336" data-geo-long="3.20142">
+            <h3>A domicili</h3>
+            <p>On em necessitis</p>
+            <div class="longdesc"><p>Aquesta és l'opció que acaba optant més gent. Ja que si necessites una fisio tampoc tens moltes ganes de venir fins a <strong>Muro</strong> o <strong>Can Picafort</strong>, no?</p><p>Normalment treballo a la zona nord de Mallorca (<strong>Artà</strong>, <strong>Alcúdia</strong>, <strong>Sa Pobla</strong>, <strong>Santa Margalida</strong>, <strong>Pollença</strong>, ...) però em desplaço allà on sigui necessari.</p></div>
+          </li>
+        </ul>
+        <div id="map_canvas"></div>
+        <div id="more-info">
+          <div>
+            <h2>More Info</h2>
+            <p>Passa per sobre de les localitzacions de l'esquerra. (JavaScript ha d'estar activat)</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contacta</h2>
+        <header><p>Si emplenes aquest formulari rebré un correu electrònic amb les teves dades i em posaré en contacte amb tu. Si vols també em pots telefonar al 660-082-398 o escriure a <a href="mailto:hola@merceperello.es">hola@merceperello.es</a></p><p>A part, també pots posar-te en contacte o dir-me qualsevol cosa a través de Twitter (<a target="blank" href="https://twitter.com/#!/rceperello">@rceperello</a>) o de Facebook (<a target="blank" href="https://www.facebook.com/pages/Mercè-Perelló-Fisioteràpia/205104012886133">Mercè Perelló Fisioteràpia</a>).</p></header>
+        <form action="contact.php" method="post">
+          <label class="required">El teu nom:</label>
+          <input type="text" id="name" name="name" required><div></div><br />
+          <input type="text" id="family-name" name="family-name" placeholder="Palotes">
+        
+          <label class="required">Adreça d'email:</label>
+          <input type="email" id="email" name="email" placeholder="example@example.org" required><div></div><br />
+              
+          <label class="required">Teléfon:</label>
+          <input type="text" pattern="[0-9]*" id="phone" name="phone" required><div></div><br />
+      
+          <label>Quin dia vols venir?</label>
+          <input type="date" id="date" name="date" title="Entra una data del tipus 2012-10-25"><br />
+          
+          <label>A quina hora?</label>
+          <input type="time" id="time" name="time" title="Entra una hora del tipus 16:32"><br />
+            
+          <label class="required">Què et passa?:</label>
+          <textarea rows="4" cols="50" name="message" id="message" required></textarea><div></div><br />
+        
+          <input type="reset" value="Esborra" /><input type="submit" value="Contacta" />
+        </form>
+      </section>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <!-- end scripts-->
+
+	
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    window._gaq = [['_setAccount','UA-27957871-1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>
