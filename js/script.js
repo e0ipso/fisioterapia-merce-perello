@@ -22,6 +22,8 @@ $(document).ready(function () {
   
   /* Contact form */
   $('#contact-form').submit(function () {
+    /* Do not submit the form if there are errors. */
+    if($('*:invalid', $(this)).length){ alert("Has d'emplenar tots els camps obligatoris."); return false; }
     var body = "Hola, em dic " + $('#contact-form #name').val() + " i el meu teléfon és el " + $('#contact-form #phone').val() + ".<br />M'agradaria que em telefonéssis per a quedar el " + $('#contact-form #date').val() + " a les " + $('#contact-form #time').val() + ". El que em passa és: " + $('#contact-form #message').val();
     var link = "mailto:hola@merceperello.es"
       + "?cc=" + escape($('#contact-form #email').val())
@@ -31,10 +33,7 @@ $(document).ready(function () {
 
     window.location.href = link;
   });
-  
-  /* Do not submit the form if there are errors. */
-  $('#contact form').submit ( function () { if($('*:invalid', $(this)).length){ alert("Has d'emplenar tots els camps obligatoris."); return false; }} );
-  
+    
   if ($(window).width() > 960) {
       // Colorbox popups
 //      $('#treatments .treatment a').each(function () {
